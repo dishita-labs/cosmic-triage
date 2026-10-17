@@ -1,0 +1,135 @@
+[project]
+name = "cosmic-triage"
+version = "0.1.0"
+description = "Learning-first, rigorously evaluated follow-up triage for astronomical transients"
+readme = "CLAUDE.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "pydantic>=2.7",
+    "httpx>=0.27",
+    "duckdb>=1.0",
+    "pyarrow>=16",
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "scipy>=1.13",
+    "scikit-learn>=1.5",
+    "astropy>=6.1",
+    "astroplan>=0.10",
+    "ortools>=9.10",
+    "anthropic>=0.40",
+    "typesafe-sdk>=0.7",
+    "rank-bm25>=0.2.2",
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "sse-starlette>=2.1",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+    "psycopg[binary]>=3.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.2",
+    "pytest-recording>=0.13",
+    "ruff>=0.6",
+    "mypy>=1.11",
+    "import-linter>=2.1",
+    "hypothesis>=6.100",
+    "pre-commit>=3.7",
+    "types-PyYAML>=6.0",
+    "pandas-stubs>=2.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cosmic_triage"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+    "network: test needs the network (forbidden; a test with this marker is a bug)",
+]
+
+[tool.ruff]
+line-length = 160
+target-version = "py312"
+extend-exclude = ["console", "data", "runs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["RUF001", "RUF002", "RUF003"]
+
+[tool.mypy]
+python_version = "3.12"
+plugins = ["pydantic.mypy"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["cosmic_triage.contracts.*", "cosmic_triage.investigator.*"]
+strict = true
+
+[tool.importlinter]
+root_package = "cosmic_triage"
+include_external_packages = false
+
+# §13.2 Snapshot-only data access: BTS truth labels are readable only by `replay`.
+[[tool.importlinter.contracts]]
+name = "Only replay may import BTS truth labels"
+type = "forbidden"
+source_modules = [
+    "cosmic_triage.belief",
+    "cosmic_triage.value",
+    "cosmic_triage.schedule",
+    "cosmic_triage.investigator",
+    "cosmic_triage.metrics",
+    "cosmic_triage.api",
+    "cosmic_triage.contracts",
+]
+forbidden_modules = ["cosmic_triage.ingest.bts"]
+
+# §13.2: belief/value/schedule consume Snapshot(t) only; they never touch ingest or the raw cache.
+[[tool.importlinter.contracts]]
+name = "Decision modules consume Snapshot only (no ingest, no raw cache)"
+type = "forbidden"
+source_modules = [
+    "cosmic_triage.belief",
+    "cosmic_triage.value",
+    "cosmic_triage.schedule",
+]
+forbidden_modules = ["cosmic_triage.ingest", "cosmic_triage.replay"]
+
+# Investigator tools may use ingest clients (as-of filtered at the tool layer, §4.1/M2), but never the raw cache.
+[[tool.importlinter.contracts]]
+name = "Investigator never reads the raw cache or replay internals directly"
+type = "forbidden"
+source_modules = ["cosmic_triage.investigator"]
+forbidden_modules = ["cosmic_triage.ingest.cache", "cosmic_triage.replay"]
+allow_indirect_imports = true
+
+# The console API is presentation only: it reads replay artifacts, not raw broker data.
+[[tool.importlinter.contracts]]
+name = "API reads replay artifacts, not ingest"
+type = "forbidden"
+source_modules = ["cosmic_triage.api"]
+forbidden_modules = ["cosmic_triage.ingest"]
+allow_indirect_imports = true
+
+# Contracts are a leaf: they depend on nothing else in the package.
+[[tool.importlinter.contracts]]
+name = "Contracts are a leaf package"
+type = "forbidden"
+source_modules = ["cosmic_triage.contracts"]
+forbidden_modules = [
+    "cosmic_triage.ingest",
+    "cosmic_triage.belief",
+    "cosmic_triage.value",
+    "cosmic_triage.schedule",
+    "cosmic_triage.replay",
+    "cosmic_triage.investigator",
+    "cosmic_triage.metrics",
+    "cosmic_triage.api",
+]

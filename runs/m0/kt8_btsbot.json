@@ -1,0 +1,9 @@
+{
+ "verdict": "PASS",
+ "evidence": [
+  "btsbot 2.0.6 (torch 2.14.1) installed in an isolated venv; model nabeelr/BTSbot-convnext-pico-galaxyzoo (image-only)",
+  "10 first-alert ALeRCE FITS triplets scored on CPU; load 12.1s, inference 0.22s",
+  "scores (sigmoid; higher = BTS-worthy SN-like): ZTF25aaaalin (SN Ia): 0.462; ZTF25aaaauxw (SN Ia): 0.762; ZTF25aaaawig (SN Ia): 0.157; ZTF25aaabezb (SN Ia): 0.537; ZTF25aaabnxh (SN Ia): 0.119; ZTF25aacawsr (AGN): 0.220; ZTF25aaqvwgk (CV): 0.997; ZTF25aaynaqk (CV): 0.261; ZTF25abmwwga (CV): 0.872; ZTF25absjvvl (CV): 0.991",
+  "Image-only model used (the multimodal variant also needs 25 alert-packet features; M7 work)."
+ ]
+}

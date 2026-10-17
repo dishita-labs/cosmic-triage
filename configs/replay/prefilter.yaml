@@ -1,0 +1,17 @@
+# Time-honest forward-pool pre-filter mirroring the BTS alert filter (ARCHITECTURE §6.4).
+# Changing any value here is a §14.3 trigger (pre-filter change) once comparisons begin.
+version: "1.0"
+window_days: 14            # first detection in [t - 14 d, t]
+min_detections: 2          # qualifying detections at <= t
+min_separation_min: 30     # ... at least 30 minutes apart
+min_drb: 0.5               # deep real/bogus score of the alert detection
+require_positive_subtraction: true
+max_mag: 19.0              # brightest qualifying detection at <= t
+star_counterpart:          # reject: star-like PS1 counterpart within 2"
+  max_dist_arcsec: 2.0
+  min_sgscore: 0.5
+bright_star:               # reject: bright PS1 or Gaia source within 20"
+  max_dist_arcsec: 20.0
+  max_mag: 15.0
+min_abs_gal_b: 7.0         # outside the Galactic plane
+scored_peak_mag: 18.5      # scoring regime: BTS peak <= 18.5 (labels / metrics only)

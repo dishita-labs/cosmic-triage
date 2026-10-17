@@ -1,0 +1,2003 @@
+{
+ "$defs": {
+  "Action": {
+   "additionalProperties": false,
+   "properties": {
+    "evsi": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Evsi"
+    },
+    "expected_reward": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Expected Reward"
+    },
+    "exposure_s": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Exposure S"
+    },
+    "instrument": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Instrument"
+    },
+    "kind": {
+     "enum": [
+      "spectrum",
+      "photometry",
+      "wait"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "oid": {
+     "title": "Oid",
+     "type": "string"
+    }
+   },
+   "required": [
+    "kind",
+    "oid"
+   ],
+   "title": "Action",
+   "type": "object"
+  },
+  "ActionValue": {
+   "additionalProperties": false,
+   "properties": {
+    "components": {
+     "additionalProperties": {
+      "type": "number"
+     },
+     "title": "Components",
+     "type": "object"
+    },
+    "kind": {
+     "enum": [
+      "spectrum",
+      "photometry",
+      "wait"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "value": {
+     "title": "Value",
+     "type": "number"
+    }
+   },
+   "required": [
+    "kind",
+    "value"
+   ],
+   "title": "ActionValue",
+   "type": "object"
+  },
+  "Belief": {
+   "additionalProperties": false,
+   "description": "Posterior over coarse classes K for one candidate at t, with per-channel contributions (\u00a73.2).",
+   "properties": {
+    "channel_logp": {
+     "additionalProperties": {
+      "additionalProperties": {
+       "type": "number"
+      },
+      "propertyNames": {
+       "enum": [
+        "Ia",
+        "II",
+        "Ibc",
+        "other_luminous",
+        "contaminant"
+       ]
+      },
+      "type": "object"
+     },
+     "title": "Channel Logp",
+     "type": "object"
+    },
+    "config_hash": {
+     "title": "Config Hash",
+     "type": "string"
+    },
+    "entropy_nats": {
+     "title": "Entropy Nats",
+     "type": "number"
+    },
+    "oid": {
+     "title": "Oid",
+     "type": "string"
+    },
+    "phase_days": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "Estimated days relative to peak",
+     "title": "Phase Days"
+    },
+    "probs": {
+     "additionalProperties": {
+      "type": "number"
+     },
+     "propertyNames": {
+      "enum": [
+       "Ia",
+       "II",
+       "Ibc",
+       "other_luminous",
+       "contaminant"
+      ]
+     },
+     "title": "Probs",
+     "type": "object"
+    },
+    "t_mjd": {
+     "title": "T Mjd",
+     "type": "number"
+    }
+   },
+   "required": [
+    "oid",
+    "t_mjd",
+    "probs",
+    "entropy_nats",
+    "config_hash"
+   ],
+   "title": "Belief",
+   "type": "object"
+  },
+  "CandidateContext": {
+   "additionalProperties": false,
+   "description": "Static (time-independent) context of a candidate's position.",
+   "properties": {
+    "dec": {
+     "title": "Dec",
+     "type": "number"
+    },
+    "distpsnr1": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "Distance to nearest PS1 source, arcsec",
+     "title": "Distpsnr1"
+    },
+    "gal_b": {
+     "description": "Galactic latitude, degrees",
+     "title": "Gal B",
+     "type": "number"
+    },
+    "maggaia": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "G mag of nearest Gaia source",
+     "title": "Maggaia"
+    },
+    "neargaia": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "Distance to nearest Gaia source, arcsec",
+     "title": "Neargaia"
+    },
+    "ra": {
+     "title": "Ra",
+     "type": "number"
+    },
+    "sgscore1": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "PS1 star/galaxy score of nearest source",
+     "title": "Sgscore1"
+    },
+    "srmag1": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "r mag of nearest PS1 source",
+     "title": "Srmag1"
+    }
+   },
+   "required": [
+    "ra",
+    "dec",
+    "gal_b"
+   ],
+   "title": "CandidateContext",
+   "type": "object"
+  },
+  "CandidateState": {
+   "additionalProperties": false,
+   "description": "Everything known about one candidate at snapshot time t. All counts are recomputed from data <= t.",
+   "properties": {
+    "brightest_mag": {
+     "title": "Brightest Mag",
+     "type": "number"
+    },
+    "context": {
+     "$ref": "#/$defs/CandidateContext"
+    },
+    "fink_rows": {
+     "default": [],
+     "items": {
+      "$ref": "#/$defs/FinkAlertRow"
+     },
+     "title": "Fink Rows",
+     "type": "array"
+    },
+    "first_detection_mjd": {
+     "title": "First Detection Mjd",
+     "type": "number"
+    },
+    "last_detection_mjd": {
+     "title": "Last Detection Mjd",
+     "type": "number"
+    },
+    "latest_band": {
+     "title": "Latest Band",
+     "type": "string"
+    },
+    "latest_mag": {
+     "title": "Latest Mag",
+     "type": "number"
+    },
+    "n_detections": {
+     "description": "Detections with mjd <= t (recomputed, never ndethist-final)",
+     "title": "N Detections",
+     "type": "integer"
+    },
+    "n_nondetections": {
+     "title": "N Nondetections",
+     "type": "integer"
+    },
+    "oid": {
+     "title": "Oid",
+     "type": "string"
+    },
+    "photometry": {
+     "items": {
+      "$ref": "#/$defs/PhotometryPoint"
+     },
+     "title": "Photometry",
+     "type": "array"
+    },
+    "stamp_prior": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/StampPrior"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null
+    },
+    "t_mjd": {
+     "title": "T Mjd",
+     "type": "number"
+    }
+   },
+   "required": [
+    "oid",
+    "t_mjd",
+    "context",
+    "photometry",
+    "first_detection_mjd",
+    "last_detection_mjd",
+    "n_detections",
+    "n_nondetections",
+    "brightest_mag",
+    "latest_mag",
+    "latest_band"
+   ],
+   "title": "CandidateState",
+   "type": "object"
+  },
+  "Claim": {
+   "additionalProperties": false,
+   "properties": {
+    "evidence_ids": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Evidence Ids",
+     "type": "array"
+    },
+    "extractor_model": {
+     "title": "Extractor Model",
+     "type": "string"
+    },
+    "kind": {
+     "enum": [
+      "prior_classification",
+      "host_redshift",
+      "known_agn",
+      "star_counterpart",
+      "prior_flares",
+      "nuclear",
+      "analysis_result"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "payload": {
+     "additionalProperties": true,
+     "title": "Payload",
+     "type": "object"
+    },
+    "validation": {
+     "$ref": "#/$defs/ValidationReport"
+    }
+   },
+   "required": [
+    "kind",
+    "payload",
+    "evidence_ids",
+    "extractor_model",
+    "validation"
+   ],
+   "title": "Claim",
+   "type": "object"
+  },
+  "ClaimDraft": {
+   "additionalProperties": false,
+   "description": "An extractor's proposal; becomes a Claim only after validation (\u00a74.4).",
+   "properties": {
+    "evidence_ids": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Evidence Ids",
+     "type": "array"
+    },
+    "extractor_model": {
+     "title": "Extractor Model",
+     "type": "string"
+    },
+    "kind": {
+     "enum": [
+      "prior_classification",
+      "host_redshift",
+      "known_agn",
+      "star_counterpart",
+      "prior_flares",
+      "nuclear",
+      "analysis_result"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "payload": {
+     "additionalProperties": true,
+     "title": "Payload",
+     "type": "object"
+    }
+   },
+   "required": [
+    "kind",
+    "payload",
+    "evidence_ids",
+    "extractor_model"
+   ],
+   "title": "ClaimDraft",
+   "type": "object"
+  },
+  "Compaction": {
+   "additionalProperties": false,
+   "description": "A summary of ledger entries that cites ids and never replaces the raw entries (\u00a74.5).",
+   "properties": {
+    "cited_ids": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Cited Ids",
+     "type": "array"
+    },
+    "created_at_sim_time": {
+     "title": "Created At Sim Time",
+     "type": "number"
+    },
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "summary": {
+     "title": "Summary",
+     "type": "string"
+    }
+   },
+   "required": [
+    "id",
+    "created_at_sim_time",
+    "summary",
+    "cited_ids"
+   ],
+   "title": "Compaction",
+   "type": "object"
+  },
+  "DecisionTrace": {
+   "additionalProperties": false,
+   "description": "Per candidate per night: what was considered, what was chosen, and why not the rest.",
+   "properties": {
+    "belief_top": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Belief Top"
+    },
+    "chosen": {
+     "anyOf": [
+      {
+       "enum": [
+        "spectrum",
+        "photometry",
+        "wait"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "title": "Chosen"
+    },
+    "considered": {
+     "items": {
+      "$ref": "#/$defs/ActionValue"
+     },
+     "title": "Considered",
+     "type": "array"
+    },
+    "night_id": {
+     "title": "Night Id",
+     "type": "string"
+    },
+    "oid": {
+     "title": "Oid",
+     "type": "string"
+    },
+    "reason": {
+     "title": "Reason",
+     "type": "string"
+    },
+    "run_id": {
+     "title": "Run Id",
+     "type": "string"
+    },
+    "t_mjd": {
+     "title": "T Mjd",
+     "type": "number"
+    },
+    "why_not": {
+     "additionalProperties": {
+      "type": "string"
+     },
+     "title": "Why Not",
+     "type": "object"
+    }
+   },
+   "required": [
+    "run_id",
+    "night_id",
+    "oid",
+    "t_mjd",
+    "considered",
+    "chosen",
+    "reason"
+   ],
+   "title": "DecisionTrace",
+   "type": "object"
+  },
+  "Evidence": {
+   "additionalProperties": false,
+   "properties": {
+    "id": {
+     "title": "Id",
+     "type": "string"
+    },
+    "parsed": {
+     "additionalProperties": true,
+     "title": "Parsed",
+     "type": "object"
+    },
+    "query": {
+     "additionalProperties": true,
+     "title": "Query",
+     "type": "object"
+    },
+    "raw_excerpt_hash": {
+     "title": "Raw Excerpt Hash",
+     "type": "string"
+    },
+    "retrieved_at_sim_time": {
+     "description": "Simulated t of the run (MJD)",
+     "title": "Retrieved At Sim Time",
+     "type": "number"
+    },
+    "source": {
+     "enum": [
+      "tns",
+      "astronote",
+      "atel",
+      "gcn",
+      "simbad",
+      "ned",
+      "sherlock",
+      "gaia",
+      "wise",
+      "ps1",
+      "alerce",
+      "fink",
+      "arxiv",
+      "cutout",
+      "tool"
+     ],
+     "title": "Source",
+     "type": "string"
+    },
+    "source_date": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "description": "MJD of the record itself; None for static catalogs",
+     "title": "Source Date"
+    }
+   },
+   "required": [
+    "id",
+    "source",
+    "source_date",
+    "retrieved_at_sim_time",
+    "query",
+    "raw_excerpt_hash",
+    "parsed"
+   ],
+   "title": "Evidence",
+   "type": "object"
+  },
+  "EvidenceLedger": {
+   "additionalProperties": false,
+   "properties": {
+    "claims": {
+     "default": [],
+     "items": {
+      "$ref": "#/$defs/Claim"
+     },
+     "title": "Claims",
+     "type": "array"
+    },
+    "compactions": {
+     "default": [],
+     "items": {
+      "$ref": "#/$defs/Compaction"
+     },
+     "title": "Compactions",
+     "type": "array"
+    },
+    "entries": {
+     "default": [],
+     "items": {
+      "$ref": "#/$defs/Evidence"
+     },
+     "title": "Entries",
+     "type": "array"
+    },
+    "oid": {
+     "title": "Oid",
+     "type": "string"
+    },
+    "version": {
+     "title": "Version",
+     "type": "string"
+    }
+   },
+   "required": [
+    "oid",
+    "version"
+   ],
+   "title": "EvidenceLedger",
+   "type": "object"
+  },
+  "FacilityState": {
+   "additionalProperties": false,
+   "properties": {
+    "pointing_oid": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Pointing Oid"
+    },
+    "sim_level": {
+     "const": "L1",
+     "default": "L1",
+     "title": "Sim Level",
+     "type": "string"
+    },
+    "state": {
+     "default": "idle",
+     "enum": [
+      "idle",
+      "slewing",
+      "exposing",
+      "down"
+     ],
+     "title": "State",
+     "type": "string"
+    }
+   },
+   "title": "FacilityState",
+   "type": "object"
+  },
+  "FinkAlertRow": {
+   "additionalProperties": false,
+   "description": "Alert-time Fink scores for one detection (replay-safe photometry channel, \u00a76.1).",
+   "properties": {
+    "candid": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Candid"
+    },
+    "cdsxmatch": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Cdsxmatch"
+    },
+    "mjd": {
+     "title": "Mjd",
+     "type": "number"
+    },
+    "rf_snia_vs_nonia": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Rf Snia Vs Nonia"
+    },
+    "snn_sn_vs_all": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Snn Sn Vs All"
+    },
+    "snn_snia_vs_nonia": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Snn Snia Vs Nonia"
+    },
+    "tns_alert_time": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "Fink's TNS crossmatch label as of this alert (d:tns)",
+     "title": "Tns Alert Time"
+    }
+   },
+   "required": [
+    "mjd"
+   ],
+   "title": "FinkAlertRow",
+   "type": "object"
+  },
+  "FrameCandidate": {
+   "additionalProperties": false,
+   "properties": {
+    "alt": {
+     "title": "Alt",
+     "type": "number"
+    },
+    "az": {
+     "title": "Az",
+     "type": "number"
+    },
+    "belief_top": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Belief Top"
+    },
+    "expected_reward": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Expected Reward"
+    },
+    "is_real_detection_now": {
+     "default": false,
+     "title": "Is Real Detection Now",
+     "type": "boolean"
+    },
+    "oid": {
+     "title": "Oid",
+     "type": "string"
+    }
+   },
+   "required": [
+    "oid",
+    "alt",
+    "az"
+   ],
+   "title": "FrameCandidate",
+   "type": "object"
+  },
+  "MoonState": {
+   "additionalProperties": false,
+   "properties": {
+    "alt": {
+     "title": "Alt",
+     "type": "number"
+    },
+    "az": {
+     "title": "Az",
+     "type": "number"
+    },
+    "phase": {
+     "title": "Phase",
+     "type": "number"
+    }
+   },
+   "required": [
+    "alt",
+    "az",
+    "phase"
+   ],
+   "title": "MoonState",
+   "type": "object"
+  },
+  "NightFrame": {
+   "additionalProperties": false,
+   "properties": {
+    "candidates": {
+     "items": {
+      "$ref": "#/$defs/FrameCandidate"
+     },
+     "title": "Candidates",
+     "type": "array"
+    },
+    "events": {
+     "default": [],
+     "items": {
+      "$ref": "#/$defs/TheaterEvent"
+     },
+     "title": "Events",
+     "type": "array"
+    },
+    "facility": {
+     "$ref": "#/$defs/FacilityState"
+    },
+    "moon": {
+     "$ref": "#/$defs/MoonState"
+    },
+    "sun_alt": {
+     "title": "Sun Alt",
+     "type": "number"
+    },
+    "sun_az": {
+     "title": "Sun Az",
+     "type": "number"
+    },
+    "t_mjd": {
+     "title": "T Mjd",
+     "type": "number"
+    },
+    "twilight": {
+     "enum": [
+      "day",
+      "civil",
+      "nautical",
+      "astro",
+      "night"
+     ],
+     "title": "Twilight",
+     "type": "string"
+    }
+   },
+   "required": [
+    "t_mjd",
+    "sun_alt",
+    "sun_az",
+    "moon",
+    "twilight",
+    "candidates",
+    "facility"
+   ],
+   "title": "NightFrame",
+   "type": "object"
+  },
+  "Objective": {
+   "additionalProperties": false,
+   "properties": {
+    "description": {
+     "title": "Description",
+     "type": "string"
+    },
+    "id": {
+     "enum": [
+      "O1",
+      "O2",
+      "O3",
+      "O4"
+     ],
+     "title": "Id",
+     "type": "string"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "reward_table": {
+     "description": "Path of the versioned reward-table YAML",
+     "title": "Reward Table",
+     "type": "string"
+    }
+   },
+   "required": [
+    "id",
+    "name",
+    "description",
+    "reward_table"
+   ],
+   "title": "Objective",
+   "type": "object"
+  },
+  "Outcome": {
+   "additionalProperties": false,
+   "description": "What replay revealed after executing an action (\u00a73.3 step 5).",
+   "properties": {
+    "action": {
+     "enum": [
+      "spectrum",
+      "photometry",
+      "wait"
+     ],
+     "title": "Action",
+     "type": "string"
+    },
+    "night_id": {
+     "title": "Night Id",
+     "type": "string"
+    },
+    "oid": {
+     "title": "Oid",
+     "type": "string"
+    },
+    "realized_reward": {
+     "title": "Realized Reward",
+     "type": "number"
+    },
+    "revealed_class": {
+     "anyOf": [
+      {
+       "enum": [
+        "Ia",
+        "II",
+        "Ibc",
+        "other_luminous",
+        "contaminant"
+       ],
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Revealed Class"
+    },
+    "sim_level": {
+     "enum": [
+      "L0",
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "title": "Sim Level",
+     "type": "string"
+    },
+    "simulated": {
+     "title": "Simulated",
+     "type": "boolean"
+    },
+    "source": {
+     "description": "e.g. 'bts_truth', 'confusion_reveal', 'ztf_record', 'posterior_draw'",
+     "title": "Source",
+     "type": "string"
+    }
+   },
+   "required": [
+    "oid",
+    "night_id",
+    "action",
+    "realized_reward",
+    "sim_level",
+    "simulated",
+    "source"
+   ],
+   "title": "Outcome",
+   "type": "object"
+  },
+  "PhotometryPoint": {
+   "additionalProperties": false,
+   "description": "One ZTF difference-imaging measurement: a detection or a non-detection (upper limit).",
+   "properties": {
+    "band": {
+     "enum": [
+      "g",
+      "r",
+      "i"
+     ],
+     "title": "Band",
+     "type": "string"
+    },
+    "candid": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Candid"
+    },
+    "drb": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "Deep real/bogus score of the alert, if any",
+     "title": "Drb"
+    },
+    "is_detection": {
+     "title": "Is Detection",
+     "type": "boolean"
+    },
+    "isdiffpos": {
+     "anyOf": [
+      {
+       "type": "boolean"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Isdiffpos"
+    },
+    "limiting_mag": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "5-sigma limit (AB) if a non-detection",
+     "title": "Limiting Mag"
+    },
+    "mag": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "PSF magnitude (AB) if a detection",
+     "title": "Mag"
+    },
+    "mag_err": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Mag Err"
+    },
+    "mjd": {
+     "title": "Mjd",
+     "type": "number"
+    },
+    "sim_level": {
+     "default": "L0",
+     "enum": [
+      "L0",
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "title": "Sim Level",
+     "type": "string"
+    },
+    "simulated": {
+     "default": false,
+     "title": "Simulated",
+     "type": "boolean"
+    },
+    "source": {
+     "default": "alerce",
+     "enum": [
+      "alerce",
+      "fink",
+      "lasair",
+      "synthetic"
+     ],
+     "title": "Source",
+     "type": "string"
+    }
+   },
+   "required": [
+    "mjd",
+    "band",
+    "is_detection"
+   ],
+   "title": "PhotometryPoint",
+   "type": "object"
+  },
+  "RewardTable": {
+   "additionalProperties": false,
+   "description": "R(objective, class, phase_bin), hand-written, versioned, frozen before comparisons (\u00a76.2).",
+   "properties": {
+    "frozen_hash": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Frozen Hash"
+    },
+    "objective": {
+     "enum": [
+      "O1",
+      "O2",
+      "O3",
+      "O4"
+     ],
+     "title": "Objective",
+     "type": "string"
+    },
+    "phase_bins": {
+     "items": {
+      "type": "string"
+     },
+     "title": "Phase Bins",
+     "type": "array"
+    },
+    "rewards": {
+     "additionalProperties": {
+      "additionalProperties": {
+       "type": "number"
+      },
+      "type": "object"
+     },
+     "propertyNames": {
+      "enum": [
+       "Ia",
+       "II",
+       "Ibc",
+       "other_luminous",
+       "contaminant"
+      ]
+     },
+     "title": "Rewards",
+     "type": "object"
+    },
+    "version": {
+     "title": "Version",
+     "type": "string"
+    }
+   },
+   "required": [
+    "version",
+    "objective",
+    "phase_bins",
+    "rewards"
+   ],
+   "title": "RewardTable",
+   "type": "object"
+  },
+  "RunConfig": {
+   "additionalProperties": false,
+   "description": "Logged into every run (\u00a713.2): seed, config hash, resolved model ids, cost.",
+   "properties": {
+    "code_version": {
+     "title": "Code Version",
+     "type": "string"
+    },
+    "config_hash": {
+     "title": "Config Hash",
+     "type": "string"
+    },
+    "config_hashes": {
+     "additionalProperties": {
+      "type": "string"
+     },
+     "description": "config name -> content hash",
+     "title": "Config Hashes",
+     "type": "object"
+    },
+    "mode": {
+     "enum": [
+      "exploratory",
+      "bench"
+     ],
+     "title": "Mode",
+     "type": "string"
+    },
+    "model_ids": {
+     "additionalProperties": {
+      "type": "string"
+     },
+     "title": "Model Ids",
+     "type": "object"
+    },
+    "run_id": {
+     "title": "Run Id",
+     "type": "string"
+    },
+    "script": {
+     "title": "Script",
+     "type": "string"
+    },
+    "seed": {
+     "title": "Seed",
+     "type": "integer"
+    }
+   },
+   "required": [
+    "run_id",
+    "mode",
+    "seed",
+    "config_hash",
+    "code_version",
+    "script"
+   ],
+   "title": "RunConfig",
+   "type": "object"
+  },
+  "RunManifest": {
+   "additionalProperties": false,
+   "description": "Written at the end of every run: the config plus the deterministic output hash and spend.",
+   "properties": {
+    "config": {
+     "$ref": "#/$defs/RunConfig"
+    },
+    "input_tokens": {
+     "default": 0,
+     "title": "Input Tokens",
+     "type": "integer"
+    },
+    "output_hash": {
+     "title": "Output Hash",
+     "type": "string"
+    },
+    "output_tokens": {
+     "default": 0,
+     "title": "Output Tokens",
+     "type": "integer"
+    },
+    "outputs": {
+     "additionalProperties": {
+      "type": "string"
+     },
+     "description": "artifact path -> sha256",
+     "title": "Outputs",
+     "type": "object"
+    },
+    "usd": {
+     "default": 0.0,
+     "title": "Usd",
+     "type": "number"
+    }
+   },
+   "required": [
+    "config",
+    "output_hash"
+   ],
+   "title": "RunManifest",
+   "type": "object"
+  },
+  "Schedule": {
+   "additionalProperties": false,
+   "properties": {
+    "budget": {
+     "title": "Budget",
+     "type": "integer"
+    },
+    "config_hash": {
+     "title": "Config Hash",
+     "type": "string"
+    },
+    "facility_id": {
+     "title": "Facility Id",
+     "type": "string"
+    },
+    "items": {
+     "items": {
+      "$ref": "#/$defs/ScheduledObservation"
+     },
+     "title": "Items",
+     "type": "array"
+    },
+    "night_id": {
+     "title": "Night Id",
+     "type": "string"
+    },
+    "objective_value": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Objective Value"
+    },
+    "solver": {
+     "enum": [
+      "cpsat",
+      "greedy",
+      "none"
+     ],
+     "title": "Solver",
+     "type": "string"
+    },
+    "solver_status": {
+     "title": "Solver Status",
+     "type": "string"
+    }
+   },
+   "required": [
+    "night_id",
+    "facility_id",
+    "budget",
+    "items",
+    "solver",
+    "solver_status",
+    "config_hash"
+   ],
+   "title": "Schedule",
+   "type": "object"
+  },
+  "ScheduledObservation": {
+   "additionalProperties": false,
+   "properties": {
+    "action": {
+     "enum": [
+      "spectrum",
+      "photometry",
+      "wait"
+     ],
+     "title": "Action",
+     "type": "string"
+    },
+    "end_mjd": {
+     "title": "End Mjd",
+     "type": "number"
+    },
+    "exposure_s": {
+     "title": "Exposure S",
+     "type": "number"
+    },
+    "oid": {
+     "title": "Oid",
+     "type": "string"
+    },
+    "overhead_s": {
+     "title": "Overhead S",
+     "type": "number"
+    },
+    "start_mjd": {
+     "title": "Start Mjd",
+     "type": "number"
+    }
+   },
+   "required": [
+    "oid",
+    "action",
+    "start_mjd",
+    "end_mjd",
+    "exposure_s",
+    "overhead_s"
+   ],
+   "title": "ScheduledObservation",
+   "type": "object"
+  },
+  "Snapshot": {
+   "additionalProperties": false,
+   "description": "The world as it was known at ``t_mjd`` (\u00a73.3). The only input to belief/value/schedule/investigator.",
+   "properties": {
+    "candidates": {
+     "items": {
+      "$ref": "#/$defs/CandidateState"
+     },
+     "title": "Candidates",
+     "type": "array"
+    },
+    "denylist_version": {
+     "title": "Denylist Version",
+     "type": "string"
+    },
+    "night_id": {
+     "title": "Night Id",
+     "type": "string"
+    },
+    "pool_config_hash": {
+     "title": "Pool Config Hash",
+     "type": "string"
+    },
+    "sources": {
+     "additionalProperties": {
+      "type": "string"
+     },
+     "title": "Sources",
+     "type": "object"
+    },
+    "t_mjd": {
+     "title": "T Mjd",
+     "type": "number"
+    }
+   },
+   "required": [
+    "t_mjd",
+    "night_id",
+    "candidates",
+    "pool_config_hash",
+    "denylist_version",
+    "sources"
+   ],
+   "title": "Snapshot",
+   "type": "object"
+  },
+  "Span": {
+   "additionalProperties": false,
+   "properties": {
+    "attrs": {
+     "additionalProperties": true,
+     "title": "Attrs",
+     "type": "object"
+    },
+    "cache_hit": {
+     "anyOf": [
+      {
+       "type": "boolean"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Cache Hit"
+    },
+    "error": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Error"
+    },
+    "input_tokens": {
+     "default": 0,
+     "title": "Input Tokens",
+     "type": "integer"
+    },
+    "kind": {
+     "enum": [
+      "tool",
+      "model",
+      "validator",
+      "solver",
+      "gate",
+      "plan",
+      "extract",
+      "replay"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "latency_ms": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "Wall-clock; excluded from output hashes",
+     "title": "Latency Ms"
+    },
+    "model_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "description": "Resolved model id, never an alias",
+     "title": "Model Id"
+    },
+    "name": {
+     "title": "Name",
+     "type": "string"
+    },
+    "output_tokens": {
+     "default": 0,
+     "title": "Output Tokens",
+     "type": "integer"
+    },
+    "parent_id": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Parent Id"
+    },
+    "prompt_hash": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Prompt Hash"
+    },
+    "response_hash": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Response Hash"
+    },
+    "span_id": {
+     "title": "Span Id",
+     "type": "string"
+    },
+    "status": {
+     "default": "ok",
+     "enum": [
+      "ok",
+      "error",
+      "skipped"
+     ],
+     "title": "Status",
+     "type": "string"
+    },
+    "usd": {
+     "default": 0.0,
+     "title": "Usd",
+     "type": "number"
+    }
+   },
+   "required": [
+    "span_id",
+    "kind",
+    "name"
+   ],
+   "title": "Span",
+   "type": "object"
+  },
+  "StampPrior": {
+   "additionalProperties": false,
+   "description": "ALeRCE stamp-classifier probabilities from the first alert (time-honest, \u00a76.1).",
+   "properties": {
+    "classifier_version": {
+     "title": "Classifier Version",
+     "type": "string"
+    },
+    "first_alert_mjd": {
+     "title": "First Alert Mjd",
+     "type": "number"
+    },
+    "probs": {
+     "additionalProperties": {
+      "type": "number"
+     },
+     "title": "Probs",
+     "type": "object"
+    }
+   },
+   "required": [
+    "first_alert_mjd",
+    "classifier_version",
+    "probs"
+   ],
+   "title": "StampPrior",
+   "type": "object"
+  },
+  "TheaterEvent": {
+   "additionalProperties": false,
+   "properties": {
+    "kind": {
+     "enum": [
+      "detection",
+      "report",
+      "gate",
+      "tool",
+      "claim",
+      "schedule",
+      "outcome"
+     ],
+     "title": "Kind",
+     "type": "string"
+    },
+    "label": {
+     "default": "",
+     "title": "Label",
+     "type": "string"
+    },
+    "oid": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Oid"
+    },
+    "ref_id": {
+     "title": "Ref Id",
+     "type": "string"
+    },
+    "sim_level": {
+     "enum": [
+      "L0",
+      "L1",
+      "L2",
+      "L3"
+     ],
+     "title": "Sim Level",
+     "type": "string"
+    },
+    "t_mjd": {
+     "title": "T Mjd",
+     "type": "number"
+    }
+   },
+   "required": [
+    "t_mjd",
+    "kind",
+    "ref_id",
+    "sim_level"
+   ],
+   "title": "TheaterEvent",
+   "type": "object"
+  },
+  "TheaterNight": {
+   "additionalProperties": false,
+   "description": "Header for one precomputed night: site, run provenance and the frame cadence.",
+   "properties": {
+    "astro_dawn_mjd": {
+     "title": "Astro Dawn Mjd",
+     "type": "number"
+    },
+    "astro_dusk_mjd": {
+     "title": "Astro Dusk Mjd",
+     "type": "number"
+    },
+    "cadence_min": {
+     "title": "Cadence Min",
+     "type": "number"
+    },
+    "config_hash": {
+     "title": "Config Hash",
+     "type": "string"
+    },
+    "end_mjd": {
+     "title": "End Mjd",
+     "type": "number"
+    },
+    "min_altitude_deg": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Min Altitude Deg"
+    },
+    "mode": {
+     "enum": [
+      "exploratory",
+      "bench"
+     ],
+     "title": "Mode",
+     "type": "string"
+    },
+    "n_candidates": {
+     "title": "N Candidates",
+     "type": "integer"
+    },
+    "n_frames": {
+     "title": "N Frames",
+     "type": "integer"
+    },
+    "night_id": {
+     "title": "Night Id",
+     "type": "string"
+    },
+    "run_id": {
+     "title": "Run Id",
+     "type": "string"
+    },
+    "site_height_m": {
+     "title": "Site Height M",
+     "type": "number"
+    },
+    "site_lat": {
+     "title": "Site Lat",
+     "type": "number"
+    },
+    "site_lon": {
+     "title": "Site Lon",
+     "type": "number"
+    },
+    "site_name": {
+     "title": "Site Name",
+     "type": "string"
+    },
+    "site_timezone": {
+     "anyOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Site Timezone"
+    },
+    "start_mjd": {
+     "title": "Start Mjd",
+     "type": "number"
+    },
+    "sunrise_mjd": {
+     "title": "Sunrise Mjd",
+     "type": "number"
+    },
+    "sunset_mjd": {
+     "title": "Sunset Mjd",
+     "type": "number"
+    }
+   },
+   "required": [
+    "run_id",
+    "night_id",
+    "mode",
+    "config_hash",
+    "site_name",
+    "site_lat",
+    "site_lon",
+    "site_height_m",
+    "start_mjd",
+    "end_mjd",
+    "cadence_min",
+    "n_frames",
+    "n_candidates",
+    "sunset_mjd",
+    "sunrise_mjd",
+    "astro_dusk_mjd",
+    "astro_dawn_mjd"
+   ],
+   "title": "TheaterNight",
+   "type": "object"
+  },
+  "Trace": {
+   "additionalProperties": false,
+   "description": "One per Investigator run; read by the console (\u00a74.3).",
+   "properties": {
+    "config_version": {
+     "title": "Config Version",
+     "type": "string"
+    },
+    "cost_usd": {
+     "title": "Cost Usd",
+     "type": "number"
+    },
+    "mode": {
+     "enum": [
+      "exploratory",
+      "bench"
+     ],
+     "title": "Mode",
+     "type": "string"
+    },
+    "model_ids": {
+     "additionalProperties": {
+      "type": "string"
+     },
+     "title": "Model Ids",
+     "type": "object"
+    },
+    "oid": {
+     "title": "Oid",
+     "type": "string"
+    },
+    "run_id": {
+     "title": "Run Id",
+     "type": "string"
+    },
+    "spans": {
+     "items": {
+      "$ref": "#/$defs/Span"
+     },
+     "title": "Spans",
+     "type": "array"
+    },
+    "t_mjd": {
+     "title": "T Mjd",
+     "type": "number"
+    }
+   },
+   "required": [
+    "run_id",
+    "oid",
+    "t_mjd",
+    "config_version",
+    "mode",
+    "spans",
+    "cost_usd",
+    "model_ids"
+   ],
+   "title": "Trace",
+   "type": "object"
+  },
+  "ValidationCheck": {
+   "additionalProperties": false,
+   "properties": {
+    "detail": {
+     "default": "",
+     "title": "Detail",
+     "type": "string"
+    },
+    "name": {
+     "enum": [
+      "schema",
+      "provenance",
+      "date_le_t",
+      "geometry",
+      "type_specific",
+      "support"
+     ],
+     "title": "Name",
+     "type": "string"
+    },
+    "passed": {
+     "title": "Passed",
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "name",
+    "passed"
+   ],
+   "title": "ValidationCheck",
+   "type": "object"
+  },
+  "ValidationReport": {
+   "additionalProperties": false,
+   "properties": {
+    "accepted": {
+     "title": "Accepted",
+     "type": "boolean"
+    },
+    "checks": {
+     "items": {
+      "$ref": "#/$defs/ValidationCheck"
+     },
+     "title": "Checks",
+     "type": "array"
+    },
+    "rejected_reasons": {
+     "default": [],
+     "items": {
+      "type": "string"
+     },
+     "title": "Rejected Reasons",
+     "type": "array"
+    },
+    "support_score": {
+     "anyOf": [
+      {
+       "type": "number"
+      },
+      {
+       "type": "null"
+      }
+     ],
+     "default": null,
+     "title": "Support Score"
+    }
+   },
+   "required": [
+    "accepted",
+    "checks"
+   ],
+   "title": "ValidationReport",
+   "type": "object"
+  }
+ },
+ "title": "CosmicTriageContracts"
+}

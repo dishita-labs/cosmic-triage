@@ -1,0 +1,41 @@
+# Fields that must never cross into Snapshot(t) (ARCHITECTURE §3.3 step 1, §14.1).
+# Exact names are dropped from every raw record before any processing; `prefixes` match by prefix.
+# Final-history aggregates are dropped and recomputed from data <= t.
+version: "1.0"
+exact:
+  - type
+  - redshift
+  - class
+  - classifier
+  - probability
+  - probabilities
+  - ndethist
+  - ncovhist
+  - mjdstarthist
+  - mjdendhist
+  - jdstarthist
+  - jdendhist
+  - ndet
+  - lastmjd
+  - deltajd
+  - g_r_max
+  - g_r_max_corr
+  - g_r_mean
+  - g_r_mean_corr
+  - meanra
+  - meandec
+  - sigmara
+  - sigmadec
+  - lc_classifier
+  - ncand
+  - jdmax
+  - maggmin
+  - magrmin
+  - maggmax
+  - magrmax
+  - IAUID
+  - savedate
+prefixes:
+  - peak
+  - "v:"           # Fink object-level (final) aggregates
+  - "d:lc_features"

@@ -1,0 +1,143 @@
+[
+ {
+  "id": 1,
+  "assumption": "TNS report/classification dates obtainable (individual bot)",
+  "test": "register; one query",
+  "verdict": "BLOCKED: CREDENTIAL REQUIRED",
+  "evidence": [
+   "No TNS bot credentials in .env; no TNS call was attempted.",
+   "Fallback inspected (not adopted): Lasair crossmatch_tns for ZTF25aaafbbk -> [('2025N', 'SN Ia', '2025-01-02T14:06:24.192000')]; columns=['decl', 'disc_date', 'disc_int_name', 'disc_mag', 'disc_mag_filter', 'ext_catalogs', 'host_name', 'hostz', 'htm16', 'id', 'lasairmodified_date', 'lastmodified_date', 'ra', 'reporters', 'sender', 'source_group', 'tns_name', 'tns_prefix', 'type', 'z']. It has disc_date and lastmodified_date but NO classification date, and `type` is the current TNS type."
+  ],
+  "fallback": "Lasair/Fink TNS crossmatch tables (dates partial) \u2014 requires Fable decision (\u00a714.7) if TNS stays unavailable",
+  "needs_fable": true,
+  "credential": "TNS_BOT_ID/TNS_BOT_NAME/TNS_API_KEY",
+  "setup": "Log in at https://www.wis-tns.org, open 'My account' -> 'Bots' -> 'Add bot', then add TNS_BOT_ID, TNS_BOT_NAME and TNS_API_KEY to .env.",
+  "seconds": 0.6071360111236572
+ },
+ {
+  "id": 2,
+  "assumption": "Fink /objects POST returns per-alert d:* incl. d:tns, with upper limits",
+  "test": "one POST",
+  "verdict": "PASS",
+  "evidence": [
+   "ZTF25aaafbbk: 33 rows, tags={'valid': 8, 'upperlim': 24, 'badquality': 1}; distinct alert jd per valid row: True",
+   "missing required fields: none",
+   "d:tns over time (jd-2460000, value): [(678.91, ''), (690.98, 'SN Ia'), (692.87, 'SN Ia'), (694.97, 'SN Ia'), (697.94, 'SN Ia'), (699.91, 'SN Ia')] \u2014 changes from '' to a class after the TNS report, consistent with alert-time crossmatch semantics",
+   "quirk check ZTF25aaaalin: withupperlim=True -> 15 rows; withupperlim=False -> 10 rows. Mitigation: upper limits are taken from ALeRCE light curves; Fink is used for alert-time scores only."
+  ],
+  "fallback": "",
+  "needs_fable": false,
+  "credential": "",
+  "setup": "",
+  "seconds": 1.7619271278381348
+ },
+ {
+  "id": 5,
+  "assumption": "BTS CSV without filters includes unclassified saved candidates",
+  "test": "one download",
+  "verdict": "PASS",
+  "evidence": [
+   "snapshot 2026-10-18: 20599 rows, 7682 unclassified (type '-'); columns ['ZTFID', 'IAUID', 'savedate', 'discdate', 'RA', 'Dec', 'peakt', 'peakfilt', 'peakmag', 'peakabs', 'duration', 'rise', 'fade', 'type', 'redshift', 'b', 'A_V']",
+   "2025 peaks: 2499 rows, 974 unclassified; top types [('-', 974), ('SN Ia', 949), ('SN II', 244), ('CV', 56), ('AGN', 39)]",
+   "CSV has savedate/discdate but no classification date (as documented in \u00a72.2)."
+  ],
+  "fallback": "",
+  "needs_fable": false,
+  "credential": "",
+  "setup": "",
+  "seconds": 16.427448987960815
+ },
+ {
+  "id": 6,
+  "assumption": "Lasair token + Sherlock available; SIMBAD/NED rate limits tolerable with caching",
+  "test": "smoke tests",
+  "verdict": "PASS",
+  "evidence": [
+   "Lasair Sherlock (ZTF25aaafbbk): [('SN', 'UGC08239', 0.036, 22.964)]",
+   "Lasair Sherlock position endpoint keys: ['classifications', 'crossmatches']",
+   "SIMBAD: 10 cone searches (30\"), errors=0, rows=1, median latency 0.25s (paced; cached thereafter)",
+   "NED: 10 cone searches (30\"), errors=0, rows=66, median latency 1.10s (paced; cached thereafter)"
+  ],
+  "fallback": "",
+  "needs_fable": false,
+  "credential": "",
+  "setup": "",
+  "seconds": 15.91709280014038
+ },
+ {
+  "id": 7,
+  "assumption": "Jev and Claude keys; Jev call ~200 ms with ~500-token state",
+  "test": "one call each",
+  "verdict": "BLOCKED: CREDENTIAL REQUIRED",
+  "evidence": [
+   "No model call attempted (keys absent; and no spend budget approved by the owner)."
+  ],
+  "fallback": "M4 slips; architecture unaffected (\u00a711)",
+  "needs_fable": false,
+  "credential": "ANTHROPIC_API_KEY, TYPESAFE_API_KEY (or OPENROUTER_API_KEY)",
+  "setup": "ANTHROPIC_API_KEY: create at https://console.anthropic.com -> API keys. TYPESAFE_API_KEY: create at https://docs.typesafe.ai (quickstart) or use OPENROUTER_API_KEY (https://openrouter.ai/keys). Add to .env. Live calls are paid: the owner must also approve a spend budget.",
+  "seconds": 1.2874603271484375e-05
+ },
+ {
+  "id": 9,
+  "assumption": "CP-SAT solves 60 targets x 12 h in < 5 s",
+  "test": "toy model",
+  "verdict": "PASS",
+  "evidence": [
+   "trial 0: status=OPTIMAL obj=733 bound=733 time=0.01s",
+   "trial 1: status=OPTIMAL obj=702 bound=702 time=0.01s",
+   "trial 2: status=OPTIMAL obj=727 bound=727 time=0.01s",
+   "trial 3: status=OPTIMAL obj=736 bound=736 time=0.01s",
+   "trial 4: status=OPTIMAL obj=743 bound=743 time=0.01s"
+  ],
+  "fallback": "",
+  "needs_fable": false,
+  "credential": "",
+  "setup": "",
+  "seconds": 24.254809856414795
+ },
+ {
+  "id": 10,
+  "assumption": "Corpus ingestion (AstroNotes/ATels/GCN) feasible with dates",
+  "test": "crawl 1 month",
+  "verdict": "PARTIAL",
+  "evidence": [
+   "GCN: circulars 39543..39989: 447 dated in month, 0 fetch failures",
+   "ATel: 65 telegrams dated in month (from #17059 to #17123); 0 unparseable; 'Referred to by' and 'Related' (later telegrams) stripped at parse time",
+   "AstroNotes failed: RateLimited: astronote: HTTP 429: rate limited"
+  ],
+  "fallback": "restrict to TNS + catalogs for M2",
+  "needs_fable": false,
+  "credential": "",
+  "setup": "",
+  "seconds": 394.6527259349823
+ },
+ {
+  "id": 11,
+  "assumption": "Investigator decision impact may be small on easy candidates",
+  "test": "M3 design",
+  "verdict": "DEFERRED",
+  "evidence": [
+   "By architecture this is addressed in M3/M4 design (stratified easy/ambiguous/contaminant Tier-B; null results reported honestly). Not testable in M0."
+  ],
+  "fallback": "report null honestly; stratify",
+  "needs_fable": false,
+  "credential": "",
+  "setup": "",
+  "seconds": 3.0994415283203125e-06
+ },
+ {
+  "id": 12,
+  "assumption": "Jev first-option bias / literal reading",
+  "test": "M4",
+  "verdict": "DEFERRED",
+  "evidence": [
+   "By architecture measured in M4/M5 (option-order flip test). Also requires TYPESAFE_API_KEY and a spend budget (not configured)."
+  ],
+  "fallback": "randomize order, measure flips",
+  "needs_fable": false,
+  "credential": "",
+  "setup": "",
+  "seconds": 9.5367431640625e-07
+ }
+]

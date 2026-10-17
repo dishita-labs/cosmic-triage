@@ -1,0 +1,16 @@
+# Facility v1 (ARCHITECTURE §6.3): Palomar site, SEDM-like spectrograph.
+version: "1.0"
+id: palomar_sedm
+site:
+  name: Palomar Observatory
+  lat_deg: 33.3563
+  lon_deg: -116.8650
+  height_m: 1712.0
+  timezone: America/Los_Angeles
+instrument: sedm_like
+effective_mag_limit: 18.75     # SEDM paper: effective limit ~18.5-19
+overhead_s: 300
+min_altitude_deg: 30.0
+min_moon_sep_deg: 30.0
+# Spectra per night is set from pool statistics (§6.3): median(bright SN-like)/slots >= 2.
+budget_spectra_per_night: null

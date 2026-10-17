@@ -1,0 +1,32 @@
+
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.hypothesis/
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+
+# Local data (large, regenerable from cache scripts)
+data/cache/
+data/derived/
+
+# Console
+console/node_modules/
+console/dist/
+
+# Logs and local scratch
+runs/**/*.log
+*.npz
+console/*.tsbuildinfo

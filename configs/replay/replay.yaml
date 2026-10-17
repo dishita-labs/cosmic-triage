@@ -1,0 +1,7 @@
+version: "1.0"
+# Decision time for the night that begins on local calendar date D at Palomar: D 20:00 UTC (13:00 PDT / 12:00 PST),
+# i.e. after the previous night's data is complete and before sunset.
+decision_time_utc_hour: 20.0
+bts_snapshot_date: "2026-10-18"
+# Default M1 nights: five consecutive nights in spring 2025 (Virgo season; many SNe Ia).
+m1_nights: ["2025-04-01", "2025-04-02", "2025-04-03", "2025-04-04", "2025-04-05"]

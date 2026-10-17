@@ -1,0 +1,8 @@
+# BTS `type` string -> coarse class K (ARCHITECTURE §1.2). Unlisted types are `unmapped` and excluded from
+# class-level metrics (counted and reported). IIb/Ibn/Icn/Ca-rich are grouped with stripped-envelope (Ibc).
+version: "1.0"
+Ia: ["SN Ia", "SN Ia-91T", "SN Ia-91bg", "SN Ia-pec", "SN Iax", "SN Ia-CSM", "SN Ia-SC", "SN Ia-02es", "SN Ia-03fg"]
+II: ["SN II", "SN IIP", "SN IIL", "SN IIn", "SN II-pec", "SN IIn-pec"]
+Ibc: ["SN Ib", "SN Ic", "SN Ic-BL", "SN Ib/c", "SN IIb", "SN Ibn", "SN Icn", "SN Ib-pec", "SN Ic-pec", "SN Ib-Ca-rich", "SN Ca-rich", "SN Ibn/Icn"]
+other_luminous: ["SLSN-I", "SLSN-II", "SLSN-R", "TDE", "TDE-H", "TDE-He", "TDE-H-He", "TDE-featureless"]
+contaminant: ["AGN", "AGN?", "CV", "CV?", "nova", "LBV", "star", "varstar", "bogus", "Galactic", "QSO", "blazar", "YSO", "M dwarf", "ILRT", "LRN"]

@@ -1,0 +1,24 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff
+        entry: uv run ruff check --fix
+        language: system
+        types: [python]
+      - id: mypy-strict
+        name: mypy (strict on contracts + investigator)
+        entry: uv run mypy src/cosmic_triage/contracts src/cosmic_triage/investigator
+        language: system
+        pass_filenames: false
+        types: [python]
+      - id: import-linter
+        name: import-linter (Snapshot-only access)
+        entry: uv run lint-imports
+        language: system
+        pass_filenames: false
+        types: [python]
+      - id: no-dotenv
+        name: never commit .env
+        entry: bash -c 'for f in "$@"; do case "$f" in .env|.env.*) [ "$f" = .env.example ] || { echo "refusing to commit $f"; exit 1; };; esac; done' --
+        language: system
