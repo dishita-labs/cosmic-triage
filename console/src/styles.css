@@ -126,6 +126,7 @@ select { background: var(--panel-solid); border: 1px solid var(--line); border-r
 .sw-real { background: var(--real); box-shadow: 0 0 0.6em rgba(143, 232, 255, 0.7); }
 .sw-dim { background: #3f6c88; }
 .sw-sim { border: 2px dashed var(--sim); background: transparent; }
+.sw-model { border: 2px dotted #ffd479; background: transparent; }
 
 .th-bottom { padding: 0.4em 1.4em 0.8em; display: grid; gap: 0.5em; }
 .controls { display: flex; align-items: center; gap: 0.7em; }

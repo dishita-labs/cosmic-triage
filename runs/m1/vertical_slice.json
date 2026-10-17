@@ -1,0 +1,86 @@
+{
+ "chosen": {
+  "oid": "ZTF25aankqhe",
+  "iau": "SN2025hnv",
+  "peakmag": 17.7773,
+  "peak_mjd": 60794.41000000015,
+  "nights": [
+   "2025-04-20",
+   "2025-04-21",
+   "2025-04-22",
+   "2025-04-23"
+  ],
+  "pre_peak_nights": [
+   "2025-04-20",
+   "2025-04-21",
+   "2025-04-22",
+   "2025-04-23"
+  ],
+  "sherlock": [
+   {
+    "classification": "SN",
+    "catalogue_object_id": "1237668332027641933",
+    "catalogue_table_name": "SDSS/2MASS/PS1",
+    "separationArcsec": 13.67,
+    "z": 0.052,
+    "photoZ": 0.041,
+    "association_type": "SN"
+   }
+  ],
+  "tns": [
+   {
+    "tns_prefix": "SN",
+    "tns_name": "2025hnv",
+    "type": "SN Ia",
+    "disc_date": "2025-04-17T22:42:27.360000",
+    "z": 0.052
+   }
+  ],
+  "fink_first_alert_with_tns_SN_Ia_mjd": 60789.33748839982,
+  "qualifies": true
+ },
+ "checked": [
+  {
+   "oid": "ZTF25aankqhe",
+   "iau": "SN2025hnv",
+   "peakmag": 17.7773,
+   "peak_mjd": 60794.41000000015,
+   "nights": [
+    "2025-04-20",
+    "2025-04-21",
+    "2025-04-22",
+    "2025-04-23"
+   ],
+   "pre_peak_nights": [
+    "2025-04-20",
+    "2025-04-21",
+    "2025-04-22",
+    "2025-04-23"
+   ],
+   "sherlock": [
+    {
+     "classification": "SN",
+     "catalogue_object_id": "1237668332027641933",
+     "catalogue_table_name": "SDSS/2MASS/PS1",
+     "separationArcsec": 13.67,
+     "z": 0.052,
+     "photoZ": 0.041,
+     "association_type": "SN"
+    }
+   ],
+   "tns": [
+    {
+     "tns_prefix": "SN",
+     "tns_name": "2025hnv",
+     "type": "SN Ia",
+     "disc_date": "2025-04-17T22:42:27.360000",
+     "z": 0.052
+    }
+   ],
+   "fink_first_alert_with_tns_SN_Ia_mjd": 60789.33748839982,
+   "qualifies": true
+  }
+ ],
+ "criteria": "BTS type == 'SN Ia' and IAU name SN2025*; Lasair Sherlock classification SN with a catalogued host; Lasair crossmatch_tns type SN Ia; in an M1 pool night",
+ "caveat": "TNS classification verified through Lasair's TNS crossmatch (TNS bot credentials not configured)."
+}

@@ -1,0 +1,72 @@
+[
+ {
+  "criterion": "C1 all 12 kill-tests have a recorded verdict",
+  "pass": true,
+  "detail": "#1:BLOCKED: CREDENTIAL REQUIRED, #2:PASS, #3:PASS, #4:PASS, #5:PASS, #6:PASS, #7:BLOCKED: CREDENTIAL REQUIRED, #8:PASS, #9:PASS, #10:PASS, #11:DEFERRED, #12:DEFERRED"
+ },
+ {
+  "criterion": "C1 failed #1-#5 carry a fallback flagged for Fable",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "criterion": "C1 runs/m0/killtests.md written",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "criterion": "C2 every contract round-trips JSON (tests/contracts)",
+  "pass": true,
+  "detail": "101 passed in 0.12s"
+ },
+ {
+  "criterion": "C3 uv run pytest green with COSMIC_OFFLINE=1 (sockets blocked)",
+  "pass": true,
+  "detail": "179 passed in 1.59s"
+ },
+ {
+  "criterion": "D scaffold layout (\u00a79)",
+  "pass": true,
+  "detail": "25 dirs"
+ },
+ {
+  "criterion": "D contracts package has every type in \u00a73/\u00a74.3/\u00a713.3",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "criterion": "D recorded fixtures for every external API touched",
+  "pass": true,
+  "detail": "['alerce', 'fink', 'lasair', 'bts', 'simbad', 'ned', 'gcn', 'atel', 'astronote'] (TNS: not touched \u2014 credential blocked)"
+ },
+ {
+  "criterion": "D .env.example present with names only",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "criterion": "D .env is git-ignored and untracked",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "criterion": "D pre-commit config (ruff)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "criterion": "D ruff clean",
+  "pass": true,
+  "detail": "All checks passed!"
+ },
+ {
+  "criterion": "D mypy --strict on contracts + investigator",
+  "pass": true,
+  "detail": "Success: no issues found in 21 source files"
+ },
+ {
+  "criterion": "D import-linter contracts kept",
+  "pass": true,
+  "detail": "Contracts: 5 kept, 0 broken."
+ }
+]

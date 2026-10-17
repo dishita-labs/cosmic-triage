@@ -1,0 +1,239 @@
+{
+ "nights": [
+  {
+   "night": "2025-04-19",
+   "t_mjd": 60784.833333333336,
+   "superset": 2785,
+   "pool": 95,
+   "bright_le_18p5_at_t": 59,
+   "bright_sn_like": 59,
+   "labels": {
+    "contaminant": 36,
+    "class": 25,
+    "unknown": 18,
+    "unscored": 16
+   },
+   "classes": {
+    "Ia": 20,
+    "II": 5
+   },
+   "bts_saved_by_t_in_superset": 53,
+   "bts_saved_by_t_in_pool": 42,
+   "bts_missed_reasons": {
+    "near_bright_star": 1,
+    "too_few_detections": 1,
+    "fainter_than_max_mag": 10
+   },
+   "rejection_reasons": {
+    "no_real_alert_le_t": 970,
+    "too_few_detections": 1045,
+    "fainter_than_max_mag": 1027,
+    "star_like_counterpart": 158,
+    "detections_too_close_in_time": 1546,
+    "near_bright_star": 324,
+    "first_detection_before_window": 298,
+    "galactic_plane": 60
+   }
+  },
+  {
+   "night": "2025-04-20",
+   "t_mjd": 60785.833333333336,
+   "superset": 2889,
+   "pool": 104,
+   "bright_le_18p5_at_t": 62,
+   "bright_sn_like": 62,
+   "labels": {
+    "contaminant": 40,
+    "unscored": 19,
+    "class": 25,
+    "unknown": 20
+   },
+   "classes": {
+    "Ia": 23,
+    "II": 1,
+    "Ibc": 1
+   },
+   "bts_saved_by_t_in_superset": 52,
+   "bts_saved_by_t_in_pool": 43,
+   "bts_missed_reasons": {
+    "near_bright_star": 1,
+    "too_few_detections": 3,
+    "fainter_than_max_mag": 7
+   },
+   "rejection_reasons": {
+    "no_real_alert_le_t": 1035,
+    "too_few_detections": 1116,
+    "fainter_than_max_mag": 1092,
+    "star_like_counterpart": 152,
+    "detections_too_close_in_time": 1582,
+    "near_bright_star": 344,
+    "first_detection_before_window": 95,
+    "galactic_plane": 60
+   }
+  },
+  {
+   "night": "2025-04-21",
+   "t_mjd": 60786.833333333336,
+   "superset": 3032,
+   "pool": 103,
+   "bright_le_18p5_at_t": 52,
+   "bright_sn_like": 52,
+   "labels": {
+    "contaminant": 39,
+    "unscored": 22,
+    "class": 24,
+    "unknown": 18
+   },
+   "classes": {
+    "Ia": 23,
+    "Ibc": 1
+   },
+   "bts_saved_by_t_in_superset": 51,
+   "bts_saved_by_t_in_pool": 41,
+   "bts_missed_reasons": {
+    "near_bright_star": 1,
+    "too_few_detections": 5,
+    "fainter_than_max_mag": 8,
+    "no_real_alert_le_t": 1
+   },
+   "rejection_reasons": {
+    "no_real_alert_le_t": 1117,
+    "too_few_detections": 1210,
+    "fainter_than_max_mag": 1171,
+    "star_like_counterpart": 155,
+    "first_detection_before_window": 286,
+    "detections_too_close_in_time": 1639,
+    "near_bright_star": 378,
+    "galactic_plane": 57
+   }
+  },
+  {
+   "night": "2025-04-22",
+   "t_mjd": 60787.833333333336,
+   "superset": 3208,
+   "pool": 102,
+   "bright_le_18p5_at_t": 51,
+   "bright_sn_like": 51,
+   "labels": {
+    "contaminant": 40,
+    "unscored": 23,
+    "class": 23,
+    "unknown": 16
+   },
+   "classes": {
+    "Ia": 21,
+    "Ibc": 2
+   },
+   "bts_saved_by_t_in_superset": 54,
+   "bts_saved_by_t_in_pool": 39,
+   "bts_missed_reasons": {
+    "fainter_than_max_mag": 14,
+    "too_few_detections": 4
+   },
+   "rejection_reasons": {
+    "no_real_alert_le_t": 1210,
+    "too_few_detections": 1312,
+    "fainter_than_max_mag": 1286,
+    "star_like_counterpart": 170,
+    "near_bright_star": 418,
+    "detections_too_close_in_time": 1702,
+    "first_detection_before_window": 316,
+    "galactic_plane": 64
+   }
+  },
+  {
+   "night": "2025-04-23",
+   "t_mjd": 60788.833333333336,
+   "superset": 3045,
+   "pool": 102,
+   "bright_le_18p5_at_t": 47,
+   "bright_sn_like": 47,
+   "labels": {
+    "contaminant": 37,
+    "unscored": 27,
+    "unknown": 17,
+    "class": 21
+   },
+   "classes": {
+    "Ia": 19,
+    "other_luminous": 1,
+    "Ibc": 1
+   },
+   "bts_saved_by_t_in_superset": 55,
+   "bts_saved_by_t_in_pool": 38,
+   "bts_missed_reasons": {
+    "fainter_than_max_mag": 16,
+    "too_few_detections": 4
+   },
+   "rejection_reasons": {
+    "no_real_alert_le_t": 1170,
+    "too_few_detections": 1255,
+    "fainter_than_max_mag": 1244,
+    "star_like_counterpart": 141,
+    "near_bright_star": 410,
+    "detections_too_close_in_time": 1598,
+    "first_detection_before_window": 487,
+    "galactic_plane": 58
+   }
+  }
+ ],
+ "median_bright_sn_like": 52,
+ "ratios": {
+  "1": 52.0,
+  "2": 26.0,
+  "3": 17.333333333333332,
+  "4": 13.0,
+  "5": 10.4,
+  "6": 8.666666666666666,
+  "7": 7.428571428571429,
+  "8": 6.5,
+  "9": 5.777777777777778,
+  "10": 5.2,
+  "11": 4.7272727272727275,
+  "12": 4.333333333333333,
+  "13": 4.0,
+  "14": 3.7142857142857144,
+  "15": 3.466666666666667,
+  "16": 3.25,
+  "17": 3.0588235294117645,
+  "18": 2.888888888888889,
+  "19": 2.736842105263158,
+  "20": 2.6,
+  "21": 2.4761904761904763,
+  "22": 2.3636363636363638,
+  "23": 2.260869565217391,
+  "24": 2.1666666666666665,
+  "25": 2.08,
+  "26": 2.0,
+  "27": 1.9259259259259258,
+  "28": 1.8571428571428572,
+  "29": 1.793103448275862,
+  "30": 1.7333333333333334,
+  "31": 1.6774193548387097,
+  "32": 1.625,
+  "33": 1.5757575757575757,
+  "34": 1.5294117647058822,
+  "35": 1.4857142857142858,
+  "36": 1.4444444444444444,
+  "37": 1.4054054054054055,
+  "38": 1.368421052631579,
+  "39": 1.3333333333333333,
+  "40": 1.3,
+  "41": 1.2682926829268293,
+  "42": 1.2380952380952381,
+  "43": 1.2093023255813953,
+  "44": 1.1818181818181819,
+  "45": 1.1555555555555554,
+  "46": 1.1304347826086956,
+  "47": 1.1063829787234043,
+  "48": 1.0833333333333333,
+  "49": 1.0612244897959184,
+  "50": 1.04,
+  "51": 1.0196078431372548,
+  "52": 1.0
+ },
+ "budget_max_binding": 26,
+ "prefilter_hash": "9f64125e3daf437c",
+ "replay_hash": "9429bcc4430130b0",
+ "scored_peak_mag": 18.5
+}

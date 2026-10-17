@@ -22,6 +22,7 @@ from dataclasses import dataclass, field
 from datetime import date, timedelta
 from typing import Any
 
+import numpy as np
 from astropy.coordinates import SkyCoord
 from astropy.time import Time
 
@@ -144,8 +145,22 @@ class RawCandidate:
         return ctx
 
 
+def _icrs_to_galactic_matrix() -> np.ndarray:
+    """Rotation matrix ICRS -> Galactic, derived once from astropy (rows = Galactic x/y/z axes in ICRS)."""
+    axes = SkyCoord(x=[1.0, 0.0, 0.0], y=[0.0, 1.0, 0.0], z=[0.0, 0.0, 1.0], frame="icrs", representation_type="cartesian")
+    g = axes.galactic.cartesian
+    return np.vstack([g.x.value, g.y.value, g.z.value])
+
+
+_ICRS2GAL = _icrs_to_galactic_matrix()
+
+
 def galactic_b(ra: float, dec: float) -> float:
-    return float(SkyCoord(ra=ra, dec=dec, unit="deg", frame="icrs").galactic.b.deg)
+    """Galactic latitude (deg). Same result as astropy's SkyCoord(...).galactic.b, ~1000x faster per call."""
+    r, d = math.radians(ra), math.radians(dec)
+    v = np.array([math.cos(d) * math.cos(r), math.cos(d) * math.sin(r), math.sin(d)])
+    z = float(_ICRS2GAL[2] @ v)
+    return math.degrees(math.asin(max(-1.0, min(1.0, z))))
 
 
 @dataclass(frozen=True)
@@ -166,10 +181,16 @@ def evaluate(raw: RawCandidate, t: float, cfg: PrefilterConfig) -> FilterResult:
     first = min(d["mjd"] for d in dets)
     if first < t - cfg.window_days:
         reasons.append("first_detection_before_window")
+    # Mirrors the BTS alert filter: the *alert* must pass drb (and the magnitude cut), while the detection count
+    # and time span come from the position's detection history (like ndethist / jd - jdstarthist), recomputed from
+    # positive detections <= t. History detections from prv_candidates carry no drb in the broker record.
     q = raw.qualifying(t, cfg)
-    if len(q) < cfg.min_detections:
-        reasons.append("too_few_qualifying_detections")
-    elif (max(d["mjd"] for d in q) - min(d["mjd"] for d in q)) * 1440.0 < cfg.min_separation_min:
+    hist = [d for d in dets if _positive(d.get("isdiffpos")) is not False and _f(d.get("magpsf")) is not None]
+    if not q:
+        reasons.append("no_real_alert_le_t")
+    if len(hist) < cfg.min_detections:
+        reasons.append("too_few_detections")
+    elif (max(d["mjd"] for d in hist) - min(d["mjd"] for d in hist)) * 1440.0 < cfg.min_separation_min:
         reasons.append("detections_too_close_in_time")
     brightest = min((float(d["magpsf"]) for d in q), default=None)
     if brightest is None or brightest > cfg.max_mag:

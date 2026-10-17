@@ -21,7 +21,7 @@ class AlerceClient:
 
     def __init__(self, cache: Cache, http: HttpClient | None = None) -> None:
         self.cache = cache
-        self.http = http or HttpClient(self.name, min_interval_s=0.05, offline=cache.offline)
+        self.http = http or HttpClient(self.name, min_interval_s=0.05, max_retries=7, offline=cache.offline)
 
     def objects(self, firstmjd: tuple[float, float], page_size: int = 1000, **filters: Any) -> list[dict[str, Any]]:
         """All objects whose ALeRCE ``firstmjd`` (first alert) lies in [a, b). Paginates fully."""

@@ -103,7 +103,8 @@ def kt2_fink(cache: Cache) -> Verdict:
     quirk = fink.object_rows("ZTF25aaaalin", with_upperlim=True)
     quirk2 = fink.object_rows("ZTF25aaaalin", with_upperlim=False)
     v.evidence.append(
-        f"quirk check ZTF25aaaalin: withupperlim=True -> {len(quirk)} rows; withupperlim=False -> {len(quirk2)} rows. "
+        f"quirk check ZTF25aaaalin: withupperlim=True -> {len(quirk)} rows; withupperlim=False -> {len(quirk2)} rows "
+        "(during M0 probing the withupperlim=True call once returned [] for this object — transient). "
         "Mitigation: upper limits are taken from ALeRCE light curves; Fink is used for alert-time scores only."
     )
     ok = not missing and per_alert and tags.get("upperlim", 0) > 0

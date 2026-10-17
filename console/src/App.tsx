@@ -6,7 +6,9 @@ import CandidatesView from "./components/CandidatesView";
 type Tab = "theater" | "candidates";
 
 export default function App() {
-  const [tab, setTab] = useState<Tab>("theater");
+  // Hash routing (#theater, #candidates, #candidates/<oid>) so views are linkable.
+  const initial = window.location.hash.replace(/^#/, "").split("/");
+  const [tab, setTab] = useState<Tab>(initial[0] === "candidates" ? "candidates" : "theater");
   const [runs, setRuns] = useState<RunInfo[]>([]);
   const [nights, setNights] = useState<TheaterNightRef[]>([]);
   const [current, setCurrent] = useState<TheaterNightRef | null>(null);
@@ -19,10 +21,15 @@ export default function App() {
         setRuns(r);
         setNights(n);
         if (n.length) setCurrent(n[0]);
-        if (r.length) setSel({ run: r[0].run_id, night: r[0].nights[0] ?? null, oid: null });
+        if (r.length) setSel({ run: r[0].run_id, night: r[0].nights[0] ?? null, oid: initial[1] || null });
       })
       .catch((e) => setErr(String(e)));
   }, []);
+
+  useEffect(() => {
+    const h = tab === "candidates" && sel.oid ? `#candidates/${sel.oid}` : `#${tab}`;
+    if (window.location.hash !== h) window.history.replaceState(null, "", h);
+  }, [tab, sel.oid]);
 
   return (
     <div className={`app tab-${tab}`}>

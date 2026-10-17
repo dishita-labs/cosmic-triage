@@ -46,7 +46,7 @@ export default function LightCurve({ points, tSnapshot, cursor, compact }: Props
         font: { color: "#cdd8ee", family: "Inter, system-ui, sans-serif", size: compact ? 10 : 13 },
         margin: compact ? { l: 36, r: 8, t: 6, b: 26 } : { l: 56, r: 18, t: 16, b: 48 },
         showlegend: !compact, legend: { orientation: "h", y: -0.18 },
-        xaxis: { title: compact ? undefined : { text: "MJD" }, range: [lo, hi], gridcolor: "rgba(255,255,255,0.06)", zeroline: false },
+        xaxis: { title: compact ? undefined : { text: "MJD" }, tickformat: "d", range: [lo, hi], gridcolor: "rgba(255,255,255,0.06)", zeroline: false },
         yaxis: { title: compact ? undefined : { text: "AB magnitude" }, autorange: "reversed", gridcolor: "rgba(255,255,255,0.06)", zeroline: false },
         shapes: [
           { type: "line", x0: tSnapshot, x1: tSnapshot, yref: "paper", y0: 0, y1: 1, line: { color: "#ffb347", width: 1.5 } },

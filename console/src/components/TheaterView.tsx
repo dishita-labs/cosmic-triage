@@ -205,6 +205,7 @@ export default function TheaterView({ nights, current, onPick, onOpenCandidate }
             <div className="lg-row"><span className="sw sw-real" /> Candidate (real ZTF, ≤ t) · <span className="badge l0">L0</span></div>
             <div className="lg-row"><span className="sw sw-dim" /> Below the {minAlt}° facility limit</div>
             <div className="lg-row"><span className="sw sw-sim" /> Simulated facility · idle until S1 · <span className="badge l1">L1</span></div>
+            <div className="lg-row"><span className="sw sw-model" /> Model prediction (belief, reward) · from M3</div>
             <div className="lg-row muted">Marker size: latest real magnitude. Positions: astropy, 5-min frames.</div>
           </section>
         </aside>
@@ -223,7 +224,7 @@ export default function TheaterView({ nights, current, onPick, onOpenCandidate }
         </div>
         <Scrubber header={h} frames={data.frames} t={t} timeZone={tz} onSeek={setT} />
         <div className="provenance">
-          {h.mode === "bench" ? <>run <code>{h.run_id}</code> · config <code>{h.config_hash}</code></> : <>EXPLORATORY run <code>{h.run_id}</code></>}
+          <span>{h.mode === "bench" ? <>run <code>{h.run_id}</code> · config <code>{h.config_hash}</code></> : <>EXPLORATORY run <code>{h.run_id}</code></>}</span>
           <span className="keys">space play · ←/→ 5 min · shift 1 h · F full screen · L labels</span>
         </div>
       </footer>

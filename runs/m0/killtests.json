@@ -12,7 +12,7 @@
   "needs_fable": true,
   "credential": "TNS_BOT_ID/TNS_BOT_NAME/TNS_API_KEY",
   "setup": "Log in at https://www.wis-tns.org, open 'My account' -> 'Bots' -> 'Add bot', then add TNS_BOT_ID, TNS_BOT_NAME and TNS_API_KEY to .env.",
-  "seconds": 0.6071360111236572
+  "seconds": 0.0011510848999023438
  },
  {
   "id": 2,
@@ -23,13 +23,43 @@
    "ZTF25aaafbbk: 33 rows, tags={'valid': 8, 'upperlim': 24, 'badquality': 1}; distinct alert jd per valid row: True",
    "missing required fields: none",
    "d:tns over time (jd-2460000, value): [(678.91, ''), (690.98, 'SN Ia'), (692.87, 'SN Ia'), (694.97, 'SN Ia'), (697.94, 'SN Ia'), (699.91, 'SN Ia')] \u2014 changes from '' to a class after the TNS report, consistent with alert-time crossmatch semantics",
-   "quirk check ZTF25aaaalin: withupperlim=True -> 15 rows; withupperlim=False -> 10 rows. Mitigation: upper limits are taken from ALeRCE light curves; Fink is used for alert-time scores only."
+   "quirk check ZTF25aaaalin: withupperlim=True -> 15 rows; withupperlim=False -> 10 rows (during M0 probing the withupperlim=True call once returned [] for this object \u2014 transient). Mitigation: upper limits are taken from ALeRCE light curves; Fink is used for alert-time scores only."
   ],
   "fallback": "",
   "needs_fable": false,
   "credential": "",
   "setup": "",
-  "seconds": 1.7619271278381348
+  "seconds": 0.0014929771423339844
+ },
+ {
+  "id": 3,
+  "assumption": "Forward-pool volume per night manageable (<= ~500 after pre-filter)",
+  "test": "5 nights of /objects?firstmjd",
+  "verdict": "PASS",
+  "evidence": [
+   "pool size after time-honest pre-filter per night: {'2025-04-19': 95, '2025-04-20': 104, '2025-04-21': 103, '2025-04-22': 102, '2025-04-23': 102} (median 102)",
+   "per night: ALeRCE objects first alerted that UTC day with final ndet>=2 (REST /objects?firstmjd) / that day's superset after necessary cuts (all-time brightest <= 19, |b|, PS1 star) / 15-day window superset hydrated: 2025-04-19: 55/12/2785, 2025-04-20: 2758/402/2889, 2025-04-21: 11230/238/3032, 2025-04-22: 3543/462/3208, 2025-04-23: 1010/153/3045"
+  ],
+  "fallback": "",
+  "needs_fable": false,
+  "credential": "",
+  "setup": "",
+  "seconds": 1.0859997272491455
+ },
+ {
+  "id": 4,
+  "assumption": "Budget binds: median(bright SN-like candidates)/slots >= 2",
+  "test": "count over candidate window",
+  "verdict": "PASS",
+  "evidence": [
+   "bright (brightest qualifying mag <= 18.5 at t) & SN-like (latest alert-time Fink cdsxmatch not stellar/AGN) pool members per night: {'2025-04-19': 59, '2025-04-20': 62, '2025-04-21': 52, '2025-04-22': 51, '2025-04-23': 47}; median 52",
+   "largest budget with median/slots >= 2: 26 spectra/night (architecture floor if the sky is thin: 3-4 spectra/night)"
+  ],
+  "fallback": "",
+  "needs_fable": false,
+  "credential": "",
+  "setup": "",
+  "seconds": 1.0449020862579346
  },
  {
   "id": 5,
@@ -45,7 +75,7 @@
   "needs_fable": false,
   "credential": "",
   "setup": "",
-  "seconds": 16.427448987960815
+  "seconds": 0.3892819881439209
  },
  {
   "id": 6,
@@ -55,14 +85,14 @@
   "evidence": [
    "Lasair Sherlock (ZTF25aaafbbk): [('SN', 'UGC08239', 0.036, 22.964)]",
    "Lasair Sherlock position endpoint keys: ['classifications', 'crossmatches']",
-   "SIMBAD: 10 cone searches (30\"), errors=0, rows=1, median latency 0.25s (paced; cached thereafter)",
-   "NED: 10 cone searches (30\"), errors=0, rows=66, median latency 1.10s (paced; cached thereafter)"
+   "SIMBAD: 10 cone searches (30\"), errors=0, rows=1, median latency 0.00s (paced; cached thereafter)",
+   "NED: 10 cone searches (30\"), errors=0, rows=66, median latency 0.00s (paced; cached thereafter)"
   ],
   "fallback": "",
   "needs_fable": false,
   "credential": "",
   "setup": "",
-  "seconds": 15.91709280014038
+  "seconds": 0.00437617301940918
  },
  {
   "id": 7,
@@ -76,7 +106,24 @@
   "needs_fable": false,
   "credential": "ANTHROPIC_API_KEY, TYPESAFE_API_KEY (or OPENROUTER_API_KEY)",
   "setup": "ANTHROPIC_API_KEY: create at https://console.anthropic.com -> API keys. TYPESAFE_API_KEY: create at https://docs.typesafe.ai (quickstart) or use OPENROUTER_API_KEY (https://openrouter.ai/keys). Add to .env. Live calls are paid: the owner must also approve a spend budget.",
-  "seconds": 1.2874603271484375e-05
+  "seconds": 8.821487426757812e-06
+ },
+ {
+  "id": 8,
+  "assumption": "btsbot installs and runs on ALeRCE stamps",
+  "test": "inference on 10 alerts",
+  "verdict": "PASS",
+  "evidence": [
+   "btsbot 2.0.6 (torch 2.14.1) installed in an isolated venv; model nabeelr/BTSbot-convnext-pico-galaxyzoo (image-only)",
+   "10 first-alert ALeRCE FITS triplets scored on CPU; load 12.1s, inference 0.22s",
+   "scores (sigmoid; higher = BTS-worthy SN-like): ZTF25aaaalin (SN Ia): 0.462; ZTF25aaaauxw (SN Ia): 0.762; ZTF25aaaawig (SN Ia): 0.157; ZTF25aaabezb (SN Ia): 0.537; ZTF25aaabnxh (SN Ia): 0.119; ZTF25aacawsr (AGN): 0.220; ZTF25aaqvwgk (CV): 0.997; ZTF25aaynaqk (CV): 0.261; ZTF25abmwwga (CV): 0.872; ZTF25absjvvl (CV): 0.991",
+   "Image-only model used (the multimodal variant also needs 25 alert-packet features; M7 work)."
+  ],
+  "fallback": "",
+  "needs_fable": false,
+  "credential": "",
+  "setup": "",
+  "seconds": 0.0001499652862548828
  },
  {
   "id": 9,
@@ -84,7 +131,7 @@
   "test": "toy model",
   "verdict": "PASS",
   "evidence": [
-   "trial 0: status=OPTIMAL obj=733 bound=733 time=0.01s",
+   "trial 0: status=OPTIMAL obj=733 bound=733 time=0.03s",
    "trial 1: status=OPTIMAL obj=702 bound=702 time=0.01s",
    "trial 2: status=OPTIMAL obj=727 bound=727 time=0.01s",
    "trial 3: status=OPTIMAL obj=736 bound=736 time=0.01s",
@@ -94,23 +141,23 @@
   "needs_fable": false,
   "credential": "",
   "setup": "",
-  "seconds": 24.254809856414795
+  "seconds": 0.41855692863464355
  },
  {
   "id": 10,
   "assumption": "Corpus ingestion (AstroNotes/ATels/GCN) feasible with dates",
   "test": "crawl 1 month",
-  "verdict": "PARTIAL",
+  "verdict": "PASS",
   "evidence": [
    "GCN: circulars 39543..39989: 447 dated in month, 0 fetch failures",
    "ATel: 65 telegrams dated in month (from #17059 to #17123); 0 unparseable; 'Referred to by' and 'Related' (later telegrams) stripped at parse time",
-   "AstroNotes failed: RateLimited: astronote: HTTP 429: rate limited"
+   "AstroNotes: 29 notes with release/last-modified date in month (scanned 80 listing pages); date is 'last modified' (may post-date first release) \u2014 as-of filter must treat it as an upper bound; object tooltips with current TNS type/redshift stripped"
   ],
-  "fallback": "restrict to TNS + catalogs for M2",
+  "fallback": "",
   "needs_fable": false,
   "credential": "",
   "setup": "",
-  "seconds": 394.6527259349823
+  "seconds": 0.394697904586792
  },
  {
   "id": 11,
@@ -124,7 +171,7 @@
   "needs_fable": false,
   "credential": "",
   "setup": "",
-  "seconds": 3.0994415283203125e-06
+  "seconds": 2.6226043701171875e-06
  },
  {
   "id": 12,

@@ -48,3 +48,16 @@ def test_env_example_has_names_only() -> None:
 def test_dotenv_is_gitignored() -> None:
     lines = (settings.PROJECT_ROOT / ".gitignore").read_text().splitlines()
     assert ".env" in lines and "!.env.example" in lines
+
+
+def test_fast_galactic_latitude_matches_astropy() -> None:
+    import random
+
+    from astropy.coordinates import SkyCoord
+
+    from cosmic_triage.replay.pool import galactic_b
+
+    rng = random.Random(1)
+    for _ in range(200):
+        ra, dec = rng.uniform(0, 360), rng.uniform(-90, 90)
+        assert abs(galactic_b(ra, dec) - SkyCoord(ra=ra, dec=dec, unit="deg").galactic.b.deg) < 1e-6

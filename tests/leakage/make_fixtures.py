@@ -128,6 +128,13 @@ def fixtures() -> list[dict[str, Any]]:
     add("future_only_object", "An object whose first detection is after t must not appear at all.",
         lambda f: f["lightcurve"].update(detections=[det(T + 0.1, 18.0), det(T + 0.2, 18.0)]),
         {"member": False, "no_snapshot": True})
+    add("history_without_drb_counts", "A prv_candidates history detection (no drb) counts toward the history; the alert passes drb.",
+        lambda f: f["lightcurve"].update(detections=[det(T - 3.0, 18.9, drb=None), det(T - 2.0, 18.4)]),
+        {"member": True, "n_detections": 2})
+    add("no_real_alert_only_history", "History-only detections (no drb anywhere by t) never make an object a pool member.",
+        lambda f: f["lightcurve"].update(detections=[det(T - 3.0, 18.4, drb=None), det(T - 2.0, 18.3, drb=None),
+                                                     det(T + 0.5, 18.0)]),
+        {"member": False})
     return L
 
 

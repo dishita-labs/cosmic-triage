@@ -187,10 +187,10 @@ export default function SkyDome(p: Props) {
         const pnt = project(-9, az as number);
         return <text key={l as string} x={pnt.x} y={pnt.y + 9} className="cardinal">{l}</text>;
       })}
-      {[30, 60].map((a) => (
+      {[30, 60].filter((a) => a !== minAlt).map((a) => (
         <text key={a} x={cx + 6} y={cy - (r * (90 - a)) / 90 - 6} className="ring-label">{a}°</text>
       ))}
-      <text x={cx + 6} y={cy - minAltR + 18} className="limit-label">{minAlt}° limit</text>
+      <text x={cx + 6} y={cy - minAltR - 6} className="limit-label">{minAlt}° · facility limit</text>
       {!sunUp && now.sunAlt > -18 && (
         <text x={sunRim.x} y={sunRim.y} className="sun-below" textAnchor="middle"
           transform={`translate(${(sunRim.x - cx) * 0.08},${(sunRim.y - cy) * 0.08})`}>

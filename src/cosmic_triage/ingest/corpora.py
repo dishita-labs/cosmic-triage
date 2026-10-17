@@ -121,7 +121,7 @@ class AstroNoteClient:
 
     def __init__(self, cache: Cache, http: HttpClient | None = None) -> None:
         self.cache = cache
-        self.http = http or HttpClient(self.name, min_interval_s=2.0, offline=cache.offline)
+        self.http = http or HttpClient(self.name, min_interval_s=12.0, max_retries=1, offline=cache.offline)
 
     def listing_raw(self, page: int) -> str:
         def fetch() -> str:

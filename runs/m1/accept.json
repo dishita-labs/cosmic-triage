@@ -1,0 +1,75 @@
+{
+ "generated": "2026-10-18T02:55:51",
+ "checks": [
+  {
+   "criterion": "C1 Snapshot(t) for 5 consecutive nights from cache < 60 s (offline)",
+   "pass": true,
+   "detail": "1.2s; pool sizes {'2025-04-19': 95, '2025-04-20': 104, '2025-04-21': 103, '2025-04-22': 102, '2025-04-23': 102}"
+  },
+  {
+   "criterion": "C2 >= 20 leakage fixtures pass incl. the four named in \u00a710.3",
+   "pass": true,
+   "detail": "26 fixtures; 29 passed in 0.26s"
+  },
+  {
+   "criterion": "C3 pool-size + bright counts per night with budget-binding check (runs/m1/pool_stats.md)",
+   "pass": true,
+   "detail": "pools [95, 104, 103, 102, 102]; bright SN-like [59, 62, 52, 51, 47]; largest binding budget 26"
+  },
+  {
+   "criterion": "C3 budget binds at >= 3 spectra/night (else \u00a714.7 decision)",
+   "pass": true,
+   "detail": "B_max=26"
+  },
+  {
+   "criterion": "D replay spine deterministic: identical output hash on re-run",
+   "pass": true,
+   "detail": "ef006c8183e90878\u2026 (run m1spine-f8a4310da0-s0-2025-04-19-n5)"
+  },
+  {
+   "criterion": "C4 API serves every pool candidate (light curve) for every night",
+   "pass": true,
+   "detail": "506 candidate-nights served; missing []"
+  },
+  {
+   "criterion": "D Night Theater S0 frames at 5-min cadence for every night via /theater/*",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "criterion": "C4 console type-checks and builds (tsc + vite)",
+   "pass": true,
+   "detail": "- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit."
+  },
+  {
+   "criterion": "D Snapshot-only access: import-linter contracts kept",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "criterion": "D Snapshot-only access: boundary tests incl. injected-violation test",
+   "pass": true,
+   "detail": "6 passed in 0.25s"
+  },
+  {
+   "criterion": "D vertical-slice object identified (BTS SN Ia 2025 + Sherlock host + TNS class)",
+   "pass": true,
+   "detail": "ZTF25aankqhe"
+  },
+  {
+   "criterion": "D full test suite green offline",
+   "pass": true,
+   "detail": "179 passed in 1.80s"
+  },
+  {
+   "criterion": "D ruff clean",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "criterion": "D mypy --strict on contracts + investigator",
+   "pass": true,
+   "detail": "Success: no issues found in 21 source files"
+  }
+ ]
+}
