@@ -1,0 +1,17 @@
+# Paid-model spend cap (ARCHITECTURE §10.3 M2 Review-03 sequencing; §14.9). Enforced in code by
+# cosmic_triage.spend.SpendGuard before every live Claude / Jev call; running ledger: runs/spend.jsonl.
+#
+# NO PAID CALL IS MADE while `approved` is false. Only the owner flips it, after writing an explicit approval in the
+# session; record who/when/what in `approval`. Cached responses (offline replays) never spend and never need approval.
+version: "1.0"
+total_cap_usd: 20.0          # lifetime cap across all runs (sum of runs/spend.jsonl charges)
+approved: false
+approval: null               # e.g. {by: owner, date: 2026-10-19, approved_usd: 20.0, note: "M2 exploratory extractor + Jev"}
+ledger: runs/spend.jsonl
+# Prices used for the *pre-call* worst-case estimate (input tokens + max output tokens). ASSUMPTION: values below must be
+# checked against the providers' current price pages before approval; an unknown model id is refused.
+prices_usd_per_mtok:
+  claude-sonnet-5-5: {input: 3.0, output: 15.0}
+  claude-haiku-5-5: {input: 1.0, output: 5.0}
+  jev-latest: {input: 0.042, output: 0.0}
+  jev-1.14: {input: 0.042, output: 0.0}

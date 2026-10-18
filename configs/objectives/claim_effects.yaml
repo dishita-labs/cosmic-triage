@@ -1,0 +1,8 @@
+# Pre-registered, code-owned effects of validated claims (ARCHITECTURE §1.4, §4.1, §13.3 ClaimEffects).
+# M2 scope: only the effect §4.1 states outright is active (prior classification -> spectrum reward 0). The other
+# effects (absolute-magnitude constraint, contaminant prior, TDE/AGN weighting) are defined with the M3 belief and
+# reward tables and are logged as "deferred" until then. Editing this after M4 begins is a §14.3 trigger.
+version: "1.0"
+spectrum_reward_factor:
+  prior_classification: 0.0     # already classified at t (report_date or evidence_by): a spectrum would be wasted
+deferred_to_m3: [host_redshift, known_agn, star_counterpart, prior_flares, nuclear, analysis_result]

@@ -1,0 +1,80 @@
+{
+ "verdict": "INCOMPLETE (BLOCKED)",
+ "results": [
+  {
+   "name": "C1 20 runs at chosen t (10 BTS-classified, 10 contaminant/unknown)",
+   "status": "PASS",
+   "detail": "20 runs {'bts_classified': 10, 'contaminant_or_unknown': 10}"
+  },
+  {
+   "name": "C2 100% of runs terminate within budget",
+   "status": "PASS",
+   "detail": "20/20"
+  },
+  {
+   "name": "C3 0 accepted claims with source_date > t over all traces",
+   "status": "PASS",
+   "detail": "20 traces; 1 passed in 0.10s"
+  },
+  {
+   "name": "C4 >= 80% of runs end with >= 1 validated claim or explicit no_context_found",
+   "status": "PASS",
+   "detail": "20/20 (100%)"
+  },
+  {
+   "name": "C5 every run's trace renders (API 200, no leakage badge; console type-checks + builds)",
+   "status": "PASS",
+   "detail": "20/20 served; tsc ok; build ok"
+  },
+  {
+   "name": "C6 Jev calls logged for all 20",
+   "status": "BLOCKED",
+   "detail": "0/20 \u2014 BLOCKED: SPEND NOT APPROVED (owner approval required; spend approved=False); Jev gate/verifier implemented behind flags, tested with transport doubles, no paid call made"
+  },
+  {
+   "name": "C7 hand review of all 20 dossiers with error categories in runs/reports/M2.md",
+   "status": "PASS",
+   "detail": "20/20 dossiers reviewed"
+  },
+  {
+   "name": "C8 demo_investigate.py end-to-end with cache < 2 min (offline)",
+   "status": "PASS",
+   "detail": "ZTF25aankqhe @ 2025-04-23: 1.9s; exit 0"
+  },
+  {
+   "name": "D determinism: identical inputs \u2192 identical output hash",
+   "status": "PASS",
+   "detail": "3e0be864275087ea vs 3e0be864275087ea"
+  },
+  {
+   "name": "D investigator tests (tools as-of, corrupted claims, orchestrator, spend cap)",
+   "status": "PASS",
+   "detail": "44 passed in 0.89s"
+  },
+  {
+   "name": "D full offline suite",
+   "status": "PASS",
+   "detail": "239 passed in 3.52s"
+  },
+  {
+   "name": "D mypy --strict contracts + investigator",
+   "status": "PASS",
+   "detail": "Success: no issues found in 41 source files"
+  },
+  {
+   "name": "D ruff clean",
+   "status": "PASS",
+   "detail": "All checks passed!"
+  },
+  {
+   "name": "D import-linter contracts kept",
+   "status": "PASS",
+   "detail": "Contracts: 5 kept, 0 broken."
+  },
+  {
+   "name": "D no paid model call made (runs/spend.jsonl has no charge)",
+   "status": "PASS",
+   "detail": "0 refused attempts logged, 0 charges"
+  }
+ ]
+}

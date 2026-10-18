@@ -1,0 +1,514 @@
+{
+ "n_runs": 20,
+ "within_budget": 20,
+ "claims_or_no_context": 20,
+ "outcomes": {
+  "claims": 9,
+  "no_context_found": 11,
+  "gated_out": 0
+ },
+ "config_version": "d4fdff3324525a71",
+ "mode": "exploratory",
+ "flags": {
+  "claude_extractor": false,
+  "jev_gate": false,
+  "jev_verifier": false
+ },
+ "blocked": [
+  "TNS report dates: BLOCKED: CREDENTIAL REQUIRED (TNS_BOT_ID/NAME/API_KEY) \u2014 using the approved Lasair-TNS fallback (discovery only) + Fink d:tns as evidence_by; neither is Tier-A truth",
+  "claude_extractor: off (configs/investigator/investigator.yaml)",
+  "jev_gate: off (configs/investigator/investigator.yaml)",
+  "jev_verifier: off (configs/investigator/investigator.yaml)"
+ ],
+ "wall_s": 2.1,
+ "runs": [
+  {
+   "oid": "ZTF25aankqhe",
+   "night": "2025-04-23",
+   "stratum": "bts_classified",
+   "run_id": "inv-ZTF25aankqhe-60788.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-23/inv-ZTF25aankqhe-60788.83333-d4fdff33-s0.jsonl",
+   "outcome": "claims",
+   "stop_reason": "plan_exhausted",
+   "within_budget": true,
+   "n_claims": 2,
+   "claim_kinds": [
+    "analysis_result",
+    "host_redshift"
+   ],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "bed485544c8de70cc4a51f08ff4b05e6b872fb20244f028f571dd8d5b21c3c89",
+   "wall_s": 0.01,
+   "counters": {
+    "tool_calls": 6,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aalzmga",
+   "night": "2025-04-19",
+   "stratum": "bts_classified",
+   "run_id": "inv-ZTF25aalzmga-60784.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-19/inv-ZTF25aalzmga-60784.83333-d4fdff33-s0.jsonl",
+   "outcome": "claims",
+   "stop_reason": "resolved:prior_classification",
+   "within_budget": true,
+   "n_claims": 1,
+   "claim_kinds": [
+    "prior_classification"
+   ],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 0.0,
+   "output_hash": "66ebf2552baab38d5818aaf47a94c401aa3095b3d568c54a405519478f2c4659",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aankqtm",
+   "night": "2025-04-22",
+   "stratum": "contaminant_or_unknown",
+   "run_id": "inv-ZTF25aankqtm-60787.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-22/inv-ZTF25aankqtm-60787.83333-d4fdff33-s0.jsonl",
+   "outcome": "claims",
+   "stop_reason": "plan_exhausted",
+   "within_budget": true,
+   "n_claims": 3,
+   "claim_kinds": [
+    "analysis_result",
+    "host_redshift",
+    "prior_flares"
+   ],
+   "n_rejected": 1,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "080744ac6b19ea666200eb66e8546c24febc38d3b14d5847e56f8d27defe69a2",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 6,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aambsqu",
+   "night": "2025-04-19",
+   "stratum": "bts_classified",
+   "run_id": "inv-ZTF25aambsqu-60784.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-19/inv-ZTF25aambsqu-60784.83333-d4fdff33-s0.jsonl",
+   "outcome": "no_context_found",
+   "stop_reason": "plan_exhausted",
+   "within_budget": true,
+   "n_claims": 0,
+   "claim_kinds": [],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "c266484946acac3bf3bf86eb7fb83368fe8bedf37e662ac63d3d4f5665fe72a3",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 5,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aancloh",
+   "night": "2025-04-22",
+   "stratum": "bts_classified",
+   "run_id": "inv-ZTF25aancloh-60787.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-22/inv-ZTF25aancloh-60787.83333-d4fdff33-s0.jsonl",
+   "outcome": "claims",
+   "stop_reason": "plan_exhausted",
+   "within_budget": true,
+   "n_claims": 2,
+   "claim_kinds": [
+    "analysis_result",
+    "host_redshift"
+   ],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "8b03aa6a7e6a58668e4ebf3a9fd6508b832733a069db434efe62e1f92b195630",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 6,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aalthwc",
+   "night": "2025-04-20",
+   "stratum": "bts_classified",
+   "run_id": "inv-ZTF25aalthwc-60785.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-20/inv-ZTF25aalthwc-60785.83333-d4fdff33-s0.jsonl",
+   "outcome": "claims",
+   "stop_reason": "resolved:prior_classification",
+   "within_budget": true,
+   "n_claims": 1,
+   "claim_kinds": [
+    "prior_classification"
+   ],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 0.0,
+   "output_hash": "ca4db00a787dd4bdbde1d385aa243d4ab983ec93114835880a00410044da04b1",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 1,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aanikpq",
+   "night": "2025-04-23",
+   "stratum": "bts_classified",
+   "run_id": "inv-ZTF25aanikpq-60788.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-23/inv-ZTF25aanikpq-60788.83333-d4fdff33-s0.jsonl",
+   "outcome": "no_context_found",
+   "stop_reason": "plan_exhausted",
+   "within_budget": true,
+   "n_claims": 0,
+   "claim_kinds": [],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "4e651a9418a6e0a192eff22421925255ce08109a272f6cd44180079747c99b14",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 5,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aalvyjz",
+   "night": "2025-04-19",
+   "stratum": "bts_classified",
+   "run_id": "inv-ZTF25aalvyjz-60784.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-19/inv-ZTF25aalvyjz-60784.83333-d4fdff33-s0.jsonl",
+   "outcome": "no_context_found",
+   "stop_reason": "plan_exhausted",
+   "within_budget": true,
+   "n_claims": 0,
+   "claim_kinds": [],
+   "n_rejected": 1,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "ee31e136881ab19f7081fb6b4e322e81f2a544b5a124687ca9d70038995f4869",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 5,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aangnvu",
+   "night": "2025-04-21",
+   "stratum": "bts_classified",
+   "run_id": "inv-ZTF25aangnvu-60786.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-21/inv-ZTF25aangnvu-60786.83333-d4fdff33-s0.jsonl",
+   "outcome": "claims",
+   "stop_reason": "plan_exhausted",
+   "within_budget": true,
+   "n_claims": 1,
+   "claim_kinds": [
+    "nuclear"
+   ],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "4ed2c4350fb605b77bfbba816a386da46056876d012f8389dea3e07fd60899cd",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 5,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aankyie",
+   "night": "2025-04-21",
+   "stratum": "bts_classified",
+   "run_id": "inv-ZTF25aankyie-60786.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-21/inv-ZTF25aankyie-60786.83333-d4fdff33-s0.jsonl",
+   "outcome": "claims",
+   "stop_reason": "plan_exhausted",
+   "within_budget": true,
+   "n_claims": 3,
+   "claim_kinds": [
+    "analysis_result",
+    "host_redshift",
+    "host_redshift"
+   ],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "d476a47ba21e7cabde62a15d8158317dfda964988cb90ffb5e888fdc99619e18",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 6,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aaniiis",
+   "night": "2025-04-22",
+   "stratum": "bts_classified",
+   "run_id": "inv-ZTF25aaniiis-60787.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-22/inv-ZTF25aaniiis-60787.83333-d4fdff33-s0.jsonl",
+   "outcome": "no_context_found",
+   "stop_reason": "plan_exhausted",
+   "within_budget": true,
+   "n_claims": 0,
+   "claim_kinds": [],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "ee780942668bb480296f69f17cb593be631308a94fe23b03b4f5d96ea751cff8",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 5,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aalvypi",
+   "night": "2025-04-19",
+   "stratum": "contaminant_or_unknown",
+   "run_id": "inv-ZTF25aalvypi-60784.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-19/inv-ZTF25aalvypi-60784.83333-d4fdff33-s0.jsonl",
+   "outcome": "claims",
+   "stop_reason": "plan_exhausted",
+   "within_budget": true,
+   "n_claims": 3,
+   "claim_kinds": [
+    "analysis_result",
+    "host_redshift",
+    "host_redshift"
+   ],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "c7dc721f5f70cd78d06500f361a8b15fae13986b7f832073049ade295f349bc6",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 6,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aaobyqn",
+   "night": "2025-04-23",
+   "stratum": "contaminant_or_unknown",
+   "run_id": "inv-ZTF25aaobyqn-60788.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-23/inv-ZTF25aaobyqn-60788.83333-d4fdff33-s0.jsonl",
+   "outcome": "no_context_found",
+   "stop_reason": "no_new_information",
+   "within_budget": true,
+   "n_claims": 0,
+   "claim_kinds": [],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "705265f2610ec0c21aab94ec37369bef399c3ce98075442e74a87cbb404efcc4",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 4,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aamkbbd",
+   "night": "2025-04-19",
+   "stratum": "contaminant_or_unknown",
+   "run_id": "inv-ZTF25aamkbbd-60784.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-19/inv-ZTF25aamkbbd-60784.83333-d4fdff33-s0.jsonl",
+   "outcome": "no_context_found",
+   "stop_reason": "no_new_information",
+   "within_budget": true,
+   "n_claims": 0,
+   "claim_kinds": [],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "61425011ccbd9086064294a91acb009b03accb958545edcfb0389b168616fb21",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 4,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aamjata",
+   "night": "2025-04-20",
+   "stratum": "contaminant_or_unknown",
+   "run_id": "inv-ZTF25aamjata-60785.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-20/inv-ZTF25aamjata-60785.83333-d4fdff33-s0.jsonl",
+   "outcome": "no_context_found",
+   "stop_reason": "no_new_information",
+   "within_budget": true,
+   "n_claims": 0,
+   "claim_kinds": [],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "64c623ec0edcd47d5c34c23eb7ea89473717ee14b1c152525da22cc85e343e76",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 4,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aanycov",
+   "night": "2025-04-22",
+   "stratum": "contaminant_or_unknown",
+   "run_id": "inv-ZTF25aanycov-60787.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-22/inv-ZTF25aanycov-60787.83333-d4fdff33-s0.jsonl",
+   "outcome": "no_context_found",
+   "stop_reason": "no_new_information",
+   "within_budget": true,
+   "n_claims": 0,
+   "claim_kinds": [],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "1776ecdbd23652c719affb7a83c244bda7978df57e2759c97ebf63de6a8e6d74",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 4,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aanikdu",
+   "night": "2025-04-20",
+   "stratum": "contaminant_or_unknown",
+   "run_id": "inv-ZTF25aanikdu-60785.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-20/inv-ZTF25aanikdu-60785.83333-d4fdff33-s0.jsonl",
+   "outcome": "no_context_found",
+   "stop_reason": "plan_exhausted",
+   "within_budget": true,
+   "n_claims": 0,
+   "claim_kinds": [],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "d758fa4a5d66629afa1647cf60b20ce38a6004e535989595e7c07b2abff26da0",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 5,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aalvymj",
+   "night": "2025-04-19",
+   "stratum": "contaminant_or_unknown",
+   "run_id": "inv-ZTF25aalvymj-60784.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-19/inv-ZTF25aalvymj-60784.83333-d4fdff33-s0.jsonl",
+   "outcome": "no_context_found",
+   "stop_reason": "plan_exhausted",
+   "within_budget": true,
+   "n_claims": 0,
+   "claim_kinds": [],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "de693b654481a80c403bba45a32b91b4f4958b929d708477d93786ed6d2e3a76",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 5,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aalzibz",
+   "night": "2025-04-19",
+   "stratum": "contaminant_or_unknown",
+   "run_id": "inv-ZTF25aalzibz-60784.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-19/inv-ZTF25aalzibz-60784.83333-d4fdff33-s0.jsonl",
+   "outcome": "claims",
+   "stop_reason": "plan_exhausted",
+   "within_budget": true,
+   "n_claims": 3,
+   "claim_kinds": [
+    "analysis_result",
+    "host_redshift",
+    "host_redshift"
+   ],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "89cba931cab29980e9b3ae3dab24955deecba86622d7e5cf2295101a51b86094",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 6,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  },
+  {
+   "oid": "ZTF25aanijcp",
+   "night": "2025-04-20",
+   "stratum": "contaminant_or_unknown",
+   "run_id": "inv-ZTF25aanijcp-60785.83333-d4fdff33-s0",
+   "trace": "runs/exploratory/2025-04-20/inv-ZTF25aanijcp-60785.83333-d4fdff33-s0.jsonl",
+   "outcome": "no_context_found",
+   "stop_reason": "plan_exhausted",
+   "within_budget": true,
+   "n_claims": 0,
+   "claim_kinds": [],
+   "n_rejected": 0,
+   "tool_errors": {},
+   "spectrum_reward_factor": 1.0,
+   "output_hash": "2809b019ba3573ccab5cc49639178f057e8114a0d5fb1ef88ef3c5b2696ffefa",
+   "wall_s": 0.0,
+   "counters": {
+    "tool_calls": 5,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "usd": 0.0
+   }
+  }
+ ]
+}

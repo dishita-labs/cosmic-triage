@@ -103,3 +103,55 @@ def theater_events(run_id: str, night: str) -> list[dict[str, Any]]:
     """S0 has no timeline events (detections-in-time arrive with S1, Investigator events with S2)."""
     _json(_run_dir(run_id) / "theater" / f"{night}.json")
     return []
+
+
+# --- Investigator traces (M2): runs/{exploratory|bench}/<night>/<run_id>.jsonl -----------------------------------------
+def _trace_files() -> dict[str, Path]:
+    out: dict[str, Path] = {}
+    for mode in ("exploratory", "bench"):
+        for p in sorted((RUNS / mode).glob("*/inv-*.jsonl")):
+            out[p.stem] = p
+    return out
+
+
+def _trace(run_id: str) -> list[dict[str, Any]]:
+    p = _trace_files().get(run_id)
+    if p is None:
+        raise HTTPException(404, f"unknown investigation {run_id}")
+    lines: list[dict[str, Any]] = _load_jsonl(str(p), p.stat().st_mtime)
+    return lines
+
+
+@lru_cache(maxsize=256)
+def _load_jsonl(path: str, mtime: float) -> list[dict[str, Any]]:
+    return [json.loads(x) for x in Path(path).read_text().splitlines() if x.strip()]
+
+
+@app.get("/api/investigations")
+def investigations() -> list[dict[str, Any]]:
+    out = []
+    for run_id in sorted(_trace_files()):
+        lines = _trace(run_id)
+        head = lines[0]
+        out.append({**{k: head[k] for k in ("run_id", "oid", "t_mjd", "night_id", "mode", "outcome", "stop_reason", "cost_usd",
+                                            "within_budget")},
+                    "label": head.get("label"), "n_claims": sum(1 for x in lines if x["type"] == "claim"),
+                    "n_evidence": sum(1 for x in lines if x["type"] == "evidence"),
+                    "n_rejected": sum(1 for x in lines if x["type"] == "rejected")})
+    return out
+
+
+@app.get("/api/investigations/{run_id}")
+def investigation(run_id: str) -> dict[str, Any]:
+    """Trace + ledger. ``leak`` is computed here (source_date > t) so the console only renders the badge."""
+    lines = _trace(run_id)
+    head = lines[0]
+    t = float(head["t_mjd"])
+    evidence = []
+    for e in (x for x in lines if x["type"] == "evidence"):
+        sd = e.get("source_date")
+        evidence.append({**e, "dt_days": None if sd is None else round(float(sd) - t, 4),
+                         "leak": bool((sd is not None and float(sd) > t) or float(e["retrieved_at_sim_time"]) != t)})
+    return {"header": head, "spans": [x for x in lines if x["type"] == "span"], "evidence": evidence,
+            "claims": [x for x in lines if x["type"] == "claim"], "rejected": [x for x in lines if x["type"] == "rejected"],
+            "n_leaks": sum(1 for e in evidence if e["leak"])}

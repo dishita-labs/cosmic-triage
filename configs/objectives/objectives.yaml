@@ -1,0 +1,4 @@
+# Objectives (ARCHITECTURE §1.1). Reward tables arrive with M3 (configs/objectives/<id>_rewards.yaml, frozen + hashed).
+version: "1.0"
+O1: {name: "Cosmology-grade SNe Ia", description: "Classification spectra of normal SNe Ia before peak.", reward_table: "configs/objectives/O1_rewards.yaml (M3)"}
+O4: {name: "Completeness", description: "Classify everything brighter than the magnitude limit (BTS's mandate).", reward_table: "configs/objectives/O4_rewards.yaml (M3)"}

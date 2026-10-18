@@ -27,10 +27,14 @@ class SimbadClient:
         self.cache = cache
         self.http = http or HttpClient(self.name, min_interval_s=0.25, offline=cache.offline)
 
-    def cone(self, ra: float, dec: float, radius_arcsec: float = 10.0, top: int = 25) -> list[dict[str, Any]]:
-        params = {"ra": round(ra, 6), "dec": round(dec, 6), "r": radius_arcsec, "top": top}
+    def cone(self, ra: float, dec: float, radius_arcsec: float = 10.0, top: int = 25, with_bibcode: bool = False) -> list[dict[str, Any]]:
+        """Cone search. ``with_bibcode`` adds ``rvz_bibcode`` (the redshift's reference, used for as-of dating)."""
+        params: dict[str, Any] = {"ra": round(ra, 6), "dec": round(dec, 6), "r": radius_arcsec, "top": top}
+        if with_bibcode:
+            params["cols"] = "v2"
+        extra = "rvz_bibcode, " if with_bibcode else ""
         adql = (
-            f"SELECT TOP {top} main_id, ra, dec, otype, rvz_redshift, "
+            f"SELECT TOP {top} main_id, ra, dec, otype, rvz_redshift, {extra}"
             f"DISTANCE(POINT('ICRS', ra, dec), POINT('ICRS', {ra}, {dec})) * 3600 AS sep_arcsec "
             f"FROM basic WHERE CONTAINS(POINT('ICRS', ra, dec), CIRCLE('ICRS', {ra}, {dec}, {radius_arcsec / 3600.0}))=1 "
             "ORDER BY sep_arcsec"

@@ -1,0 +1,43 @@
+# Investigator v1 configuration (ARCHITECTURE §4, §10.3 M2). The content hash of this file is the run's config_version.
+version: "1.0"
+mode: exploratory                 # M2 runs are exploratory only (§10.1); bench graduation happens in M4
+slots:
+  gate: always                    # always | entropy | jev_noul. M2: always — the entropy gate needs the calibrated M3
+                                  # belief; on the uncalibrated Fink stub its threshold would be arbitrary
+  planner: fixed                  # fixed
+  extractor: rule                 # rule | rule+claude (Claude only for unstructured text; needs flag + approval)
+  verifier: deterministic         # deterministic | jev_noul
+flags:                            # paid integrations; also require configs/investigator/budget.yaml approval
+  claude_extractor: false
+  jev_gate: false
+  jev_verifier: false
+models:
+  claude_extractor: claude-sonnet-5-5
+  jev: jev-latest
+gate:
+  entropy_threshold_nats: 0.30    # investigate when the stub/M3 belief entropy is at least this
+planner:
+  order: [alert_history, report_lookup, sherlock, simbad_cone, cutouts, offset_absmag]
+budgets:                          # hard, per run
+  max_tool_calls: 8
+  max_model_calls: 4
+  max_tokens: 20000
+  max_usd: 0.25
+  max_wall_s: 120
+stop:
+  no_new_evidence_patience: 3     # consecutive tool calls adding no new evidence
+  stop_when_resolved: true        # an accepted prior_classification resolves the run
+tools:
+  report_radius_arcsec: 3.0
+  simbad_radius_arcsec: 10.0
+  max_retries: 2
+  circuit_breaker_failures: 3     # consecutive failures before a tool is skipped for the rest of the run
+validation:
+  support_threshold: 0.5
+  geometry_tolerance_arcsec: 0.3
+  z_range: [0.0, 3.0]
+  association_radius_arcsec:      # counterpart claims must be within these recomputed separations
+    star_counterpart: 1.5
+    known_agn: 1.5
+    nuclear: 0.5
+    host_redshift: 60.0

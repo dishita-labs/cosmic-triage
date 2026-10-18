@@ -1,0 +1,185 @@
+{
+ "seed": 20261018,
+ "selected": [
+  {
+   "oid": "ZTF25aankqhe",
+   "night": "2025-04-23",
+   "why": "vertical slice 1 (SN Ia, host, TNS)",
+   "label": "class",
+   "coarse_class": "Ia",
+   "bts_type": "SN Ia",
+   "stratum": "bts_classified"
+  },
+  {
+   "oid": "ZTF25aalzmga",
+   "night": "2025-04-19",
+   "why": "vertical slice 2 (classified before t)",
+   "label": "class",
+   "coarse_class": "II",
+   "bts_type": "SN II",
+   "stratum": "bts_classified"
+  },
+  {
+   "oid": "ZTF25aankqtm",
+   "night": "2025-04-22",
+   "why": "vertical slice 3 (AGN)",
+   "label": "unknown",
+   "coarse_class": null,
+   "bts_type": null,
+   "stratum": "contaminant_or_unknown"
+  },
+  {
+   "oid": "ZTF25aambsqu",
+   "night": "2025-04-19",
+   "why": "random",
+   "label": "class",
+   "coarse_class": "Ia",
+   "bts_type": "SN Ia",
+   "stratum": "bts_classified"
+  },
+  {
+   "oid": "ZTF25aancloh",
+   "night": "2025-04-22",
+   "why": "random",
+   "label": "class",
+   "coarse_class": "Ia",
+   "bts_type": "SN Ia",
+   "stratum": "bts_classified"
+  },
+  {
+   "oid": "ZTF25aalthwc",
+   "night": "2025-04-20",
+   "why": "random",
+   "label": "class",
+   "coarse_class": "Ia",
+   "bts_type": "SN Ia",
+   "stratum": "bts_classified"
+  },
+  {
+   "oid": "ZTF25aanikpq",
+   "night": "2025-04-23",
+   "why": "random",
+   "label": "class",
+   "coarse_class": "other_luminous",
+   "bts_type": "SLSN-I",
+   "stratum": "bts_classified"
+  },
+  {
+   "oid": "ZTF25aalvyjz",
+   "night": "2025-04-19",
+   "why": "random",
+   "label": "class",
+   "coarse_class": "Ia",
+   "bts_type": "SN Ia",
+   "stratum": "bts_classified"
+  },
+  {
+   "oid": "ZTF25aangnvu",
+   "night": "2025-04-21",
+   "why": "random",
+   "label": "class",
+   "coarse_class": "Ia",
+   "bts_type": "SN Ia",
+   "stratum": "bts_classified"
+  },
+  {
+   "oid": "ZTF25aankyie",
+   "night": "2025-04-21",
+   "why": "random",
+   "label": "class",
+   "coarse_class": "Ibc",
+   "bts_type": "SN Ib",
+   "stratum": "bts_classified"
+  },
+  {
+   "oid": "ZTF25aaniiis",
+   "night": "2025-04-22",
+   "why": "random",
+   "label": "class",
+   "coarse_class": "Ia",
+   "bts_type": "SN Ia",
+   "stratum": "bts_classified"
+  },
+  {
+   "oid": "ZTF25aalvypi",
+   "night": "2025-04-19",
+   "why": "random",
+   "label": "unknown",
+   "coarse_class": null,
+   "bts_type": null,
+   "stratum": "contaminant_or_unknown"
+  },
+  {
+   "oid": "ZTF25aaobyqn",
+   "night": "2025-04-23",
+   "why": "random",
+   "label": "contaminant",
+   "coarse_class": "contaminant",
+   "bts_type": null,
+   "stratum": "contaminant_or_unknown"
+  },
+  {
+   "oid": "ZTF25aamkbbd",
+   "night": "2025-04-19",
+   "why": "random",
+   "label": "contaminant",
+   "coarse_class": "contaminant",
+   "bts_type": null,
+   "stratum": "contaminant_or_unknown"
+  },
+  {
+   "oid": "ZTF25aamjata",
+   "night": "2025-04-20",
+   "why": "random",
+   "label": "contaminant",
+   "coarse_class": "contaminant",
+   "bts_type": null,
+   "stratum": "contaminant_or_unknown"
+  },
+  {
+   "oid": "ZTF25aanycov",
+   "night": "2025-04-22",
+   "why": "random",
+   "label": "contaminant",
+   "coarse_class": "contaminant",
+   "bts_type": null,
+   "stratum": "contaminant_or_unknown"
+  },
+  {
+   "oid": "ZTF25aanikdu",
+   "night": "2025-04-20",
+   "why": "random",
+   "label": "unknown",
+   "coarse_class": null,
+   "bts_type": null,
+   "stratum": "contaminant_or_unknown"
+  },
+  {
+   "oid": "ZTF25aalvymj",
+   "night": "2025-04-19",
+   "why": "random",
+   "label": "unknown",
+   "coarse_class": null,
+   "bts_type": null,
+   "stratum": "contaminant_or_unknown"
+  },
+  {
+   "oid": "ZTF25aalzibz",
+   "night": "2025-04-19",
+   "why": "random",
+   "label": "unknown",
+   "coarse_class": null,
+   "bts_type": null,
+   "stratum": "contaminant_or_unknown"
+  },
+  {
+   "oid": "ZTF25aanijcp",
+   "night": "2025-04-20",
+   "why": "random",
+   "label": "contaminant",
+   "coarse_class": "contaminant",
+   "bts_type": null,
+   "stratum": "contaminant_or_unknown"
+  }
+ ]
+}
