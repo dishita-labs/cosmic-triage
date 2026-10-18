@@ -1,0 +1,31 @@
+{
+ "nights": {
+  "2025-04-19": {
+   "bright_sn_like": 52,
+   "known_asteroid": 20,
+   "excluding_asteroids": 32
+  },
+  "2025-04-20": {
+   "bright_sn_like": 55,
+   "known_asteroid": 22,
+   "excluding_asteroids": 33
+  },
+  "2025-04-21": {
+   "bright_sn_like": 46,
+   "known_asteroid": 21,
+   "excluding_asteroids": 25
+  },
+  "2025-04-22": {
+   "bright_sn_like": 51,
+   "known_asteroid": 24,
+   "excluding_asteroids": 27
+  },
+  "2025-04-23": {
+   "bright_sn_like": 48,
+   "known_asteroid": 26,
+   "excluding_asteroids": 22
+  }
+ },
+ "median_excluding_asteroids": 27,
+ "budget_max_binding_excluding_asteroids": 13
+}

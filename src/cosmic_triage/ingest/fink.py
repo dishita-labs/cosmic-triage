@@ -9,9 +9,11 @@ from cosmic_triage.ingest.http import HttpClient
 
 BASE = "https://api.ztf.fink-portal.org/api/v1"
 
-# Columns needed for the belief channel (M3) and static star/Gaia context for the pre-filter.
+# Columns needed for the belief channel (M3), static star/Gaia context and the per-alert history fields
+# (i:jdstarthist / i:ndethist as carried by each packet; Review-03 §6.4) for the pre-filter.
 SCORE_COLUMNS: tuple[str, ...] = (
     "i:objectId", "i:candid", "i:jd", "i:fid", "i:magpsf", "i:sigmapsf", "i:drb", "i:isdiffpos",
+    "i:jdstarthist", "i:ndethist",
     "i:sgscore1", "i:distpsnr1", "i:srmag1", "i:neargaia", "i:maggaia", "i:ra", "i:dec",
     "d:rf_snia_vs_nonia", "d:snn_snia_vs_nonia", "d:snn_sn_vs_all", "d:cdsxmatch", "d:tns",
 )

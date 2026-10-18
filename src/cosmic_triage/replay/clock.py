@@ -1,7 +1,9 @@
 """Replay clock: builds Snapshot(t) (ARCHITECTURE §3.3 step 1, §13.3).
 
-Everything that reaches a Snapshot is (a) denylist-scrubbed and (b) filtered to ``mjd <= t``; every aggregate
-(detection counts, brightest/latest magnitude, first detection, position) is recomputed from those records.
+Everything that reaches a Snapshot is (a) denylist-scrubbed and (b) *known at t* (Review-03, §6.4): photometry
+delivered by an alert with jd <= t, Fink rows with jd <= t; every aggregate (detection counts, brightest/latest
+magnitude, first detection, position) is recomputed from those records. ``first_detection_mjd`` also honours the
+per-alert ``i:jdstarthist`` carried by rows <= t.
 """
 
 from __future__ import annotations
@@ -12,6 +14,7 @@ from typing import Any
 from astropy.time import Time
 
 from cosmic_triage.contracts import CandidateContext, CandidateState, FinkAlertRow, PhotometryPoint, Snapshot
+from cosmic_triage.contracts.units import jd_to_mjd
 from cosmic_triage.replay.denylist import Denylist
 from cosmic_triage.replay.pool import ForwardPool, RawCandidate, _f, _positive, galactic_b
 
@@ -33,27 +36,39 @@ def _str(x: Any) -> str | None:
     return str(x)
 
 
-def build_candidate(raw: RawCandidate, t: float) -> CandidateState:
+def _int(x: Any) -> int | None:
+    v = _f(x)
+    return None if v is None else int(v)
+
+
+def _hist_start(r: dict[str, Any]) -> float | None:
+    v = _f(r.get("i:jdstarthist"))
+    if v is None or jd_to_mjd(v) > r["mjd"]:
+        return None
+    return jd_to_mjd(v)
+
+
+def build_candidate(raw: RawCandidate, t: float, packet_history_days: float = 30.0) -> CandidateState:
     phot: list[PhotometryPoint] = []
-    for d in raw.dets_le(t):
+    for d in raw.known_dets(t):
         mag = _f(d.get("magpsf"))
         band = BANDS.get(int(d.get("fid", 0) or 0))
         if mag is None or band is None:
             continue
         phot.append(PhotometryPoint(
             mjd=float(d["mjd"]), band=band, is_detection=True, mag=mag, mag_err=_f(d.get("sigmapsf")),
-            drb=_f(d.get("drb")), isdiffpos=_positive(d.get("isdiffpos")), candid=_str(d.get("candid")), source="alerce",
+            drb=_f(d.get("drb")), isdiffpos=_positive(d.get("isdiffpos")), candid=_str(d.get("candid")),
+            delivered_by_mjd=raw.delivered_by(d), source="alerce",
         ))
     n_nd = 0
-    for n in raw.non_detections:
-        if n["mjd"] > t:
-            continue
+    for n in raw.known_nondets(t, packet_history_days):
         band = BANDS.get(int(n.get("fid", 0) or 0))
         lim = _f(n.get("diffmaglim"))
         if band is None or lim is None:
             continue
         n_nd += 1
-        phot.append(PhotometryPoint(mjd=float(n["mjd"]), band=band, is_detection=False, limiting_mag=lim, source="alerce"))
+        phot.append(PhotometryPoint(mjd=float(n["mjd"]), band=band, is_detection=False, limiting_mag=lim,
+                                    delivered_by_mjd=raw.nondet_delivered_by(n, t, packet_history_days), source="alerce"))
     phot.sort(key=lambda p: (p.mjd, p.band, p.is_detection))
     dets = [p for p in phot if p.is_detection]
     if not dets:
@@ -64,9 +79,9 @@ def build_candidate(raw: RawCandidate, t: float) -> CandidateState:
             mjd=float(r["mjd"]), candid=_str(r.get("i:candid")),
             rf_snia_vs_nonia=_f(r.get("d:rf_snia_vs_nonia")), snn_snia_vs_nonia=_f(r.get("d:snn_snia_vs_nonia")),
             snn_sn_vs_all=_f(r.get("d:snn_sn_vs_all")), cdsxmatch=_str(r.get("d:cdsxmatch")),
-            tns_alert_time=_str(r.get("d:tns")),
+            tns_alert_time=_str(r.get("d:tns")), hist_start_mjd=_hist_start(r), hist_ndet=_int(r.get("i:ndethist")),
         )
-        for r in raw.fink_rows if r["mjd"] <= t
+        for r in raw.fink_le(t)
     )
     pos = raw.position_le(t)
     assert pos is not None
@@ -76,7 +91,8 @@ def build_candidate(raw: RawCandidate, t: float) -> CandidateState:
         oid=raw.oid, t_mjd=t,
         context=CandidateContext(ra=pos[0], dec=pos[1], gal_b=galactic_b(*pos), **ctx),
         photometry=tuple(phot), fink_rows=fink, stamp_prior=None,
-        first_detection_mjd=min(p.mjd for p in dets), last_detection_mjd=max(p.mjd for p in dets),
+        first_detection_mjd=min([p.mjd for p in dets] + [h for r in fink if (h := r.hist_start_mjd) is not None]),
+        last_detection_mjd=max(p.mjd for p in dets),
         n_detections=len(dets), n_nondetections=n_nd,
         brightest_mag=min(p.mag for p in pos_dets if p.mag is not None),
         latest_mag=float(latest.mag) if latest.mag is not None else math.inf, latest_band=latest.band,
@@ -90,7 +106,7 @@ class Clock:
 
     def snapshot(self, t_mjd: float, pool: ForwardPool) -> Snapshot:
         oids = pool.candidates(t_mjd)
-        cands = tuple(build_candidate(pool.raw(o), t_mjd) for o in oids)
+        cands = tuple(build_candidate(pool.raw(o), t_mjd, pool.cfg.packet_history_days) for o in oids)
         return Snapshot(
             t_mjd=t_mjd, night_id=night_id_for_t(t_mjd, self.decision_time_utc_hour), candidates=cands,
             pool_config_hash=pool.cfg.config_hash, denylist_version=f"{self.deny.version}:{self.deny.config_hash}",

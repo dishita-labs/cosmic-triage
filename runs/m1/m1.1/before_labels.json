@@ -1,0 +1,2546 @@
+{
+ "code": "ebf9062",
+ "prefilter_hash": "9f64125e3daf437c",
+ "nights": {
+  "2025-04-19": {
+   "ZTF19abfaihw": {
+    "label": "contaminant",
+    "peak": 17.047342,
+    "brightest_at_t": 17.047342
+   },
+   "ZTF23absjmpv": {
+    "label": "contaminant",
+    "peak": 16.8424,
+    "brightest_at_t": 17.256388
+   },
+   "ZTF25aalldzz": {
+    "label": "class",
+    "peak": 17.3086,
+    "brightest_at_t": 17.308617
+   },
+   "ZTF25aalpzgd": {
+    "label": "class",
+    "peak": 18.472,
+    "brightest_at_t": 18.472036
+   },
+   "ZTF25aalqhus": {
+    "label": "unknown",
+    "peak": 18.8648,
+    "brightest_at_t": 18.864763
+   },
+   "ZTF25aalqpuk": {
+    "label": "unknown",
+    "peak": 18.9454,
+    "brightest_at_t": 18.945415
+   },
+   "ZTF25aalqyks": {
+    "label": "unknown",
+    "peak": 18.9455,
+    "brightest_at_t": 18.945475
+   },
+   "ZTF25aalrorp": {
+    "label": "class",
+    "peak": 18.5293,
+    "brightest_at_t": 18.529268
+   },
+   "ZTF25aalrrwj": {
+    "label": "class",
+    "peak": 17.4747,
+    "brightest_at_t": 17.474731
+   },
+   "ZTF25aalrums": {
+    "label": "class",
+    "peak": 18.1036,
+    "brightest_at_t": 18.103613
+   },
+   "ZTF25aalrvdf": {
+    "label": "unknown",
+    "peak": 18.9473,
+    "brightest_at_t": 18.947336
+   },
+   "ZTF25aalsxks": {
+    "label": "class",
+    "peak": 17.3335,
+    "brightest_at_t": 17.45377
+   },
+   "ZTF25aaltbqh": {
+    "label": null,
+    "peak": 18.99233,
+    "brightest_at_t": 18.99233
+   },
+   "ZTF25aalthwc": {
+    "label": "class",
+    "peak": 16.4703,
+    "brightest_at_t": 16.470297
+   },
+   "ZTF25aaluemf": {
+    "label": "class",
+    "peak": 18.7777,
+    "brightest_at_t": 18.777685
+   },
+   "ZTF25aaluens": {
+    "label": "class",
+    "peak": 17.2835,
+    "brightest_at_t": 17.283531
+   },
+   "ZTF25aaluerd": {
+    "label": "class",
+    "peak": 18.2432,
+    "brightest_at_t": 18.272911
+   },
+   "ZTF25aalufla": {
+    "label": "class",
+    "peak": 18.0167,
+    "brightest_at_t": 18.016708
+   },
+   "ZTF25aalughb": {
+    "label": "class",
+    "peak": 15.8737,
+    "brightest_at_t": 16.35714
+   },
+   "ZTF25aaluuld": {
+    "label": null,
+    "peak": 18.755419,
+    "brightest_at_t": 18.755419
+   },
+   "ZTF25aaluvkb": {
+    "label": "class",
+    "peak": 17.7499,
+    "brightest_at_t": 17.834118
+   },
+   "ZTF25aaluyhj": {
+    "label": "class",
+    "peak": 18.2064,
+    "brightest_at_t": 18.206406
+   },
+   "ZTF25aalvbqd": {
+    "label": "unknown",
+    "peak": 18.9311,
+    "brightest_at_t": 18.931078
+   },
+   "ZTF25aalvnyi": {
+    "label": "unknown",
+    "peak": 18.6778,
+    "brightest_at_t": 18.677832
+   },
+   "ZTF25aalvose": {
+    "label": "contaminant",
+    "peak": 17.435995,
+    "brightest_at_t": 17.435995
+   },
+   "ZTF25aalvpuf": {
+    "label": "contaminant",
+    "peak": 18.30106,
+    "brightest_at_t": 18.30106
+   },
+   "ZTF25aalvrak": {
+    "label": "unknown",
+    "peak": 18.6128,
+    "brightest_at_t": 18.612823
+   },
+   "ZTF25aalvyha": {
+    "label": "unknown",
+    "peak": 18.9809,
+    "brightest_at_t": 18.98088
+   },
+   "ZTF25aalvyjz": {
+    "label": "class",
+    "peak": 17.7958,
+    "brightest_at_t": 17.79577
+   },
+   "ZTF25aalvymj": {
+    "label": "unknown",
+    "peak": 18.3907,
+    "brightest_at_t": 18.39067
+   },
+   "ZTF25aalvypi": {
+    "label": "unknown",
+    "peak": 18.3034,
+    "brightest_at_t": 18.303421
+   },
+   "ZTF25aalvyrp": {
+    "label": "class",
+    "peak": 18.3589,
+    "brightest_at_t": 18.358866
+   },
+   "ZTF25aalvyyq": {
+    "label": "contaminant",
+    "peak": 13.491511,
+    "brightest_at_t": 13.491511
+   },
+   "ZTF25aalvyyu": {
+    "label": "unknown",
+    "peak": 18.6419,
+    "brightest_at_t": 18.6419
+   },
+   "ZTF25aalyaqc": {
+    "label": null,
+    "peak": 18.8245,
+    "brightest_at_t": 18.915224
+   },
+   "ZTF25aalycbc": {
+    "label": "class",
+    "peak": 18.4125,
+    "brightest_at_t": 18.412487
+   },
+   "ZTF25aalycqc": {
+    "label": "class",
+    "peak": 18.9285,
+    "brightest_at_t": 18.928453
+   },
+   "ZTF25aalyfoi": {
+    "label": "class",
+    "peak": 16.8601,
+    "brightest_at_t": 16.860132
+   },
+   "ZTF25aalylco": {
+    "label": "class",
+    "peak": 17.9063,
+    "brightest_at_t": 17.934214
+   },
+   "ZTF25aalzdap": {
+    "label": "contaminant",
+    "peak": 17.167137,
+    "brightest_at_t": 17.167137
+   },
+   "ZTF25aalzibz": {
+    "label": "unknown",
+    "peak": 18.8518,
+    "brightest_at_t": 18.96618
+   },
+   "ZTF25aalzmga": {
+    "label": "class",
+    "peak": 15.5651,
+    "brightest_at_t": 15.982194
+   },
+   "ZTF25aamaffc": {
+    "label": "unknown",
+    "peak": 18.7032,
+    "brightest_at_t": 18.70322
+   },
+   "ZTF25aamauii": {
+    "label": "contaminant",
+    "peak": 16.654554,
+    "brightest_at_t": 16.654554
+   },
+   "ZTF25aamaxal": {
+    "label": null,
+    "peak": 18.5425,
+    "brightest_at_t": 18.724407
+   },
+   "ZTF25aamaxbv": {
+    "label": "contaminant",
+    "peak": 16.6174,
+    "brightest_at_t": 17.204683
+   },
+   "ZTF25aambsqu": {
+    "label": "class",
+    "peak": 18.1474,
+    "brightest_at_t": 18.916698
+   },
+   "ZTF25aambupl": {
+    "label": "unknown",
+    "peak": 17.8729,
+    "brightest_at_t": 17.872868
+   },
+   "ZTF25aambyih": {
+    "label": "unknown",
+    "peak": 18.6619,
+    "brightest_at_t": 18.81112
+   },
+   "ZTF25aameuts": {
+    "label": "class",
+    "peak": 17.6255,
+    "brightest_at_t": 18.235533
+   },
+   "ZTF25aamhede": {
+    "label": "contaminant",
+    "peak": 17.063309,
+    "brightest_at_t": 17.063309
+   },
+   "ZTF25aamhewc": {
+    "label": "contaminant",
+    "peak": 18.421057,
+    "brightest_at_t": 18.421057
+   },
+   "ZTF25aamhgkx": {
+    "label": "contaminant",
+    "peak": 17.78059,
+    "brightest_at_t": 17.78059
+   },
+   "ZTF25aamimqx": {
+    "label": "contaminant",
+    "peak": 17.588884,
+    "brightest_at_t": 17.588884
+   },
+   "ZTF25aamimsl": {
+    "label": "contaminant",
+    "peak": 17.650421,
+    "brightest_at_t": 17.650421
+   },
+   "ZTF25aamioak": {
+    "label": null,
+    "peak": 18.791609,
+    "brightest_at_t": 18.791609
+   },
+   "ZTF25aamioam": {
+    "label": "contaminant",
+    "peak": 16.90076,
+    "brightest_at_t": 16.90076
+   },
+   "ZTF25aamipol": {
+    "label": "contaminant",
+    "peak": 17.372293,
+    "brightest_at_t": 17.372293
+   },
+   "ZTF25aamitsb": {
+    "label": "contaminant",
+    "peak": 17.690403,
+    "brightest_at_t": 17.690403
+   },
+   "ZTF25aamjaji": {
+    "label": "contaminant",
+    "peak": 17.567776,
+    "brightest_at_t": 17.567776
+   },
+   "ZTF25aamjata": {
+    "label": "contaminant",
+    "peak": 18.01224,
+    "brightest_at_t": 18.01224
+   },
+   "ZTF25aamjiyk": {
+    "label": "unknown",
+    "peak": 18.7893,
+    "brightest_at_t": 18.789291
+   },
+   "ZTF25aamkbbd": {
+    "label": "contaminant",
+    "peak": 18.434736,
+    "brightest_at_t": 18.434736
+   },
+   "ZTF25aamkldj": {
+    "label": "contaminant",
+    "peak": 17.055622,
+    "brightest_at_t": 17.055622
+   },
+   "ZTF25aamkqzo": {
+    "label": "unknown",
+    "peak": 18.8466,
+    "brightest_at_t": 18.960043
+   },
+   "ZTF25aamppsd": {
+    "label": "contaminant",
+    "peak": 17.637503,
+    "brightest_at_t": 17.637503
+   },
+   "ZTF25aamqhpc": {
+    "label": "class",
+    "peak": 18.5934,
+    "brightest_at_t": 18.970665
+   },
+   "ZTF25aamqlzp": {
+    "label": "contaminant",
+    "peak": 16.505272,
+    "brightest_at_t": 16.505272
+   },
+   "ZTF25aamqtqd": {
+    "label": null,
+    "peak": 18.710846,
+    "brightest_at_t": 18.710846
+   },
+   "ZTF25aamrath": {
+    "label": "class",
+    "peak": 17.9322,
+    "brightest_at_t": 18.488024
+   },
+   "ZTF25aanbdfw": {
+    "label": null,
+    "peak": 18.993952,
+    "brightest_at_t": 18.993952
+   },
+   "ZTF25aanbdhf": {
+    "label": "contaminant",
+    "peak": 17.53784,
+    "brightest_at_t": 17.53784
+   },
+   "ZTF25aanbdir": {
+    "label": null,
+    "peak": 18.661636,
+    "brightest_at_t": 18.661636
+   },
+   "ZTF25aanbdkl": {
+    "label": "contaminant",
+    "peak": 18.165241,
+    "brightest_at_t": 18.165241
+   },
+   "ZTF25aanbdlm": {
+    "label": "contaminant",
+    "peak": 18.09197,
+    "brightest_at_t": 18.09197
+   },
+   "ZTF25aanbdmw": {
+    "label": "contaminant",
+    "peak": 17.366644,
+    "brightest_at_t": 17.366644
+   },
+   "ZTF25aanbdps": {
+    "label": "contaminant",
+    "peak": 18.428951,
+    "brightest_at_t": 18.428951
+   },
+   "ZTF25aanbdsx": {
+    "label": "contaminant",
+    "peak": 17.94943,
+    "brightest_at_t": 17.94943
+   },
+   "ZTF25aanbeal": {
+    "label": null,
+    "peak": 18.5796,
+    "brightest_at_t": 18.695683
+   },
+   "ZTF25aanbhgp": {
+    "label": "contaminant",
+    "peak": 18.337711,
+    "brightest_at_t": 18.337711
+   },
+   "ZTF25aanbhlb": {
+    "label": "contaminant",
+    "peak": 18.414644,
+    "brightest_at_t": 18.414644
+   },
+   "ZTF25aanbhld": {
+    "label": "contaminant",
+    "peak": 18.243412,
+    "brightest_at_t": 18.243412
+   },
+   "ZTF25aanbpxg": {
+    "label": "contaminant",
+    "peak": 18.499228,
+    "brightest_at_t": 18.499228
+   },
+   "ZTF25aanbpzy": {
+    "label": null,
+    "peak": 18.9683,
+    "brightest_at_t": 18.9683
+   },
+   "ZTF25aanbqrx": {
+    "label": "unknown",
+    "peak": 18.3545,
+    "brightest_at_t": 18.823435
+   },
+   "ZTF25aanbtlr": {
+    "label": null,
+    "peak": 18.929426,
+    "brightest_at_t": 18.929426
+   },
+   "ZTF25aanbuny": {
+    "label": null,
+    "peak": 18.98572,
+    "brightest_at_t": 18.98572
+   },
+   "ZTF25aanbuyz": {
+    "label": null,
+    "peak": 18.579557,
+    "brightest_at_t": 18.579557
+   },
+   "ZTF25aanevqm": {
+    "label": "contaminant",
+    "peak": 18.492096,
+    "brightest_at_t": 18.492096
+   },
+   "ZTF25aanfhbc": {
+    "label": null,
+    "peak": 18.653425,
+    "brightest_at_t": 18.653425
+   },
+   "ZTF25aanfhep": {
+    "label": "contaminant",
+    "peak": 17.828953,
+    "brightest_at_t": 17.828953
+   },
+   "ZTF25aanfhfi": {
+    "label": "contaminant",
+    "peak": 18.193089,
+    "brightest_at_t": 18.193089
+   },
+   "ZTF25aanfhqw": {
+    "label": null,
+    "peak": 18.839905,
+    "brightest_at_t": 18.839905
+   },
+   "ZTF25aanfhze": {
+    "label": null,
+    "peak": 18.661919,
+    "brightest_at_t": 18.661919
+   },
+   "ZTF25aanflcs": {
+    "label": "contaminant",
+    "peak": 17.471848,
+    "brightest_at_t": 17.471848
+   }
+  },
+  "2025-04-20": {
+   "ZTF18aawhrjb": {
+    "label": "contaminant",
+    "peak": 18.31519,
+    "brightest_at_t": 18.325935
+   },
+   "ZTF19aakhash": {
+    "label": "contaminant",
+    "peak": 17.713085,
+    "brightest_at_t": 17.713085
+   },
+   "ZTF19abfaihw": {
+    "label": "contaminant",
+    "peak": 17.047342,
+    "brightest_at_t": 17.047342
+   },
+   "ZTF21abgvfmz": {
+    "label": null,
+    "peak": 18.64333,
+    "brightest_at_t": 18.64333
+   },
+   "ZTF23absjmpv": {
+    "label": "contaminant",
+    "peak": 16.8424,
+    "brightest_at_t": 17.256388
+   },
+   "ZTF25aadupwg": {
+    "label": null,
+    "peak": 18.988857,
+    "brightest_at_t": 18.988857
+   },
+   "ZTF25aalldzz": {
+    "label": "class",
+    "peak": 17.3086,
+    "brightest_at_t": 17.308617
+   },
+   "ZTF25aalqhus": {
+    "label": "unknown",
+    "peak": 18.8648,
+    "brightest_at_t": 18.864763
+   },
+   "ZTF25aalqyks": {
+    "label": "unknown",
+    "peak": 18.9455,
+    "brightest_at_t": 18.945475
+   },
+   "ZTF25aalrrwj": {
+    "label": "class",
+    "peak": 17.4747,
+    "brightest_at_t": 17.474731
+   },
+   "ZTF25aalsxks": {
+    "label": "class",
+    "peak": 17.3335,
+    "brightest_at_t": 17.45377
+   },
+   "ZTF25aalthwc": {
+    "label": "class",
+    "peak": 16.4703,
+    "brightest_at_t": 16.470297
+   },
+   "ZTF25aalufla": {
+    "label": "class",
+    "peak": 18.0167,
+    "brightest_at_t": 18.016708
+   },
+   "ZTF25aalughb": {
+    "label": "class",
+    "peak": 15.8737,
+    "brightest_at_t": 15.873718
+   },
+   "ZTF25aaluuld": {
+    "label": null,
+    "peak": 18.755419,
+    "brightest_at_t": 18.755419
+   },
+   "ZTF25aaluvkb": {
+    "label": "class",
+    "peak": 17.7499,
+    "brightest_at_t": 17.749908
+   },
+   "ZTF25aaluyhj": {
+    "label": "class",
+    "peak": 18.2064,
+    "brightest_at_t": 18.206406
+   },
+   "ZTF25aalvbqd": {
+    "label": "unknown",
+    "peak": 18.9311,
+    "brightest_at_t": 18.931078
+   },
+   "ZTF25aalvnyi": {
+    "label": "unknown",
+    "peak": 18.6778,
+    "brightest_at_t": 18.677832
+   },
+   "ZTF25aalvose": {
+    "label": "contaminant",
+    "peak": 17.435995,
+    "brightest_at_t": 17.435995
+   },
+   "ZTF25aalvpuf": {
+    "label": "contaminant",
+    "peak": 18.30106,
+    "brightest_at_t": 18.30106
+   },
+   "ZTF25aalvrak": {
+    "label": "unknown",
+    "peak": 18.6128,
+    "brightest_at_t": 18.612823
+   },
+   "ZTF25aalvyha": {
+    "label": "unknown",
+    "peak": 18.9809,
+    "brightest_at_t": 18.98088
+   },
+   "ZTF25aalvymj": {
+    "label": "unknown",
+    "peak": 18.3907,
+    "brightest_at_t": 18.39067
+   },
+   "ZTF25aalvypi": {
+    "label": "unknown",
+    "peak": 18.3034,
+    "brightest_at_t": 18.303421
+   },
+   "ZTF25aalyaqc": {
+    "label": null,
+    "peak": 18.8245,
+    "brightest_at_t": 18.915224
+   },
+   "ZTF25aalycbc": {
+    "label": "class",
+    "peak": 18.4125,
+    "brightest_at_t": 18.412487
+   },
+   "ZTF25aalycqc": {
+    "label": "class",
+    "peak": 18.9285,
+    "brightest_at_t": 18.928453
+   },
+   "ZTF25aalylco": {
+    "label": "class",
+    "peak": 17.9063,
+    "brightest_at_t": 17.934214
+   },
+   "ZTF25aalzdap": {
+    "label": "contaminant",
+    "peak": 17.167137,
+    "brightest_at_t": 17.167137
+   },
+   "ZTF25aamauii": {
+    "label": "contaminant",
+    "peak": 16.654554,
+    "brightest_at_t": 16.654554
+   },
+   "ZTF25aambsqu": {
+    "label": "class",
+    "peak": 18.1474,
+    "brightest_at_t": 18.180006
+   },
+   "ZTF25aambupl": {
+    "label": "unknown",
+    "peak": 17.8729,
+    "brightest_at_t": 17.872868
+   },
+   "ZTF25aameuts": {
+    "label": "class",
+    "peak": 17.6255,
+    "brightest_at_t": 18.235533
+   },
+   "ZTF25aamhede": {
+    "label": "contaminant",
+    "peak": 17.063309,
+    "brightest_at_t": 17.063309
+   },
+   "ZTF25aamhewc": {
+    "label": "contaminant",
+    "peak": 18.421057,
+    "brightest_at_t": 18.421057
+   },
+   "ZTF25aamhgkx": {
+    "label": "contaminant",
+    "peak": 17.78059,
+    "brightest_at_t": 17.78059
+   },
+   "ZTF25aamhqoo": {
+    "label": "class",
+    "peak": 17.8647,
+    "brightest_at_t": 17.864738
+   },
+   "ZTF25aamimqx": {
+    "label": "contaminant",
+    "peak": 17.588884,
+    "brightest_at_t": 17.588884
+   },
+   "ZTF25aamimsl": {
+    "label": "contaminant",
+    "peak": 17.650421,
+    "brightest_at_t": 17.650421
+   },
+   "ZTF25aamioak": {
+    "label": null,
+    "peak": 18.791609,
+    "brightest_at_t": 18.791609
+   },
+   "ZTF25aamioam": {
+    "label": "contaminant",
+    "peak": 16.90076,
+    "brightest_at_t": 16.90076
+   },
+   "ZTF25aamipol": {
+    "label": "contaminant",
+    "peak": 17.372293,
+    "brightest_at_t": 17.372293
+   },
+   "ZTF25aamitsb": {
+    "label": "contaminant",
+    "peak": 17.690403,
+    "brightest_at_t": 17.690403
+   },
+   "ZTF25aamjaji": {
+    "label": "contaminant",
+    "peak": 17.567776,
+    "brightest_at_t": 17.567776
+   },
+   "ZTF25aamjata": {
+    "label": "contaminant",
+    "peak": 18.01224,
+    "brightest_at_t": 18.01224
+   },
+   "ZTF25aamjiyk": {
+    "label": "unknown",
+    "peak": 18.7893,
+    "brightest_at_t": 18.789291
+   },
+   "ZTF25aamkbbd": {
+    "label": "contaminant",
+    "peak": 18.434736,
+    "brightest_at_t": 18.434736
+   },
+   "ZTF25aamkldj": {
+    "label": "contaminant",
+    "peak": 17.055622,
+    "brightest_at_t": 17.055622
+   },
+   "ZTF25aamkqzo": {
+    "label": "unknown",
+    "peak": 18.8466,
+    "brightest_at_t": 18.960043
+   },
+   "ZTF25aamppsd": {
+    "label": "contaminant",
+    "peak": 17.637503,
+    "brightest_at_t": 17.637503
+   },
+   "ZTF25aamqhpc": {
+    "label": "class",
+    "peak": 18.5934,
+    "brightest_at_t": 18.970665
+   },
+   "ZTF25aamqlzp": {
+    "label": "contaminant",
+    "peak": 16.505272,
+    "brightest_at_t": 16.505272
+   },
+   "ZTF25aamqtqd": {
+    "label": null,
+    "peak": 18.710846,
+    "brightest_at_t": 18.710846
+   },
+   "ZTF25aamrath": {
+    "label": "class",
+    "peak": 17.9322,
+    "brightest_at_t": 18.488024
+   },
+   "ZTF25aanbchm": {
+    "label": "class",
+    "peak": 18.1561,
+    "brightest_at_t": 18.309258
+   },
+   "ZTF25aanbcou": {
+    "label": "class",
+    "peak": 18.2622,
+    "brightest_at_t": 18.528345
+   },
+   "ZTF25aanbdft": {
+    "label": "class",
+    "peak": 18.4034,
+    "brightest_at_t": 18.46699
+   },
+   "ZTF25aanbdfw": {
+    "label": null,
+    "peak": 18.993952,
+    "brightest_at_t": 18.993952
+   },
+   "ZTF25aanbdhf": {
+    "label": "contaminant",
+    "peak": 17.53784,
+    "brightest_at_t": 17.53784
+   },
+   "ZTF25aanbdir": {
+    "label": null,
+    "peak": 18.661636,
+    "brightest_at_t": 18.661636
+   },
+   "ZTF25aanbdkl": {
+    "label": "contaminant",
+    "peak": 18.165241,
+    "brightest_at_t": 18.165241
+   },
+   "ZTF25aanbdlm": {
+    "label": "contaminant",
+    "peak": 18.09197,
+    "brightest_at_t": 18.09197
+   },
+   "ZTF25aanbdmw": {
+    "label": "contaminant",
+    "peak": 17.366644,
+    "brightest_at_t": 17.366644
+   },
+   "ZTF25aanbdps": {
+    "label": "contaminant",
+    "peak": 18.428951,
+    "brightest_at_t": 18.428951
+   },
+   "ZTF25aanbdsx": {
+    "label": "contaminant",
+    "peak": 17.94943,
+    "brightest_at_t": 17.94943
+   },
+   "ZTF25aanbeal": {
+    "label": null,
+    "peak": 18.5796,
+    "brightest_at_t": 18.695683
+   },
+   "ZTF25aanbgzv": {
+    "label": "unknown",
+    "peak": 18.6604,
+    "brightest_at_t": 18.66041
+   },
+   "ZTF25aanbhgp": {
+    "label": "contaminant",
+    "peak": 18.337711,
+    "brightest_at_t": 18.337711
+   },
+   "ZTF25aanbhlb": {
+    "label": "contaminant",
+    "peak": 18.414644,
+    "brightest_at_t": 18.414644
+   },
+   "ZTF25aanbhld": {
+    "label": "contaminant",
+    "peak": 18.243412,
+    "brightest_at_t": 18.243412
+   },
+   "ZTF25aanbkev": {
+    "label": "unknown",
+    "peak": 18.9758,
+    "brightest_at_t": 18.990732
+   },
+   "ZTF25aanblkq": {
+    "label": "unknown",
+    "peak": 18.6923,
+    "brightest_at_t": 18.718325
+   },
+   "ZTF25aanbnfj": {
+    "label": "class",
+    "peak": 18.0781,
+    "brightest_at_t": 18.276012
+   },
+   "ZTF25aanbooo": {
+    "label": "contaminant",
+    "peak": 18.270844,
+    "brightest_at_t": 18.270844
+   },
+   "ZTF25aanbpxg": {
+    "label": "contaminant",
+    "peak": 18.499228,
+    "brightest_at_t": 18.499228
+   },
+   "ZTF25aanbpzy": {
+    "label": null,
+    "peak": 18.9683,
+    "brightest_at_t": 18.9683
+   },
+   "ZTF25aanbqrx": {
+    "label": "unknown",
+    "peak": 18.3545,
+    "brightest_at_t": 18.453785
+   },
+   "ZTF25aanbrxz": {
+    "label": "unknown",
+    "peak": 18.3707,
+    "brightest_at_t": 18.734165
+   },
+   "ZTF25aanbtlr": {
+    "label": null,
+    "peak": 18.929426,
+    "brightest_at_t": 18.929426
+   },
+   "ZTF25aanbuny": {
+    "label": null,
+    "peak": 18.98572,
+    "brightest_at_t": 18.98572
+   },
+   "ZTF25aanbuyz": {
+    "label": null,
+    "peak": 18.579557,
+    "brightest_at_t": 18.579557
+   },
+   "ZTF25aanbypz": {
+    "label": "unknown",
+    "peak": 18.5234,
+    "brightest_at_t": 18.633883
+   },
+   "ZTF25aancbod": {
+    "label": "unknown",
+    "peak": 18.8421,
+    "brightest_at_t": 18.842052
+   },
+   "ZTF25aancloh": {
+    "label": "class",
+    "peak": 18.3666,
+    "brightest_at_t": 18.642315
+   },
+   "ZTF25aancuae": {
+    "label": "unknown",
+    "peak": 18.6167,
+    "brightest_at_t": 18.841875
+   },
+   "ZTF25aancvre": {
+    "label": "contaminant",
+    "peak": 18.323057,
+    "brightest_at_t": 18.323057
+   },
+   "ZTF25aanepai": {
+    "label": "class",
+    "peak": 17.9555,
+    "brightest_at_t": 18.506721
+   },
+   "ZTF25aanevqm": {
+    "label": "contaminant",
+    "peak": 18.492096,
+    "brightest_at_t": 18.492096
+   },
+   "ZTF25aanfhbc": {
+    "label": null,
+    "peak": 18.653425,
+    "brightest_at_t": 18.653425
+   },
+   "ZTF25aanfhep": {
+    "label": "contaminant",
+    "peak": 17.828953,
+    "brightest_at_t": 17.828953
+   },
+   "ZTF25aanfhfi": {
+    "label": "contaminant",
+    "peak": 18.193089,
+    "brightest_at_t": 18.193089
+   },
+   "ZTF25aanfhqw": {
+    "label": null,
+    "peak": 18.839905,
+    "brightest_at_t": 18.839905
+   },
+   "ZTF25aanfhze": {
+    "label": null,
+    "peak": 18.661919,
+    "brightest_at_t": 18.661919
+   },
+   "ZTF25aanflcs": {
+    "label": "contaminant",
+    "peak": 17.471848,
+    "brightest_at_t": 17.471848
+   },
+   "ZTF25aanijcp": {
+    "label": "contaminant",
+    "peak": 17.998756,
+    "brightest_at_t": 17.998756
+   },
+   "ZTF25aanikdu": {
+    "label": "unknown",
+    "peak": 18.8462,
+    "brightest_at_t": 18.945683
+   },
+   "ZTF25aanikqv": {
+    "label": null,
+    "peak": 18.662035,
+    "brightest_at_t": 18.662035
+   },
+   "ZTF25aanilar": {
+    "label": null,
+    "peak": 18.93472,
+    "brightest_at_t": 18.93472
+   },
+   "ZTF25aanitpo": {
+    "label": "class",
+    "peak": 18.343,
+    "brightest_at_t": 18.505434
+   },
+   "ZTF25aankqhe": {
+    "label": "class",
+    "peak": 17.7773,
+    "brightest_at_t": 18.170643
+   },
+   "ZTF25aankyie": {
+    "label": "class",
+    "peak": 18.7411,
+    "brightest_at_t": 18.741146
+   },
+   "ZTF25aanmjed": {
+    "label": "contaminant",
+    "peak": 17.8265,
+    "brightest_at_t": 18.436857
+   },
+   "ZTF25aanmjss": {
+    "label": null,
+    "peak": 18.5616,
+    "brightest_at_t": 18.964962
+   }
+  },
+  "2025-04-21": {
+   "ZTF18aawhrjb": {
+    "label": "contaminant",
+    "peak": 18.31519,
+    "brightest_at_t": 18.325935
+   },
+   "ZTF19aahfevh": {
+    "label": "contaminant",
+    "peak": 18.393717,
+    "brightest_at_t": 18.540483
+   },
+   "ZTF19aakhash": {
+    "label": "contaminant",
+    "peak": 17.713085,
+    "brightest_at_t": 17.713085
+   },
+   "ZTF19adggilm": {
+    "label": "contaminant",
+    "peak": 18.3937,
+    "brightest_at_t": 18.412525
+   },
+   "ZTF21abgvfmz": {
+    "label": null,
+    "peak": 18.64333,
+    "brightest_at_t": 18.64333
+   },
+   "ZTF23absjmpv": {
+    "label": "contaminant",
+    "peak": 16.8424,
+    "brightest_at_t": 17.256388
+   },
+   "ZTF25aadupwg": {
+    "label": null,
+    "peak": 18.988857,
+    "brightest_at_t": 18.988857
+   },
+   "ZTF25aaluvkb": {
+    "label": "class",
+    "peak": 17.7499,
+    "brightest_at_t": 17.749908
+   },
+   "ZTF25aaluyhj": {
+    "label": "class",
+    "peak": 18.2064,
+    "brightest_at_t": 18.206406
+   },
+   "ZTF25aalyaqc": {
+    "label": null,
+    "peak": 18.8245,
+    "brightest_at_t": 18.915224
+   },
+   "ZTF25aalycbc": {
+    "label": "class",
+    "peak": 18.4125,
+    "brightest_at_t": 18.412487
+   },
+   "ZTF25aalycqc": {
+    "label": "class",
+    "peak": 18.9285,
+    "brightest_at_t": 18.928453
+   },
+   "ZTF25aalylco": {
+    "label": "class",
+    "peak": 17.9063,
+    "brightest_at_t": 17.90628
+   },
+   "ZTF25aalzdap": {
+    "label": "contaminant",
+    "peak": 17.167137,
+    "brightest_at_t": 17.167137
+   },
+   "ZTF25aamauii": {
+    "label": "contaminant",
+    "peak": 16.654554,
+    "brightest_at_t": 16.654554
+   },
+   "ZTF25aambsqu": {
+    "label": "class",
+    "peak": 18.1474,
+    "brightest_at_t": 18.180006
+   },
+   "ZTF25aambupl": {
+    "label": "unknown",
+    "peak": 17.8729,
+    "brightest_at_t": 17.872868
+   },
+   "ZTF25aameuts": {
+    "label": "class",
+    "peak": 17.6255,
+    "brightest_at_t": 17.625471
+   },
+   "ZTF25aamhede": {
+    "label": "contaminant",
+    "peak": 17.063309,
+    "brightest_at_t": 17.063309
+   },
+   "ZTF25aamhewc": {
+    "label": "contaminant",
+    "peak": 18.421057,
+    "brightest_at_t": 18.421057
+   },
+   "ZTF25aamhgkx": {
+    "label": "contaminant",
+    "peak": 17.78059,
+    "brightest_at_t": 17.78059
+   },
+   "ZTF25aamimqx": {
+    "label": "contaminant",
+    "peak": 17.588884,
+    "brightest_at_t": 17.588884
+   },
+   "ZTF25aamimsl": {
+    "label": "contaminant",
+    "peak": 17.650421,
+    "brightest_at_t": 17.650421
+   },
+   "ZTF25aamioak": {
+    "label": null,
+    "peak": 18.791609,
+    "brightest_at_t": 18.791609
+   },
+   "ZTF25aamioam": {
+    "label": "contaminant",
+    "peak": 16.90076,
+    "brightest_at_t": 16.90076
+   },
+   "ZTF25aamipol": {
+    "label": "contaminant",
+    "peak": 17.372293,
+    "brightest_at_t": 17.372293
+   },
+   "ZTF25aamitsb": {
+    "label": "contaminant",
+    "peak": 17.690403,
+    "brightest_at_t": 17.690403
+   },
+   "ZTF25aamjaji": {
+    "label": "contaminant",
+    "peak": 17.567776,
+    "brightest_at_t": 17.567776
+   },
+   "ZTF25aamjata": {
+    "label": "contaminant",
+    "peak": 18.01224,
+    "brightest_at_t": 18.01224
+   },
+   "ZTF25aamjiyk": {
+    "label": "unknown",
+    "peak": 18.7893,
+    "brightest_at_t": 18.789291
+   },
+   "ZTF25aamkbbd": {
+    "label": "contaminant",
+    "peak": 18.434736,
+    "brightest_at_t": 18.434736
+   },
+   "ZTF25aamkldj": {
+    "label": "contaminant",
+    "peak": 17.055622,
+    "brightest_at_t": 17.055622
+   },
+   "ZTF25aamkqzo": {
+    "label": "unknown",
+    "peak": 18.8466,
+    "brightest_at_t": 18.960043
+   },
+   "ZTF25aamppsd": {
+    "label": "contaminant",
+    "peak": 17.637503,
+    "brightest_at_t": 17.637503
+   },
+   "ZTF25aamqasc": {
+    "label": null,
+    "peak": 18.938229,
+    "brightest_at_t": 18.938229
+   },
+   "ZTF25aamqhpc": {
+    "label": "class",
+    "peak": 18.5934,
+    "brightest_at_t": 18.970665
+   },
+   "ZTF25aamqlzp": {
+    "label": "contaminant",
+    "peak": 16.505272,
+    "brightest_at_t": 16.505272
+   },
+   "ZTF25aamqtqd": {
+    "label": null,
+    "peak": 18.710846,
+    "brightest_at_t": 18.710846
+   },
+   "ZTF25aamrath": {
+    "label": "class",
+    "peak": 17.9322,
+    "brightest_at_t": 17.975107
+   },
+   "ZTF25aanbchm": {
+    "label": "class",
+    "peak": 18.1561,
+    "brightest_at_t": 18.309258
+   },
+   "ZTF25aanbcou": {
+    "label": "class",
+    "peak": 18.2622,
+    "brightest_at_t": 18.528345
+   },
+   "ZTF25aanbdft": {
+    "label": "class",
+    "peak": 18.4034,
+    "brightest_at_t": 18.46699
+   },
+   "ZTF25aanbdfw": {
+    "label": null,
+    "peak": 18.993952,
+    "brightest_at_t": 18.993952
+   },
+   "ZTF25aanbdhf": {
+    "label": "contaminant",
+    "peak": 17.53784,
+    "brightest_at_t": 17.53784
+   },
+   "ZTF25aanbdir": {
+    "label": null,
+    "peak": 18.661636,
+    "brightest_at_t": 18.661636
+   },
+   "ZTF25aanbdkl": {
+    "label": "contaminant",
+    "peak": 18.165241,
+    "brightest_at_t": 18.165241
+   },
+   "ZTF25aanbdlm": {
+    "label": "contaminant",
+    "peak": 18.09197,
+    "brightest_at_t": 18.09197
+   },
+   "ZTF25aanbdmw": {
+    "label": "contaminant",
+    "peak": 17.366644,
+    "brightest_at_t": 17.366644
+   },
+   "ZTF25aanbdps": {
+    "label": "contaminant",
+    "peak": 18.428951,
+    "brightest_at_t": 18.428951
+   },
+   "ZTF25aanbdsx": {
+    "label": "contaminant",
+    "peak": 17.94943,
+    "brightest_at_t": 17.94943
+   },
+   "ZTF25aanbeal": {
+    "label": null,
+    "peak": 18.5796,
+    "brightest_at_t": 18.695683
+   },
+   "ZTF25aanbgzv": {
+    "label": "unknown",
+    "peak": 18.6604,
+    "brightest_at_t": 18.66041
+   },
+   "ZTF25aanbhgp": {
+    "label": "contaminant",
+    "peak": 18.337711,
+    "brightest_at_t": 18.337711
+   },
+   "ZTF25aanbhlb": {
+    "label": "contaminant",
+    "peak": 18.414644,
+    "brightest_at_t": 18.414644
+   },
+   "ZTF25aanbhld": {
+    "label": "contaminant",
+    "peak": 18.243412,
+    "brightest_at_t": 18.243412
+   },
+   "ZTF25aanbkev": {
+    "label": "unknown",
+    "peak": 18.9758,
+    "brightest_at_t": 18.990732
+   },
+   "ZTF25aanblkq": {
+    "label": "unknown",
+    "peak": 18.6923,
+    "brightest_at_t": 18.718325
+   },
+   "ZTF25aanbnfj": {
+    "label": "class",
+    "peak": 18.0781,
+    "brightest_at_t": 18.276012
+   },
+   "ZTF25aanbooo": {
+    "label": "contaminant",
+    "peak": 18.270844,
+    "brightest_at_t": 18.270844
+   },
+   "ZTF25aanbpxg": {
+    "label": "contaminant",
+    "peak": 18.499228,
+    "brightest_at_t": 18.499228
+   },
+   "ZTF25aanbpzy": {
+    "label": null,
+    "peak": 18.9683,
+    "brightest_at_t": 18.9683
+   },
+   "ZTF25aanbqrx": {
+    "label": "unknown",
+    "peak": 18.3545,
+    "brightest_at_t": 18.453785
+   },
+   "ZTF25aanbrxz": {
+    "label": "unknown",
+    "peak": 18.3707,
+    "brightest_at_t": 18.734165
+   },
+   "ZTF25aanbtlr": {
+    "label": null,
+    "peak": 18.929426,
+    "brightest_at_t": 18.929426
+   },
+   "ZTF25aanbuny": {
+    "label": null,
+    "peak": 18.98572,
+    "brightest_at_t": 18.98572
+   },
+   "ZTF25aanbuyz": {
+    "label": null,
+    "peak": 18.579557,
+    "brightest_at_t": 18.579557
+   },
+   "ZTF25aanbvqv": {
+    "label": "unknown",
+    "peak": 18.9332,
+    "brightest_at_t": 18.933176
+   },
+   "ZTF25aanbypz": {
+    "label": "unknown",
+    "peak": 18.5234,
+    "brightest_at_t": 18.633883
+   },
+   "ZTF25aancbod": {
+    "label": "unknown",
+    "peak": 18.8421,
+    "brightest_at_t": 18.842052
+   },
+   "ZTF25aancloh": {
+    "label": "class",
+    "peak": 18.3666,
+    "brightest_at_t": 18.642315
+   },
+   "ZTF25aancuae": {
+    "label": "unknown",
+    "peak": 18.6167,
+    "brightest_at_t": 18.841875
+   },
+   "ZTF25aancvre": {
+    "label": "contaminant",
+    "peak": 18.323057,
+    "brightest_at_t": 18.323057
+   },
+   "ZTF25aanellf": {
+    "label": "class",
+    "peak": 18.4882,
+    "brightest_at_t": 18.611603
+   },
+   "ZTF25aanepai": {
+    "label": "class",
+    "peak": 17.9555,
+    "brightest_at_t": 18.506721
+   },
+   "ZTF25aanevqm": {
+    "label": "contaminant",
+    "peak": 18.492096,
+    "brightest_at_t": 18.492096
+   },
+   "ZTF25aanevul": {
+    "label": "unknown",
+    "peak": 18.9632,
+    "brightest_at_t": 18.963223
+   },
+   "ZTF25aaneyud": {
+    "label": "unknown",
+    "peak": 18.7878,
+    "brightest_at_t": 18.849072
+   },
+   "ZTF25aanezba": {
+    "label": "class",
+    "peak": 16.8819,
+    "brightest_at_t": 17.888592
+   },
+   "ZTF25aanfhbc": {
+    "label": null,
+    "peak": 18.653425,
+    "brightest_at_t": 18.653425
+   },
+   "ZTF25aanfhep": {
+    "label": "contaminant",
+    "peak": 17.828953,
+    "brightest_at_t": 17.828953
+   },
+   "ZTF25aanfhfi": {
+    "label": "contaminant",
+    "peak": 18.193089,
+    "brightest_at_t": 18.193089
+   },
+   "ZTF25aanfhqw": {
+    "label": null,
+    "peak": 18.839905,
+    "brightest_at_t": 18.839905
+   },
+   "ZTF25aanfhze": {
+    "label": null,
+    "peak": 18.661919,
+    "brightest_at_t": 18.661919
+   },
+   "ZTF25aanflcs": {
+    "label": "contaminant",
+    "peak": 17.471848,
+    "brightest_at_t": 17.471848
+   },
+   "ZTF25aanfqik": {
+    "label": "unknown",
+    "peak": 18.6763,
+    "brightest_at_t": 18.676344
+   },
+   "ZTF25aangnvu": {
+    "label": "class",
+    "peak": 18.8959,
+    "brightest_at_t": 18.897093
+   },
+   "ZTF25aanhfwo": {
+    "label": "unknown",
+    "peak": 18.9097,
+    "brightest_at_t": 18.909735
+   },
+   "ZTF25aanhhyc": {
+    "label": null,
+    "peak": 18.810991,
+    "brightest_at_t": 18.810991
+   },
+   "ZTF25aanhiwe": {
+    "label": "class",
+    "peak": 18.7369,
+    "brightest_at_t": 18.736855
+   },
+   "ZTF25aanijcp": {
+    "label": "contaminant",
+    "peak": 17.998756,
+    "brightest_at_t": 17.998756
+   },
+   "ZTF25aanikdu": {
+    "label": "unknown",
+    "peak": 18.8462,
+    "brightest_at_t": 18.945683
+   },
+   "ZTF25aanikqv": {
+    "label": null,
+    "peak": 18.662035,
+    "brightest_at_t": 18.662035
+   },
+   "ZTF25aanilar": {
+    "label": null,
+    "peak": 18.93472,
+    "brightest_at_t": 18.93472
+   },
+   "ZTF25aanitpo": {
+    "label": "class",
+    "peak": 18.343,
+    "brightest_at_t": 18.505434
+   },
+   "ZTF25aankqhe": {
+    "label": "class",
+    "peak": 17.7773,
+    "brightest_at_t": 18.170643
+   },
+   "ZTF25aankyie": {
+    "label": "class",
+    "peak": 18.7411,
+    "brightest_at_t": 18.741146
+   },
+   "ZTF25aanlbth": {
+    "label": "unknown",
+    "peak": 18.737,
+    "brightest_at_t": 18.840313
+   },
+   "ZTF25aanmjed": {
+    "label": "contaminant",
+    "peak": 17.8265,
+    "brightest_at_t": 18.436857
+   },
+   "ZTF25aanmjss": {
+    "label": null,
+    "peak": 18.5616,
+    "brightest_at_t": 18.964962
+   },
+   "ZTF25aanmuym": {
+    "label": "class",
+    "peak": 18.5408,
+    "brightest_at_t": 18.940151
+   },
+   "ZTF25aanokeu": {
+    "label": null,
+    "peak": 18.564863,
+    "brightest_at_t": 18.564863
+   },
+   "ZTF25aanpulo": {
+    "label": "class",
+    "peak": 17.9852,
+    "brightest_at_t": 18.69526
+   },
+   "ZTF25aanqnzr": {
+    "label": null,
+    "peak": 18.876863,
+    "brightest_at_t": 18.876863
+   }
+  },
+  "2025-04-22": {
+   "ZTF18aawhrjb": {
+    "label": "contaminant",
+    "peak": 18.31519,
+    "brightest_at_t": 18.319298
+   },
+   "ZTF19aahfevh": {
+    "label": "contaminant",
+    "peak": 18.393717,
+    "brightest_at_t": 18.540483
+   },
+   "ZTF19aakhash": {
+    "label": "contaminant",
+    "peak": 17.713085,
+    "brightest_at_t": 17.713085
+   },
+   "ZTF19adggilm": {
+    "label": "contaminant",
+    "peak": 18.3937,
+    "brightest_at_t": 18.412525
+   },
+   "ZTF21abgvfmz": {
+    "label": null,
+    "peak": 18.64333,
+    "brightest_at_t": 18.64333
+   },
+   "ZTF23absjmpv": {
+    "label": "contaminant",
+    "peak": 16.8424,
+    "brightest_at_t": 17.256388
+   },
+   "ZTF25aadupwg": {
+    "label": null,
+    "peak": 18.988857,
+    "brightest_at_t": 18.988857
+   },
+   "ZTF25aambsqu": {
+    "label": "class",
+    "peak": 18.1474,
+    "brightest_at_t": 18.147373
+   },
+   "ZTF25aameuts": {
+    "label": "class",
+    "peak": 17.6255,
+    "brightest_at_t": 17.625471
+   },
+   "ZTF25aamhede": {
+    "label": "contaminant",
+    "peak": 17.063309,
+    "brightest_at_t": 17.063309
+   },
+   "ZTF25aamhewc": {
+    "label": "contaminant",
+    "peak": 18.421057,
+    "brightest_at_t": 18.421057
+   },
+   "ZTF25aamhgkx": {
+    "label": "contaminant",
+    "peak": 17.78059,
+    "brightest_at_t": 17.78059
+   },
+   "ZTF25aamhjku": {
+    "label": "class",
+    "peak": 18.278,
+    "brightest_at_t": 18.277983
+   },
+   "ZTF25aamimqx": {
+    "label": "contaminant",
+    "peak": 17.588884,
+    "brightest_at_t": 17.588884
+   },
+   "ZTF25aamimsl": {
+    "label": "contaminant",
+    "peak": 17.650421,
+    "brightest_at_t": 17.650421
+   },
+   "ZTF25aamioak": {
+    "label": null,
+    "peak": 18.791609,
+    "brightest_at_t": 18.791609
+   },
+   "ZTF25aamioam": {
+    "label": "contaminant",
+    "peak": 16.90076,
+    "brightest_at_t": 16.90076
+   },
+   "ZTF25aamipol": {
+    "label": "contaminant",
+    "peak": 17.372293,
+    "brightest_at_t": 17.372293
+   },
+   "ZTF25aamitsb": {
+    "label": "contaminant",
+    "peak": 17.690403,
+    "brightest_at_t": 17.690403
+   },
+   "ZTF25aamjaji": {
+    "label": "contaminant",
+    "peak": 17.567776,
+    "brightest_at_t": 17.567776
+   },
+   "ZTF25aamjata": {
+    "label": "contaminant",
+    "peak": 18.01224,
+    "brightest_at_t": 18.01224
+   },
+   "ZTF25aamjiyk": {
+    "label": "unknown",
+    "peak": 18.7893,
+    "brightest_at_t": 18.789291
+   },
+   "ZTF25aamkbbd": {
+    "label": "contaminant",
+    "peak": 18.434736,
+    "brightest_at_t": 18.434736
+   },
+   "ZTF25aamkldj": {
+    "label": "contaminant",
+    "peak": 17.055622,
+    "brightest_at_t": 17.055622
+   },
+   "ZTF25aamkqzo": {
+    "label": "unknown",
+    "peak": 18.8466,
+    "brightest_at_t": 18.84665
+   },
+   "ZTF25aamppsd": {
+    "label": "contaminant",
+    "peak": 17.637503,
+    "brightest_at_t": 17.637503
+   },
+   "ZTF25aamqasc": {
+    "label": null,
+    "peak": 18.938229,
+    "brightest_at_t": 18.938229
+   },
+   "ZTF25aamqhpc": {
+    "label": "class",
+    "peak": 18.5934,
+    "brightest_at_t": 18.633667
+   },
+   "ZTF25aamqlzp": {
+    "label": "contaminant",
+    "peak": 16.505272,
+    "brightest_at_t": 16.505272
+   },
+   "ZTF25aamqtqd": {
+    "label": null,
+    "peak": 18.710846,
+    "brightest_at_t": 18.710846
+   },
+   "ZTF25aamrath": {
+    "label": "class",
+    "peak": 17.9322,
+    "brightest_at_t": 17.975107
+   },
+   "ZTF25aanbchm": {
+    "label": "class",
+    "peak": 18.1561,
+    "brightest_at_t": 18.228937
+   },
+   "ZTF25aanbcou": {
+    "label": "class",
+    "peak": 18.2622,
+    "brightest_at_t": 18.519657
+   },
+   "ZTF25aanbdft": {
+    "label": "class",
+    "peak": 18.4034,
+    "brightest_at_t": 18.403374
+   },
+   "ZTF25aanbdfw": {
+    "label": null,
+    "peak": 18.993952,
+    "brightest_at_t": 18.993952
+   },
+   "ZTF25aanbdhf": {
+    "label": "contaminant",
+    "peak": 17.53784,
+    "brightest_at_t": 17.53784
+   },
+   "ZTF25aanbdir": {
+    "label": null,
+    "peak": 18.661636,
+    "brightest_at_t": 18.661636
+   },
+   "ZTF25aanbdkl": {
+    "label": "contaminant",
+    "peak": 18.165241,
+    "brightest_at_t": 18.165241
+   },
+   "ZTF25aanbdlm": {
+    "label": "contaminant",
+    "peak": 18.09197,
+    "brightest_at_t": 18.09197
+   },
+   "ZTF25aanbdmw": {
+    "label": "contaminant",
+    "peak": 17.366644,
+    "brightest_at_t": 17.366644
+   },
+   "ZTF25aanbdps": {
+    "label": "contaminant",
+    "peak": 18.428951,
+    "brightest_at_t": 18.428951
+   },
+   "ZTF25aanbdsx": {
+    "label": "contaminant",
+    "peak": 17.94943,
+    "brightest_at_t": 17.94943
+   },
+   "ZTF25aanbeal": {
+    "label": null,
+    "peak": 18.5796,
+    "brightest_at_t": 18.695683
+   },
+   "ZTF25aanbgzv": {
+    "label": "unknown",
+    "peak": 18.6604,
+    "brightest_at_t": 18.66041
+   },
+   "ZTF25aanbhgp": {
+    "label": "contaminant",
+    "peak": 18.337711,
+    "brightest_at_t": 18.337711
+   },
+   "ZTF25aanbhlb": {
+    "label": "contaminant",
+    "peak": 18.414644,
+    "brightest_at_t": 18.414644
+   },
+   "ZTF25aanbhld": {
+    "label": "contaminant",
+    "peak": 18.243412,
+    "brightest_at_t": 18.243412
+   },
+   "ZTF25aanbkev": {
+    "label": "unknown",
+    "peak": 18.9758,
+    "brightest_at_t": 18.985153
+   },
+   "ZTF25aanblkq": {
+    "label": "unknown",
+    "peak": 18.6923,
+    "brightest_at_t": 18.71721
+   },
+   "ZTF25aanbnfj": {
+    "label": "class",
+    "peak": 18.0781,
+    "brightest_at_t": 18.104391
+   },
+   "ZTF25aanbooo": {
+    "label": "contaminant",
+    "peak": 18.270844,
+    "brightest_at_t": 18.270844
+   },
+   "ZTF25aanbpxg": {
+    "label": "contaminant",
+    "peak": 18.499228,
+    "brightest_at_t": 18.499228
+   },
+   "ZTF25aanbpzy": {
+    "label": null,
+    "peak": 18.9683,
+    "brightest_at_t": 18.9683
+   },
+   "ZTF25aanbrxz": {
+    "label": "unknown",
+    "peak": 18.3707,
+    "brightest_at_t": 18.734165
+   },
+   "ZTF25aanbtlr": {
+    "label": null,
+    "peak": 18.929426,
+    "brightest_at_t": 18.929426
+   },
+   "ZTF25aanbuny": {
+    "label": null,
+    "peak": 18.98572,
+    "brightest_at_t": 18.98572
+   },
+   "ZTF25aanbuyz": {
+    "label": null,
+    "peak": 18.579557,
+    "brightest_at_t": 18.579557
+   },
+   "ZTF25aanbvqv": {
+    "label": "unknown",
+    "peak": 18.9332,
+    "brightest_at_t": 18.933176
+   },
+   "ZTF25aanbypz": {
+    "label": "unknown",
+    "peak": 18.5234,
+    "brightest_at_t": 18.52341
+   },
+   "ZTF25aancloh": {
+    "label": "class",
+    "peak": 18.3666,
+    "brightest_at_t": 18.564528
+   },
+   "ZTF25aancuae": {
+    "label": "unknown",
+    "peak": 18.6167,
+    "brightest_at_t": 18.690105
+   },
+   "ZTF25aancvre": {
+    "label": "contaminant",
+    "peak": 18.323057,
+    "brightest_at_t": 18.323057
+   },
+   "ZTF25aanellf": {
+    "label": "class",
+    "peak": 18.4882,
+    "brightest_at_t": 18.611603
+   },
+   "ZTF25aanepai": {
+    "label": "class",
+    "peak": 17.9555,
+    "brightest_at_t": 18.304314
+   },
+   "ZTF25aanevqm": {
+    "label": "contaminant",
+    "peak": 18.492096,
+    "brightest_at_t": 18.492096
+   },
+   "ZTF25aanevul": {
+    "label": "unknown",
+    "peak": 18.9632,
+    "brightest_at_t": 18.963223
+   },
+   "ZTF25aaneyud": {
+    "label": "unknown",
+    "peak": 18.7878,
+    "brightest_at_t": 18.849072
+   },
+   "ZTF25aanezba": {
+    "label": "class",
+    "peak": 16.8819,
+    "brightest_at_t": 17.888592
+   },
+   "ZTF25aanfaxg": {
+    "label": "class",
+    "peak": 18.8107,
+    "brightest_at_t": 18.943426
+   },
+   "ZTF25aanfhbc": {
+    "label": null,
+    "peak": 18.653425,
+    "brightest_at_t": 18.653425
+   },
+   "ZTF25aanfhep": {
+    "label": "contaminant",
+    "peak": 17.828953,
+    "brightest_at_t": 17.828953
+   },
+   "ZTF25aanfhfi": {
+    "label": "contaminant",
+    "peak": 18.193089,
+    "brightest_at_t": 18.193089
+   },
+   "ZTF25aanfhqw": {
+    "label": null,
+    "peak": 18.839905,
+    "brightest_at_t": 18.839905
+   },
+   "ZTF25aanfhze": {
+    "label": null,
+    "peak": 18.661919,
+    "brightest_at_t": 18.661919
+   },
+   "ZTF25aanflcs": {
+    "label": "contaminant",
+    "peak": 17.471848,
+    "brightest_at_t": 17.471848
+   },
+   "ZTF25aanfqik": {
+    "label": "unknown",
+    "peak": 18.6763,
+    "brightest_at_t": 18.676344
+   },
+   "ZTF25aangnvu": {
+    "label": "class",
+    "peak": 18.8959,
+    "brightest_at_t": 18.897093
+   },
+   "ZTF25aanhfwo": {
+    "label": "unknown",
+    "peak": 18.9097,
+    "brightest_at_t": 18.909735
+   },
+   "ZTF25aanhhyc": {
+    "label": null,
+    "peak": 18.810991,
+    "brightest_at_t": 18.810991
+   },
+   "ZTF25aanhiwe": {
+    "label": "class",
+    "peak": 18.7369,
+    "brightest_at_t": 18.736855
+   },
+   "ZTF25aaniiis": {
+    "label": "class",
+    "peak": 18.586,
+    "brightest_at_t": 18.885365
+   },
+   "ZTF25aanijcp": {
+    "label": "contaminant",
+    "peak": 17.998756,
+    "brightest_at_t": 17.998756
+   },
+   "ZTF25aanikdu": {
+    "label": "unknown",
+    "peak": 18.8462,
+    "brightest_at_t": 18.846205
+   },
+   "ZTF25aanikqv": {
+    "label": null,
+    "peak": 18.662035,
+    "brightest_at_t": 18.662035
+   },
+   "ZTF25aanilar": {
+    "label": null,
+    "peak": 18.93472,
+    "brightest_at_t": 18.93472
+   },
+   "ZTF25aanitpo": {
+    "label": "class",
+    "peak": 18.343,
+    "brightest_at_t": 18.449228
+   },
+   "ZTF25aankqhe": {
+    "label": "class",
+    "peak": 17.7773,
+    "brightest_at_t": 17.93853
+   },
+   "ZTF25aankqtm": {
+    "label": "unknown",
+    "peak": 18.4255,
+    "brightest_at_t": 18.597301
+   },
+   "ZTF25aankyie": {
+    "label": "class",
+    "peak": 18.7411,
+    "brightest_at_t": 18.741146
+   },
+   "ZTF25aanlbth": {
+    "label": "unknown",
+    "peak": 18.737,
+    "brightest_at_t": 18.840313
+   },
+   "ZTF25aanmgrm": {
+    "label": "class",
+    "peak": 17.5493,
+    "brightest_at_t": 17.695892
+   },
+   "ZTF25aanmiqt": {
+    "label": "contaminant",
+    "peak": 16.775501,
+    "brightest_at_t": 16.775501
+   },
+   "ZTF25aanmjed": {
+    "label": "contaminant",
+    "peak": 17.8265,
+    "brightest_at_t": 18.436857
+   },
+   "ZTF25aanmjss": {
+    "label": null,
+    "peak": 18.5616,
+    "brightest_at_t": 18.964962
+   },
+   "ZTF25aanmuym": {
+    "label": "class",
+    "peak": 18.5408,
+    "brightest_at_t": 18.940151
+   },
+   "ZTF25aanokeu": {
+    "label": null,
+    "peak": 18.564863,
+    "brightest_at_t": 18.564863
+   },
+   "ZTF25aanpulo": {
+    "label": "class",
+    "peak": 17.9852,
+    "brightest_at_t": 18.69526
+   },
+   "ZTF25aanqnzr": {
+    "label": null,
+    "peak": 18.876863,
+    "brightest_at_t": 18.876863
+   },
+   "ZTF25aanxxen": {
+    "label": null,
+    "peak": 18.813068,
+    "brightest_at_t": 18.813068
+   },
+   "ZTF25aanycov": {
+    "label": "contaminant",
+    "peak": 17.11739,
+    "brightest_at_t": 17.11739
+   },
+   "ZTF25aanzrap": {
+    "label": null,
+    "peak": 18.604635,
+    "brightest_at_t": 18.604635
+   },
+   "ZTF25aanzygy": {
+    "label": "contaminant",
+    "peak": 18.39127,
+    "brightest_at_t": 18.39127
+   }
+  },
+  "2025-04-23": {
+   "ZTF18aawhrjb": {
+    "label": "contaminant",
+    "peak": 18.31519,
+    "brightest_at_t": 18.319298
+   },
+   "ZTF19aahfevh": {
+    "label": "contaminant",
+    "peak": 18.393717,
+    "brightest_at_t": 18.484701
+   },
+   "ZTF19aakhash": {
+    "label": "contaminant",
+    "peak": 17.713085,
+    "brightest_at_t": 17.713085
+   },
+   "ZTF19adggilm": {
+    "label": "contaminant",
+    "peak": 18.3937,
+    "brightest_at_t": 18.412525
+   },
+   "ZTF21abgvfmz": {
+    "label": null,
+    "peak": 18.64333,
+    "brightest_at_t": 18.64333
+   },
+   "ZTF25aadupwg": {
+    "label": null,
+    "peak": 18.988857,
+    "brightest_at_t": 18.988857
+   },
+   "ZTF25aamimqx": {
+    "label": "contaminant",
+    "peak": 17.588884,
+    "brightest_at_t": 17.588884
+   },
+   "ZTF25aamimsl": {
+    "label": "contaminant",
+    "peak": 17.650421,
+    "brightest_at_t": 17.650421
+   },
+   "ZTF25aamioak": {
+    "label": null,
+    "peak": 18.791609,
+    "brightest_at_t": 18.791609
+   },
+   "ZTF25aamioam": {
+    "label": "contaminant",
+    "peak": 16.90076,
+    "brightest_at_t": 16.90076
+   },
+   "ZTF25aamipol": {
+    "label": "contaminant",
+    "peak": 17.372293,
+    "brightest_at_t": 17.372293
+   },
+   "ZTF25aamitsb": {
+    "label": "contaminant",
+    "peak": 17.690403,
+    "brightest_at_t": 17.690403
+   },
+   "ZTF25aamjaji": {
+    "label": "contaminant",
+    "peak": 17.567776,
+    "brightest_at_t": 17.567776
+   },
+   "ZTF25aamjata": {
+    "label": "contaminant",
+    "peak": 18.01224,
+    "brightest_at_t": 18.01224
+   },
+   "ZTF25aamjiyk": {
+    "label": "unknown",
+    "peak": 18.7893,
+    "brightest_at_t": 18.789291
+   },
+   "ZTF25aamkldj": {
+    "label": "contaminant",
+    "peak": 17.055622,
+    "brightest_at_t": 17.055622
+   },
+   "ZTF25aamppsd": {
+    "label": "contaminant",
+    "peak": 17.637503,
+    "brightest_at_t": 17.637503
+   },
+   "ZTF25aamqasc": {
+    "label": null,
+    "peak": 18.938229,
+    "brightest_at_t": 18.938229
+   },
+   "ZTF25aamqlzp": {
+    "label": "contaminant",
+    "peak": 16.505272,
+    "brightest_at_t": 16.505272
+   },
+   "ZTF25aamqtqd": {
+    "label": null,
+    "peak": 18.710846,
+    "brightest_at_t": 18.710846
+   },
+   "ZTF25aamrath": {
+    "label": "class",
+    "peak": 17.9322,
+    "brightest_at_t": 17.93217
+   },
+   "ZTF25aanbchm": {
+    "label": "class",
+    "peak": 18.1561,
+    "brightest_at_t": 18.228937
+   },
+   "ZTF25aanbcou": {
+    "label": "class",
+    "peak": 18.2622,
+    "brightest_at_t": 18.519657
+   },
+   "ZTF25aanbdft": {
+    "label": "class",
+    "peak": 18.4034,
+    "brightest_at_t": 18.403374
+   },
+   "ZTF25aanbdfw": {
+    "label": null,
+    "peak": 18.993952,
+    "brightest_at_t": 18.993952
+   },
+   "ZTF25aanbdhf": {
+    "label": "contaminant",
+    "peak": 17.53784,
+    "brightest_at_t": 17.53784
+   },
+   "ZTF25aanbdir": {
+    "label": null,
+    "peak": 18.661636,
+    "brightest_at_t": 18.661636
+   },
+   "ZTF25aanbdkl": {
+    "label": "contaminant",
+    "peak": 18.165241,
+    "brightest_at_t": 18.165241
+   },
+   "ZTF25aanbdlm": {
+    "label": "contaminant",
+    "peak": 18.09197,
+    "brightest_at_t": 18.09197
+   },
+   "ZTF25aanbdmw": {
+    "label": "contaminant",
+    "peak": 17.366644,
+    "brightest_at_t": 17.366644
+   },
+   "ZTF25aanbdps": {
+    "label": "contaminant",
+    "peak": 18.428951,
+    "brightest_at_t": 18.428951
+   },
+   "ZTF25aanbdsx": {
+    "label": "contaminant",
+    "peak": 17.94943,
+    "brightest_at_t": 17.94943
+   },
+   "ZTF25aanbeal": {
+    "label": null,
+    "peak": 18.5796,
+    "brightest_at_t": 18.695683
+   },
+   "ZTF25aanbgzv": {
+    "label": "unknown",
+    "peak": 18.6604,
+    "brightest_at_t": 18.66041
+   },
+   "ZTF25aanbhgp": {
+    "label": "contaminant",
+    "peak": 18.337711,
+    "brightest_at_t": 18.337711
+   },
+   "ZTF25aanbhlb": {
+    "label": "contaminant",
+    "peak": 18.414644,
+    "brightest_at_t": 18.414644
+   },
+   "ZTF25aanbhld": {
+    "label": "contaminant",
+    "peak": 18.243412,
+    "brightest_at_t": 18.243412
+   },
+   "ZTF25aanbkev": {
+    "label": "unknown",
+    "peak": 18.9758,
+    "brightest_at_t": 18.985153
+   },
+   "ZTF25aanblkq": {
+    "label": "unknown",
+    "peak": 18.6923,
+    "brightest_at_t": 18.71721
+   },
+   "ZTF25aanbnfj": {
+    "label": "class",
+    "peak": 18.0781,
+    "brightest_at_t": 18.104391
+   },
+   "ZTF25aanbooo": {
+    "label": "contaminant",
+    "peak": 18.270844,
+    "brightest_at_t": 18.270844
+   },
+   "ZTF25aanbpxg": {
+    "label": "contaminant",
+    "peak": 18.499228,
+    "brightest_at_t": 18.499228
+   },
+   "ZTF25aanbpzy": {
+    "label": null,
+    "peak": 18.9683,
+    "brightest_at_t": 18.9683
+   },
+   "ZTF25aanbrxz": {
+    "label": "unknown",
+    "peak": 18.3707,
+    "brightest_at_t": 18.734165
+   },
+   "ZTF25aanbtlr": {
+    "label": null,
+    "peak": 18.929426,
+    "brightest_at_t": 18.929426
+   },
+   "ZTF25aanbuny": {
+    "label": null,
+    "peak": 18.98572,
+    "brightest_at_t": 18.98572
+   },
+   "ZTF25aanbuyz": {
+    "label": null,
+    "peak": 18.579557,
+    "brightest_at_t": 18.579557
+   },
+   "ZTF25aanbvqv": {
+    "label": "unknown",
+    "peak": 18.9332,
+    "brightest_at_t": 18.933176
+   },
+   "ZTF25aanbypz": {
+    "label": "unknown",
+    "peak": 18.5234,
+    "brightest_at_t": 18.52341
+   },
+   "ZTF25aancloh": {
+    "label": "class",
+    "peak": 18.3666,
+    "brightest_at_t": 18.564528
+   },
+   "ZTF25aancuae": {
+    "label": "unknown",
+    "peak": 18.6167,
+    "brightest_at_t": 18.690105
+   },
+   "ZTF25aancvre": {
+    "label": "contaminant",
+    "peak": 18.323057,
+    "brightest_at_t": 18.323057
+   },
+   "ZTF25aanellf": {
+    "label": "class",
+    "peak": 18.4882,
+    "brightest_at_t": 18.600548
+   },
+   "ZTF25aanepai": {
+    "label": "class",
+    "peak": 17.9555,
+    "brightest_at_t": 18.304314
+   },
+   "ZTF25aanevqm": {
+    "label": "contaminant",
+    "peak": 18.492096,
+    "brightest_at_t": 18.492096
+   },
+   "ZTF25aanevul": {
+    "label": "unknown",
+    "peak": 18.9632,
+    "brightest_at_t": 18.963223
+   },
+   "ZTF25aaneyud": {
+    "label": "unknown",
+    "peak": 18.7878,
+    "brightest_at_t": 18.849072
+   },
+   "ZTF25aanezba": {
+    "label": "class",
+    "peak": 16.8819,
+    "brightest_at_t": 17.888592
+   },
+   "ZTF25aanfaxg": {
+    "label": "class",
+    "peak": 18.8107,
+    "brightest_at_t": 18.943426
+   },
+   "ZTF25aanfhbc": {
+    "label": null,
+    "peak": 18.653425,
+    "brightest_at_t": 18.653425
+   },
+   "ZTF25aanfhep": {
+    "label": "contaminant",
+    "peak": 17.828953,
+    "brightest_at_t": 17.828953
+   },
+   "ZTF25aanfhfi": {
+    "label": "contaminant",
+    "peak": 18.193089,
+    "brightest_at_t": 18.193089
+   },
+   "ZTF25aanfhqw": {
+    "label": null,
+    "peak": 18.839905,
+    "brightest_at_t": 18.839905
+   },
+   "ZTF25aanfhze": {
+    "label": null,
+    "peak": 18.661919,
+    "brightest_at_t": 18.661919
+   },
+   "ZTF25aanflcs": {
+    "label": "contaminant",
+    "peak": 17.471848,
+    "brightest_at_t": 17.471848
+   },
+   "ZTF25aanfnya": {
+    "label": "unknown",
+    "peak": 18.6435,
+    "brightest_at_t": 18.820688
+   },
+   "ZTF25aanfqik": {
+    "label": "unknown",
+    "peak": 18.6763,
+    "brightest_at_t": 18.676344
+   },
+   "ZTF25aangnvu": {
+    "label": "class",
+    "peak": 18.8959,
+    "brightest_at_t": 18.895916
+   },
+   "ZTF25aanhfwo": {
+    "label": "unknown",
+    "peak": 18.9097,
+    "brightest_at_t": 18.909735
+   },
+   "ZTF25aanhhyc": {
+    "label": null,
+    "peak": 18.810991,
+    "brightest_at_t": 18.810991
+   },
+   "ZTF25aanhiwe": {
+    "label": "class",
+    "peak": 18.7369,
+    "brightest_at_t": 18.736855
+   },
+   "ZTF25aaniiis": {
+    "label": "class",
+    "peak": 18.586,
+    "brightest_at_t": 18.885365
+   },
+   "ZTF25aanijcp": {
+    "label": "contaminant",
+    "peak": 17.998756,
+    "brightest_at_t": 17.998756
+   },
+   "ZTF25aanikdu": {
+    "label": "unknown",
+    "peak": 18.8462,
+    "brightest_at_t": 18.846205
+   },
+   "ZTF25aanikpq": {
+    "label": "class",
+    "peak": 17.7462,
+    "brightest_at_t": 18.873867
+   },
+   "ZTF25aanikqv": {
+    "label": null,
+    "peak": 18.662035,
+    "brightest_at_t": 18.662035
+   },
+   "ZTF25aanilar": {
+    "label": null,
+    "peak": 18.93472,
+    "brightest_at_t": 18.93472
+   },
+   "ZTF25aanitpo": {
+    "label": "class",
+    "peak": 18.343,
+    "brightest_at_t": 18.449228
+   },
+   "ZTF25aankqhe": {
+    "label": "class",
+    "peak": 17.7773,
+    "brightest_at_t": 17.93853
+   },
+   "ZTF25aankqtm": {
+    "label": "unknown",
+    "peak": 18.4255,
+    "brightest_at_t": 18.597301
+   },
+   "ZTF25aankyie": {
+    "label": "class",
+    "peak": 18.7411,
+    "brightest_at_t": 18.741146
+   },
+   "ZTF25aanlbth": {
+    "label": "unknown",
+    "peak": 18.737,
+    "brightest_at_t": 18.840313
+   },
+   "ZTF25aanmgrm": {
+    "label": "class",
+    "peak": 17.5493,
+    "brightest_at_t": 17.695892
+   },
+   "ZTF25aanmiqt": {
+    "label": "contaminant",
+    "peak": 16.775501,
+    "brightest_at_t": 16.775501
+   },
+   "ZTF25aanmjed": {
+    "label": "contaminant",
+    "peak": 17.8265,
+    "brightest_at_t": 18.436857
+   },
+   "ZTF25aanmjss": {
+    "label": null,
+    "peak": 18.5616,
+    "brightest_at_t": 18.964962
+   },
+   "ZTF25aanmuym": {
+    "label": "class",
+    "peak": 18.5408,
+    "brightest_at_t": 18.71174
+   },
+   "ZTF25aanokeu": {
+    "label": null,
+    "peak": 18.564863,
+    "brightest_at_t": 18.564863
+   },
+   "ZTF25aanpulo": {
+    "label": "class",
+    "peak": 17.9852,
+    "brightest_at_t": 18.400497
+   },
+   "ZTF25aanqbbl": {
+    "label": "class",
+    "peak": 17.8377,
+    "brightest_at_t": 18.973057
+   },
+   "ZTF25aanqnzr": {
+    "label": null,
+    "peak": 18.876863,
+    "brightest_at_t": 18.876863
+   },
+   "ZTF25aanrkqc": {
+    "label": null,
+    "peak": 18.880514,
+    "brightest_at_t": 18.880514
+   },
+   "ZTF25aanxxen": {
+    "label": null,
+    "peak": 18.813068,
+    "brightest_at_t": 18.813068
+   },
+   "ZTF25aanycov": {
+    "label": "contaminant",
+    "peak": 17.11739,
+    "brightest_at_t": 17.11739
+   },
+   "ZTF25aanzrap": {
+    "label": null,
+    "peak": 18.604635,
+    "brightest_at_t": 18.604635
+   },
+   "ZTF25aanzygy": {
+    "label": "contaminant",
+    "peak": 18.39127,
+    "brightest_at_t": 18.39127
+   },
+   "ZTF25aaobttp": {
+    "label": null,
+    "peak": 18.889366,
+    "brightest_at_t": 18.889366
+   },
+   "ZTF25aaobuoa": {
+    "label": null,
+    "peak": 18.781506,
+    "brightest_at_t": 18.781506
+   },
+   "ZTF25aaoburp": {
+    "label": "unknown",
+    "peak": 18.4156,
+    "brightest_at_t": 18.754238
+   },
+   "ZTF25aaobxba": {
+    "label": null,
+    "peak": 18.908878,
+    "brightest_at_t": 18.908878
+   },
+   "ZTF25aaobyqn": {
+    "label": "contaminant",
+    "peak": 17.55631,
+    "brightest_at_t": 17.55631
+   },
+   "ZTF25aaocjxg": {
+    "label": "contaminant",
+    "peak": 18.384235,
+    "brightest_at_t": 18.384235
+   }
+  }
+ }
+}

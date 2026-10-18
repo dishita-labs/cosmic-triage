@@ -98,15 +98,15 @@
   "id": 7,
   "assumption": "Jev and Claude keys; Jev call ~200 ms with ~500-token state",
   "test": "one call each",
-  "verdict": "BLOCKED: CREDENTIAL REQUIRED",
+  "verdict": "BLOCKED: SPEND APPROVAL REQUIRED",
   "evidence": [
-   "No model call attempted (keys absent; and no spend budget approved by the owner)."
+   "Keys present, but the owner has not approved a model spend budget; no paid call made."
   ],
   "fallback": "M4 slips; architecture unaffected (\u00a711)",
   "needs_fable": false,
-  "credential": "ANTHROPIC_API_KEY, TYPESAFE_API_KEY (or OPENROUTER_API_KEY)",
-  "setup": "ANTHROPIC_API_KEY: create at https://console.anthropic.com -> API keys. TYPESAFE_API_KEY: create at https://docs.typesafe.ai (quickstart) or use OPENROUTER_API_KEY (https://openrouter.ai/keys). Add to .env. Live calls are paid: the owner must also approve a spend budget.",
-  "seconds": 8.821487426757812e-06
+  "credential": "",
+  "setup": "",
+  "seconds": 0.000308990478515625
  },
  {
   "id": 8,

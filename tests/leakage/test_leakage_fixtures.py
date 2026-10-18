@@ -1,4 +1,4 @@
-"""Adversarial leakage fixtures (§10.3 M1): every planted future/truth datum must be absent or recomputed.
+"""Adversarial leakage fixtures (§10.3 M1, M1.1): every planted future/truth datum must be absent or recomputed.
 
 A failure here is a §14.8 stop condition — never weaken these tests.
 """
@@ -60,22 +60,38 @@ def test_required_fixtures_present() -> None:
     assert {"detection_t_plus_0p01d", "fink_row_jd_after_t", "bts_type_field", "ndethist_final_history"} <= names
 
 
+def test_required_m1_1_fixtures_present() -> None:
+    """§10.3 M1.1 completion criteria (i)-(v)."""
+    names = {load(p)["name"] for p in FIXTURES}
+    assert {
+        "prv_delivered_after_t",                    # (i)
+        "nondet_older_than_any_delivering_alert",   # (ii)
+        "alert_jdstarthist_before_window",          # (iii)
+        "fink_row_after_t_with_old_jdstarthist",    # (iv)
+        "object_level_hist_in_alerce",              # (v)
+    } <= names
+
+
 @pytest.mark.parametrize("path", FIXTURES, ids=lambda p: p.stem)
 def test_fixture(path: Path) -> None:
     fx = load(path)
     t, exp = fx["t_mjd"], fx["expect"]
     raw = to_raw(fx)
-    # The scrubbed raw records carry no denylisted key.
-    for rec in raw.detections + raw.non_detections + raw.fink_rows:
+    # The scrubbed raw records carry no denylisted key (Fink alert rows may carry the per-alert allow-list only).
+    for rec in raw.detections + raw.non_detections:
         assert not [k for k in rec if DENY.denied(k)], rec
+    for rec in raw.fink_rows:
+        assert not [k for k in rec if DENY.denied(k, "fink")], rec
     res = evaluate(raw, t, CFG)
     if "member" in exp:
         assert res.passed is exp["member"], res.reasons
+    for reason in exp.get("reasons_include", []):
+        assert reason in res.reasons, res.reasons
     if exp.get("no_snapshot"):
         with pytest.raises(ValueError):
-            build_candidate(raw, t)
+            build_candidate(raw, t, CFG.packet_history_days)
         return
-    cand = build_candidate(raw, t)
+    cand = build_candidate(raw, t, CFG.packet_history_days)
     snap = Snapshot(t_mjd=t, night_id="2025-04-01", candidates=(cand,), pool_config_hash=CFG.config_hash,
                     denylist_version=DENY.version, sources={})
     dumped = json.loads(snap.model_dump_json())
@@ -85,12 +101,17 @@ def test_fixture(path: Path) -> None:
     text = snap.model_dump_json()
     # Universal invariants.
     assert all(p.mjd <= t for p in cand.photometry)
+    assert all(p.delivered_by_mjd is not None and p.mjd <= p.delivered_by_mjd <= t for p in cand.photometry)
     assert all(r.mjd <= t for r in cand.fink_rows)
+    assert all(r.hist_start_mjd is None or r.hist_start_mjd <= r.mjd for r in cand.fink_rows)
     assert not [k for k in keys if DENY.denied(k) and k not in ("ra", "dec")], keys
     # Fixture-specific expectations.
     for k in ("n_detections", "n_nondetections", "brightest_mag", "latest_mag", "latest_band", "first_detection_mjd"):
         if k in exp:
             assert getattr(cand, k) == pytest.approx(exp[k]) if isinstance(exp[k], float) else getattr(cand, k) == exp[k]
+    for mag, by in exp.get("delivered_by", {}).items():
+        pts = [p for p in cand.photometry if p.mag == float(mag)]
+        assert pts and all(p.delivered_by_mjd == pytest.approx(by) for p in pts), pts
     if "n_fink_rows" in exp:
         assert len(cand.fink_rows) == exp["n_fink_rows"]
     if "ra" in exp:

@@ -1,0 +1,178 @@
+[
+ {
+  "night": "2025-04-19",
+  "oid": "ZTF25aalldzz",
+  "bts_type": "SN Ia",
+  "hist_age_days": 23.5,
+  "first_known_det_age_days": 12.4,
+  "kind": "edge (\u226430 d)"
+ },
+ {
+  "night": "2025-04-19",
+  "oid": "ZTF25aalpzgd",
+  "bts_type": "SN II",
+  "hist_age_days": 14.5,
+  "first_known_det_age_days": 13.5,
+  "kind": "edge (\u226430 d)"
+ },
+ {
+  "night": "2025-04-19",
+  "oid": "ZTF25aaluens",
+  "bts_type": "SN Ia",
+  "hist_age_days": 14.3,
+  "first_known_det_age_days": 11.5,
+  "kind": "edge (\u226430 d)"
+ },
+ {
+  "night": "2025-04-19",
+  "oid": "ZTF25aaluerd",
+  "bts_type": "SN II",
+  "hist_age_days": 14.3,
+  "first_known_det_age_days": 11.5,
+  "kind": "edge (\u226430 d)"
+ },
+ {
+  "night": "2025-04-19",
+  "oid": "ZTF25aalufla",
+  "bts_type": "SN Ia",
+  "hist_age_days": 14.3,
+  "first_known_det_age_days": 12.4,
+  "kind": "edge (\u226430 d)"
+ },
+ {
+  "night": "2025-04-19",
+  "oid": "ZTF25aalughb",
+  "bts_type": "SN Ia",
+  "hist_age_days": 2202.5,
+  "first_known_det_age_days": 12.3,
+  "kind": "old pixel history (>30 d)"
+ },
+ {
+  "night": "2025-04-19",
+  "oid": "ZTF25aalyfoi",
+  "bts_type": "SN II",
+  "hist_age_days": 1870.6,
+  "first_known_det_age_days": 11.6,
+  "kind": "old pixel history (>30 d)"
+ },
+ {
+  "night": "2025-04-19",
+  "oid": "ZTF25aanbqrx",
+  "bts_type": "-",
+  "hist_age_days": 52.6,
+  "first_known_det_age_days": 4.5,
+  "kind": "old pixel history (>30 d)"
+ },
+ {
+  "night": "2025-04-20",
+  "oid": "ZTF25aalldzz",
+  "bts_type": "SN Ia",
+  "hist_age_days": 24.5,
+  "first_known_det_age_days": 13.4,
+  "kind": "edge (\u226430 d)"
+ },
+ {
+  "night": "2025-04-20",
+  "oid": "ZTF25aalrrwj",
+  "bts_type": "SN Ia",
+  "hist_age_days": 14.5,
+  "first_known_det_age_days": 13.4,
+  "kind": "edge (\u226430 d)"
+ },
+ {
+  "night": "2025-04-20",
+  "oid": "ZTF25aalufla",
+  "bts_type": "SN Ia",
+  "hist_age_days": 15.3,
+  "first_known_det_age_days": 13.4,
+  "kind": "edge (\u226430 d)"
+ },
+ {
+  "night": "2025-04-20",
+  "oid": "ZTF25aalughb",
+  "bts_type": "SN Ia",
+  "hist_age_days": 2203.5,
+  "first_known_det_age_days": 13.3,
+  "kind": "old pixel history (>30 d)"
+ },
+ {
+  "night": "2025-04-20",
+  "oid": "ZTF25aanbnfj",
+  "bts_type": "SN Ia",
+  "hist_age_days": 703.6,
+  "first_known_det_age_days": 5.6,
+  "kind": "old pixel history (>30 d)"
+ },
+ {
+  "night": "2025-04-20",
+  "oid": "ZTF25aanbqrx",
+  "bts_type": "-",
+  "hist_age_days": 54.6,
+  "first_known_det_age_days": 5.5,
+  "kind": "old pixel history (>30 d)"
+ },
+ {
+  "night": "2025-04-21",
+  "oid": "ZTF25aaluvkb",
+  "bts_type": "SN Ia",
+  "hist_age_days": 14.4,
+  "first_known_det_age_days": 13.5,
+  "kind": "edge (\u226430 d)"
+ },
+ {
+  "night": "2025-04-21",
+  "oid": "ZTF25aaluyhj",
+  "bts_type": "SN Ia",
+  "hist_age_days": 14.4,
+  "first_known_det_age_days": 13.5,
+  "kind": "edge (\u226430 d)"
+ },
+ {
+  "night": "2025-04-21",
+  "oid": "ZTF25aanbnfj",
+  "bts_type": "SN Ia",
+  "hist_age_days": 704.6,
+  "first_known_det_age_days": 6.6,
+  "kind": "old pixel history (>30 d)"
+ },
+ {
+  "night": "2025-04-21",
+  "oid": "ZTF25aanbqrx",
+  "bts_type": "-",
+  "hist_age_days": 55.6,
+  "first_known_det_age_days": 6.5,
+  "kind": "old pixel history (>30 d)"
+ },
+ {
+  "night": "2025-04-22",
+  "oid": "ZTF25aambsqu",
+  "bts_type": "SN Ia",
+  "hist_age_days": 14.3,
+  "first_known_det_age_days": 13.4,
+  "kind": "edge (\u226430 d)"
+ },
+ {
+  "night": "2025-04-22",
+  "oid": "ZTF25aameuts",
+  "bts_type": "SN Ia",
+  "hist_age_days": 14.7,
+  "first_known_det_age_days": 13.6,
+  "kind": "edge (\u226430 d)"
+ },
+ {
+  "night": "2025-04-22",
+  "oid": "ZTF25aanbnfj",
+  "bts_type": "SN Ia",
+  "hist_age_days": 705.6,
+  "first_known_det_age_days": 7.6,
+  "kind": "old pixel history (>30 d)"
+ },
+ {
+  "night": "2025-04-23",
+  "oid": "ZTF25aanbnfj",
+  "bts_type": "SN Ia",
+  "hist_age_days": 706.6,
+  "first_known_det_age_days": 8.6,
+  "kind": "old pixel history (>30 d)"
+ }
+]

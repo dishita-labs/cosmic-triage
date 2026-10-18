@@ -1,0 +1,60 @@
+{
+ "verdict": "PASS",
+ "results": [
+  {
+   "name": "C1 M1.1 leakage fixtures (i)-(v) present and pass",
+   "pass": true,
+   "detail": "6 passed, 35 deselected in 0.42s"
+  },
+  {
+   "name": "C1 all leakage fixtures pass (M1 + M1.1)",
+   "pass": true,
+   "detail": "37 fixtures; 42 passed in 0.45s"
+  },
+  {
+   "name": "C2 pool stats regenerated (pre-filter v1.1) with contaminant counts before/after",
+   "pass": true,
+   "detail": "2025-04-19: contaminant 36\u219236; 2025-04-20: contaminant 40\u219239; 2025-04-21: contaminant 39\u219236; 2025-04-22: contaminant 40\u219242; 2025-04-23: contaminant 37\u219239"
+  },
+  {
+   "name": "C3 bright-regime recall >= 95% or each miss explained",
+   "pass": true,
+   "detail": "recall 59.4% (85/143); 58 miss object-nights, 0 unexplained"
+  },
+  {
+   "name": "C4 labels audit filed with form + links for >= 30 contaminants (owner judgements pending)",
+   "pass": true,
+   "detail": "30 sampled objects; judgements: pending owner (by design)"
+  },
+  {
+   "name": "C5 spine output hash change recorded",
+   "pass": true,
+   "detail": "runs/reports/M1.1.md"
+  },
+  {
+   "name": "D second and third vertical-slice objects recorded",
+   "pass": true,
+   "detail": "classified-at-t: ZTF25aalzmga; AGN contaminant: ZTF25aankqtm"
+  },
+  {
+   "name": "D full offline suite (COSMIC_OFFLINE=1, sockets blocked)",
+   "pass": true,
+   "detail": "237 passed in 3.27s"
+  },
+  {
+   "name": "D ruff clean",
+   "pass": true,
+   "detail": "All checks passed!"
+  },
+  {
+   "name": "D mypy --strict contracts + investigator",
+   "pass": true,
+   "detail": "Success: no issues found in 41 source files"
+  },
+  {
+   "name": "D import-linter contracts kept",
+   "pass": true,
+   "detail": "Contracts: 5 kept, 0 broken."
+  }
+ ]
+}

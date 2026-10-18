@@ -18,6 +18,8 @@
      "ra": 185.0,
      "dec": 30.0,
      "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null,
      "savedate": "2025-04-03T05:00:00",
      "IAUID": "SN2025zzz"
     },
@@ -33,6 +35,8 @@
      "ra": 185.0,
      "dec": 30.0,
      "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null,
      "savedate": "2025-04-03T05:00:00",
      "IAUID": "SN2025zzz"
     },
@@ -48,6 +52,8 @@
      "ra": 185.0,
      "dec": 30.0,
      "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null,
      "savedate": "2025-04-03T05:00:00",
      "IAUID": "SN2025zzz"
     }

@@ -1,0 +1,39 @@
+{
+ "config": {
+  "run_id": "m1spine-84b7fe8347-s0-2025-04-19-n5",
+  "mode": "bench",
+  "seed": 0,
+  "config_hash": "84b7fe834765955d",
+  "config_hashes": {
+   "prefilter": "9669bcad8c932e03",
+   "denylist": "bf5342fa76afaac0",
+   "replay": "9429bcc4430130b0",
+   "class_map": "dd482faebe37bf0a",
+   "facility": "78380edea74856e6"
+  },
+  "model_ids": {},
+  "code_version": "ebf9062-dirty",
+  "script": "scripts/run_m1_spine.py"
+ },
+ "output_hash": "b1c6dd0f9d9c27e909d3798a296259a2accf39196b0490e387004613b863653b",
+ "outputs": {
+  "m1spine-84b7fe8347-s0-2025-04-19-n5/snapshots/2025-04-19.json": "18ae82de071eef578baf62749bc73e0ef4f2297e5d627f2b3901dbd255ca3ef8",
+  "m1spine-84b7fe8347-s0-2025-04-19-n5/pool/2025-04-19.json": "53528dc4f4478eb686ffccdda04ac4b3284ea8c98435f610ffe883ceacfe914c",
+  "m1spine-84b7fe8347-s0-2025-04-19-n5/theater/2025-04-19.json": "a543cf4cff498279c483f9248f006c102f829300f39f6ce58439ad943404358b",
+  "m1spine-84b7fe8347-s0-2025-04-19-n5/snapshots/2025-04-20.json": "005e01d57d3657a54fb38b55f49c5b96aae94b914adce24659ef0b429ab0865c",
+  "m1spine-84b7fe8347-s0-2025-04-19-n5/pool/2025-04-20.json": "f6918363929185b8dc35bfe3ee454ea5883edefef82356c4531953d5d8350cd6",
+  "m1spine-84b7fe8347-s0-2025-04-19-n5/theater/2025-04-20.json": "195eac26925589f7c4c9d2203f95282b6629d447f3ecd220ed0f675fd9e81f96",
+  "m1spine-84b7fe8347-s0-2025-04-19-n5/snapshots/2025-04-21.json": "5636421ac01abd3f87f01bc3697753006f01d1bb40f09c8a64e41d01bc0c7201",
+  "m1spine-84b7fe8347-s0-2025-04-19-n5/pool/2025-04-21.json": "e1c3877542bc3505db70532923f86cf023a00f2a3535d15b73a1dec4209f62a5",
+  "m1spine-84b7fe8347-s0-2025-04-19-n5/theater/2025-04-21.json": "3f26fba0daee890aa410676d7e24fda434c6c06220be854af3b2b2df37367d90",
+  "m1spine-84b7fe8347-s0-2025-04-19-n5/snapshots/2025-04-22.json": "9757aabcdbdce982d831c07a1e16b451e90cb47c7406f739e26e26997064f671",
+  "m1spine-84b7fe8347-s0-2025-04-19-n5/pool/2025-04-22.json": "17b7fc2a1421a616b109fcdc4a76bc43c00937d37287ba88ca8e091ab1232a35",
+  "m1spine-84b7fe8347-s0-2025-04-19-n5/theater/2025-04-22.json": "8553684fde688a945bb07aca1a2ca919b4134886d6bf2b817ea1d45cef1ca171",
+  "m1spine-84b7fe8347-s0-2025-04-19-n5/snapshots/2025-04-23.json": "8c47acf437a432de50f48228bb0ac0fea4975edcf45bad466adf0aa057088edc",
+  "m1spine-84b7fe8347-s0-2025-04-19-n5/pool/2025-04-23.json": "b9a754fc95094aace82634039246baa841a88d49227b83721d0c232587641abf",
+  "m1spine-84b7fe8347-s0-2025-04-19-n5/theater/2025-04-23.json": "3fafcb65023aa4a501bbf0510e10655472b07c96059f7be3adc8825abada266c"
+ },
+ "input_tokens": 0,
+ "output_tokens": 0,
+ "usd": 0.0
+}

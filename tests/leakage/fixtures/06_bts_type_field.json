@@ -18,6 +18,8 @@
      "ra": 185.0,
      "dec": 30.0,
      "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null,
      "type": "SN Ia-91T",
      "redshift": 0.0345
     },
@@ -33,6 +35,8 @@
      "ra": 185.0,
      "dec": 30.0,
      "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null,
      "type": "SN Ia-91T",
      "redshift": 0.0345
     },
@@ -48,6 +52,8 @@
      "ra": 185.0,
      "dec": 30.0,
      "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null,
      "type": "SN Ia-91T",
      "redshift": 0.0345
     }

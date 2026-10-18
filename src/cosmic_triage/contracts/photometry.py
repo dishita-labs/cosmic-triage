@@ -17,6 +17,11 @@ class PhotometryPoint(Contract):
     drb: float | None = Field(default=None, description="Deep real/bogus score of the alert, if any")
     isdiffpos: bool | None = None
     candid: str | None = None
+    delivered_by_mjd: float | None = Field(
+        default=None,
+        description="MJD of the alert whose packet delivered this point (its own alert, or the prv_candidates parent "
+        "/ covering alert); known-at-t rule, §6.4 Review-03",
+    )
     source: Literal["alerce", "fink", "lasair", "synthetic"] = "alerce"
     sim_level: SimLevel = "L0"
     simulated: bool = False

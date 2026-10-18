@@ -29,6 +29,10 @@ class FinkAlertRow(Contract):
     tns_alert_time: str | None = Field(
         default=None, description="Fink's TNS crossmatch label as of this alert (d:tns)"
     )
+    hist_start_mjd: float | None = Field(
+        default=None, description="Per-alert i:jdstarthist carried by this packet, as MJD (time-honest, §6.4 Review-03)"
+    )
+    hist_ndet: int | None = Field(default=None, description="Per-alert i:ndethist carried by this packet")
 
 
 class StampPrior(Contract):
@@ -48,7 +52,9 @@ class CandidateState(Contract):
     photometry: tuple[PhotometryPoint, ...]
     fink_rows: tuple[FinkAlertRow, ...] = ()
     stamp_prior: StampPrior | None = None
-    first_detection_mjd: float
+    first_detection_mjd: float = Field(
+        description="min(known detections <= t, alert-time hist_start_mjd over Fink rows <= t) (§6.4 Review-03)"
+    )
     last_detection_mjd: float
     n_detections: int = Field(description="Detections with mjd <= t (recomputed, never ndethist-final)")
     n_nondetections: int

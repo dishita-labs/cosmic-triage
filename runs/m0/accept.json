@@ -2,7 +2,7 @@
  {
   "criterion": "C1 all 12 kill-tests have a recorded verdict",
   "pass": true,
-  "detail": "#1:BLOCKED: CREDENTIAL REQUIRED, #2:PASS, #3:PASS, #4:PASS, #5:PASS, #6:PASS, #7:BLOCKED: CREDENTIAL REQUIRED, #8:PASS, #9:PASS, #10:PASS, #11:DEFERRED, #12:DEFERRED"
+  "detail": "#1:BLOCKED: CREDENTIAL REQUIRED, #2:PASS, #3:PASS, #4:PASS, #5:PASS, #6:PASS, #7:BLOCKED: SPEND APPROVAL REQUIRED, #8:PASS, #9:PASS, #10:PASS, #11:DEFERRED, #12:DEFERRED"
  },
  {
   "criterion": "C1 failed #1-#5 carry a fallback flagged for Fable",
@@ -17,12 +17,12 @@
  {
   "criterion": "C2 every contract round-trips JSON (tests/contracts)",
   "pass": true,
-  "detail": "101 passed in 0.12s"
+  "detail": "101 passed in 0.20s"
  },
  {
   "criterion": "C3 uv run pytest green with COSMIC_OFFLINE=1 (sockets blocked)",
   "pass": true,
-  "detail": "179 passed in 1.59s"
+  "detail": "237 passed in 3.26s"
  },
  {
   "criterion": "D scaffold layout (\u00a79)",
@@ -62,7 +62,7 @@
  {
   "criterion": "D mypy --strict on contracts + investigator",
   "pass": true,
-  "detail": "Success: no issues found in 21 source files"
+  "detail": "Success: no issues found in 41 source files"
  },
  {
   "criterion": "D import-linter contracts kept",

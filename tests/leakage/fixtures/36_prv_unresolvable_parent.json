@@ -1,0 +1,144 @@
+{
+ "name": "prv_unresolvable_parent",
+ "description": "A prv detection whose parent alert is unknown cannot be shown to be known -> excluded.",
+ "t_mjd": 60766.8333333,
+ "raw": {
+  "oid": "ZTF25prvunre",
+  "lightcurve": {
+   "detections": [
+    {
+     "mjd": 60761.8333333,
+     "magpsf": 18.6,
+     "sigmapsf": 0.05,
+     "fid": 2,
+     "drb": 0.99,
+     "rb": 0.9,
+     "isdiffpos": "t",
+     "candid": 6076183333,
+     "ra": 185.0,
+     "dec": 30.0,
+     "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null
+    },
+    {
+     "mjd": 60761.8833333,
+     "magpsf": 18.5,
+     "sigmapsf": 0.05,
+     "fid": 1,
+     "drb": 0.99,
+     "rb": 0.9,
+     "isdiffpos": "t",
+     "candid": 6076188333,
+     "ra": 185.0,
+     "dec": 30.0,
+     "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null
+    },
+    {
+     "mjd": 60764.8333333,
+     "magpsf": 18.2,
+     "sigmapsf": 0.05,
+     "fid": 2,
+     "drb": 0.99,
+     "rb": 0.9,
+     "isdiffpos": "t",
+     "candid": 6076483333,
+     "ra": 185.0,
+     "dec": 30.0,
+     "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null
+    },
+    {
+     "mjd": 60762.3333333,
+     "magpsf": 18.36,
+     "sigmapsf": 0.05,
+     "fid": 2,
+     "drb": null,
+     "rb": 0.9,
+     "isdiffpos": "t",
+     "candid": 6076233333,
+     "ra": 185.0,
+     "dec": 30.0,
+     "diffmaglim": 20.5,
+     "has_stamp": false,
+     "parent_candid": 6075771033
+    }
+   ],
+   "non_detections": [
+    {
+     "mjd": 60758.8333333,
+     "fid": 1,
+     "diffmaglim": 20.3,
+     "tid": "ztf"
+    },
+    {
+     "mjd": 60759.8333333,
+     "fid": 1,
+     "diffmaglim": 20.3,
+     "tid": "ztf"
+    }
+   ]
+  },
+  "fink_rows": [
+   {
+    "i:jd": 2460762.3333333,
+    "i:candid": 6076183333,
+    "d:tag": "valid",
+    "d:rf_snia_vs_nonia": 0.0,
+    "d:snn_snia_vs_nonia": 0.5,
+    "d:snn_sn_vs_all": 0.6,
+    "d:cdsxmatch": "Unknown",
+    "d:tns": "",
+    "i:sgscore1": 0.03,
+    "i:distpsnr1": 4.0,
+    "i:srmag1": 20.1,
+    "i:neargaia": 30.0,
+    "i:maggaia": 19.0
+   },
+   {
+    "i:jd": 2460762.3833333,
+    "i:candid": 6076188333,
+    "d:tag": "valid",
+    "d:rf_snia_vs_nonia": 0.0,
+    "d:snn_snia_vs_nonia": 0.5,
+    "d:snn_sn_vs_all": 0.6,
+    "d:cdsxmatch": "Unknown",
+    "d:tns": "",
+    "i:sgscore1": 0.03,
+    "i:distpsnr1": 4.0,
+    "i:srmag1": 20.1,
+    "i:neargaia": 30.0,
+    "i:maggaia": 19.0
+   },
+   {
+    "i:jd": 2460765.3333333,
+    "i:candid": 6076483333,
+    "d:tag": "valid",
+    "d:rf_snia_vs_nonia": 0.0,
+    "d:snn_snia_vs_nonia": 0.5,
+    "d:snn_sn_vs_all": 0.6,
+    "d:cdsxmatch": "Unknown",
+    "d:tns": "",
+    "i:sgscore1": 0.03,
+    "i:distpsnr1": 4.0,
+    "i:srmag1": 20.1,
+    "i:neargaia": 30.0,
+    "i:maggaia": 19.0
+   }
+  ],
+  "static": {
+   "sgscore1": 0.03,
+   "distpsnr1": 4.0,
+   "srmag1": 20.1
+  }
+ },
+ "expect": {
+  "n_detections": 3,
+  "forbidden_values": [
+   18.36
+  ]
+ }
+}

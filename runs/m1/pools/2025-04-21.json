@@ -1,18 +1,10 @@
 {
  "night": "2025-04-21",
  "t_mjd": 60786.833333333336,
- "prefilter_hash": "9f64125e3daf437c",
+ "prefilter_hash": "9669bcad8c932e03",
  "n_superset": 3032,
  "members": [
-  "ZTF18aawhrjb",
-  "ZTF19aahfevh",
-  "ZTF19aakhash",
-  "ZTF19adggilm",
-  "ZTF21abgvfmz",
   "ZTF23absjmpv",
-  "ZTF25aadupwg",
-  "ZTF25aaluvkb",
-  "ZTF25aaluyhj",
   "ZTF25aalyaqc",
   "ZTF25aalycbc",
   "ZTF25aalycqc",
@@ -33,12 +25,11 @@
   "ZTF25aamitsb",
   "ZTF25aamjaji",
   "ZTF25aamjata",
-  "ZTF25aamjiyk",
   "ZTF25aamkbbd",
   "ZTF25aamkldj",
   "ZTF25aamkqzo",
+  "ZTF25aampiuq",
   "ZTF25aamppsd",
-  "ZTF25aamqasc",
   "ZTF25aamqhpc",
   "ZTF25aamqlzp",
   "ZTF25aamqtqd",
@@ -61,11 +52,9 @@
   "ZTF25aanbhld",
   "ZTF25aanbkev",
   "ZTF25aanblkq",
-  "ZTF25aanbnfj",
   "ZTF25aanbooo",
   "ZTF25aanbpxg",
   "ZTF25aanbpzy",
-  "ZTF25aanbqrx",
   "ZTF25aanbrxz",
   "ZTF25aanbtlr",
   "ZTF25aanbuny",
@@ -90,7 +79,6 @@
   "ZTF25aanflcs",
   "ZTF25aanfqik",
   "ZTF25aangnvu",
-  "ZTF25aanhfwo",
   "ZTF25aanhhyc",
   "ZTF25aanhiwe",
   "ZTF25aanijcp",
@@ -110,17 +98,16 @@
  ],
  "reasons": {
   "ZTF17aaautiv": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
   "ZTF17aabushz": [
-   "first_detection_before_window",
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF17aacqtzr": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart",
    "near_bright_star"
   ],
@@ -135,45 +122,36 @@
    "fainter_than_max_mag"
   ],
   "ZTF17aadjyjm": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aabjwsn": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF18aabutfr": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF18aabweef": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aadwgft": [
    "detections_too_close_in_time",
    "star_like_counterpart"
   ],
   "ZTF18aadxich": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF18aaeifmp": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "near_bright_star"
   ],
   "ZTF18aaesgaq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aaeufhh": [
    "no_real_alert_le_t",
@@ -186,30 +164,20 @@
    "fainter_than_max_mag"
   ],
   "ZTF18aafsoqu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aagdrbi": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart"
   ],
   "ZTF18aagrjmy": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aagznco": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF18aaheshi": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF18aahpohl": [
    "first_detection_before_window",
@@ -218,24 +186,17 @@
    "fainter_than_max_mag"
   ],
   "ZTF18aahpono": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF18aajbnet": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aajezti": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aajwgmb": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "near_bright_star"
   ],
@@ -245,10 +206,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF18aajykre": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF18aakbbtp": [
    "first_detection_before_window",
@@ -257,14 +215,10 @@
    "fainter_than_max_mag"
   ],
   "ZTF18aakbggy": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aakvzyn": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aalkihs": [
    "no_real_alert_le_t",
@@ -272,78 +226,50 @@
    "fainter_than_max_mag"
   ],
   "ZTF18aalknzl": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aalmkyj": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aalqbdp": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aamxlmm": [
-   "too_few_detections",
+   "first_detection_before_window",
    "fainter_than_max_mag"
   ],
   "ZTF18aaoliqn": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aaosixj": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aaozuok": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aaozwzu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aapmgxd": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aapocto": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aaprrtz": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aapsgvo": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF18aapvmzm": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aapzxvr": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aaqalow": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aarahxq": [
    "first_detection_before_window",
@@ -352,11 +278,14 @@
    "fainter_than_max_mag"
   ],
   "ZTF18aawcijk": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "galactic_plane"
+  ],
+  "ZTF18aawhrjb": [
+   "first_detection_before_window"
   ],
   "ZTF18abcwnce": [
    "no_real_alert_le_t",
@@ -365,9 +294,7 @@
    "near_bright_star"
   ],
   "ZTF18abdyqxc": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18abejgke": [
    "no_real_alert_le_t",
@@ -380,9 +307,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF18abemybo": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18abeowqo": [
    "no_real_alert_le_t",
@@ -390,8 +315,8 @@
    "fainter_than_max_mag"
   ],
   "ZTF18abeoxen": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
@@ -418,10 +343,7 @@
    "galactic_plane"
   ],
   "ZTF18abeyhlg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF18abgakbo": [
    "no_real_alert_le_t",
@@ -429,16 +351,10 @@
    "fainter_than_max_mag"
   ],
   "ZTF18abhdvuj": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF18abhfiig": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF18abintas": [
    "no_real_alert_le_t",
@@ -461,8 +377,8 @@
    "fainter_than_max_mag"
   ],
   "ZTF18abirqas": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF18abirysa": [
@@ -504,13 +420,11 @@
    "near_bright_star"
   ],
   "ZTF18aboxkhd": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18aboycrb": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
@@ -543,21 +457,21 @@
    "fainter_than_max_mag"
   ],
   "ZTF18abprtcy": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
   "ZTF18abpsknj": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
   ],
   "ZTF18abpstju": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
@@ -576,7 +490,6 @@
   "ZTF18acavgsu": [
    "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF18accjmsd": [
@@ -585,14 +498,10 @@
    "fainter_than_max_mag"
   ],
   "ZTF18aclmeem": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18acnroac": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18acnwtxk": [
    "no_real_alert_le_t",
@@ -600,9 +509,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF18acnzdor": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18acopwwd": [
    "no_real_alert_le_t",
@@ -610,7 +517,7 @@
    "near_bright_star"
   ],
   "ZTF18acpnujw": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart",
    "near_bright_star"
   ],
@@ -633,22 +540,20 @@
    "near_bright_star"
   ],
   "ZTF18actxgry": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
   ],
   "ZTF18actxgsf": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
   "ZTF18acxwzjp": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18adbqvva": [
    "no_real_alert_le_t",
@@ -656,21 +561,17 @@
    "fainter_than_max_mag"
   ],
   "ZTF18adilugy": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
   ],
   "ZTF18adiodap": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18adjihwj": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18adjjpfe": [
    "no_real_alert_le_t",
@@ -678,15 +579,11 @@
    "fainter_than_max_mag"
   ],
   "ZTF18adkmexk": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "star_like_counterpart",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF18adkrnnj": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
@@ -706,22 +603,20 @@
    "fainter_than_max_mag"
   ],
   "ZTF18admzvhg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF18adpaqbo": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
   ],
   "ZTF18adqhkah": [
-   "too_few_detections"
+   "first_detection_before_window"
   ],
   "ZTF18adqiqeq": [
-   "too_few_detections",
+   "first_detection_before_window",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
@@ -741,43 +636,43 @@
    "fainter_than_max_mag"
   ],
   "ZTF18adqpkbv": [
-   "too_few_detections",
+   "first_detection_before_window",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
   "ZTF18adrbjal": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
   ],
   "ZTF19aafocfr": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
   "ZTF19aafsvay": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19aagmefp": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19aagpdre": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
+  ],
+  "ZTF19aahfevh": [
+   "first_detection_before_window"
   ],
   "ZTF19aajmxxb": [
    "no_real_alert_le_t",
    "too_few_detections",
    "fainter_than_max_mag",
    "near_bright_star"
+  ],
+  "ZTF19aakhash": [
+   "first_detection_before_window"
   ],
   "ZTF19aakjgei": [
    "no_real_alert_le_t",
@@ -796,7 +691,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF19aatqfls": [
-   "detections_too_close_in_time",
+   "first_detection_before_window",
    "star_like_counterpart"
   ],
   "ZTF19aayzvkw": [
@@ -821,10 +716,7 @@
    "near_bright_star"
   ],
   "ZTF19abaimxt": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF19abajkki": [
    "no_real_alert_le_t",
@@ -832,9 +724,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF19abaqwtx": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19abbbfet": [
    "no_real_alert_le_t",
@@ -874,15 +764,10 @@
    "fainter_than_max_mag"
   ],
   "ZTF19abebhda": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19abedjzv": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19abeqmiq": [
    "no_real_alert_le_t",
@@ -896,9 +781,7 @@
    "too_few_detections"
   ],
   "ZTF19abfbxfq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19abfdqfw": [
    "no_real_alert_le_t",
@@ -906,8 +789,8 @@
    "fainter_than_max_mag"
   ],
   "ZTF19abgqley": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
@@ -915,12 +798,10 @@
    "too_few_detections"
   ],
   "ZTF19abjudlo": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19ablbpma": [
-   "too_few_detections",
+   "first_detection_before_window",
    "fainter_than_max_mag"
   ],
   "ZTF19abnqxgd": [
@@ -935,15 +816,10 @@
    "near_bright_star"
   ],
   "ZTF19aborxpl": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF19aboxkgm": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19abpmmbf": [
    "no_real_alert_le_t",
@@ -967,8 +843,8 @@
    "fainter_than_max_mag"
   ],
   "ZTF19abrwowh": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF19abryeok": [
@@ -1002,17 +878,13 @@
    "fainter_than_max_mag"
   ],
   "ZTF19abxzgvz": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19abyrxvv": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19abzqfxm": [
-   "too_few_detections",
+   "first_detection_before_window",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
@@ -1029,28 +901,22 @@
    "fainter_than_max_mag"
   ],
   "ZTF19acbqfgf": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF19acesevm": [
    "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "near_bright_star"
   ],
   "ZTF19acftsdg": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
   "ZTF19acljraj": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19acsdtol": [
    "no_real_alert_le_t",
@@ -1058,27 +924,25 @@
    "fainter_than_max_mag"
   ],
   "ZTF19acseycb": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
   ],
   "ZTF19acsfisi": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
   ],
   "ZTF19acswusp": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19actaeoh": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
@@ -1096,9 +960,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF19acydgxf": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19adbcihp": [
    "no_real_alert_le_t",
@@ -1124,14 +986,10 @@
    "fainter_than_max_mag"
   ],
   "ZTF19addcebh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19addhlke": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19adebvcr": [
    "no_real_alert_le_t",
@@ -1144,8 +1002,8 @@
    "fainter_than_max_mag"
   ],
   "ZTF19adecbol": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF19adeldir": [
@@ -1154,15 +1012,13 @@
    "fainter_than_max_mag"
   ],
   "ZTF19adenijo": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
   "ZTF19adeplgu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19adeqren": [
    "no_real_alert_le_t",
@@ -1186,23 +1042,21 @@
    "too_few_detections",
    "fainter_than_max_mag"
   ],
+  "ZTF19adggilm": [
+   "first_detection_before_window"
+  ],
   "ZTF19adhcrxu": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "detections_too_close_in_time",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
   ],
   "ZTF19adholfh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF19adhttls": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19adhwwyh": [
    "no_real_alert_le_t",
@@ -1221,10 +1075,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF19adissnz": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF19adjactg": [
    "no_real_alert_le_t",
@@ -1253,8 +1104,8 @@
    "galactic_plane"
   ],
   "ZTF19admmkwy": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
@@ -1273,8 +1124,8 @@
    "fainter_than_max_mag"
   ],
   "ZTF19admuiux": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "near_bright_star"
   ],
@@ -1284,12 +1135,10 @@
    "fainter_than_max_mag"
   ],
   "ZTF19adnxvja": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF19adnytwm": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart"
   ],
   "ZTF20aakhxza": [
@@ -1298,14 +1147,11 @@
    "fainter_than_max_mag"
   ],
   "ZTF20aaquyhv": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "star_like_counterpart"
+   "no_detection_le_t"
   ],
   "ZTF20aatnavs": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
@@ -1370,31 +1216,22 @@
    "galactic_plane"
   ],
   "ZTF20abvcvns": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
   "ZTF20acgxnba": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF20acgyocu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF20achgfmt": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF20acuwhwp": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF20acvffkk": [
    "no_real_alert_le_t",
@@ -1412,9 +1249,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF20adbrqmf": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF20adbutew": [
    "no_real_alert_le_t",
@@ -1422,25 +1257,16 @@
    "fainter_than_max_mag"
   ],
   "ZTF20adbxmcy": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF20adcajgt": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF20adeymce": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF20adfrmsj": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF20adheelo": [
    "no_real_alert_le_t",
@@ -1448,17 +1274,13 @@
    "fainter_than_max_mag"
   ],
   "ZTF20adiirrn": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "near_bright_star"
   ],
   "ZTF21aaajqjl": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "star_like_counterpart",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF21aabzczl": [
    "no_real_alert_le_t",
@@ -1467,7 +1289,7 @@
    "near_bright_star"
   ],
   "ZTF21aaegyuu": [
-   "detections_too_close_in_time",
+   "first_detection_before_window",
    "star_like_counterpart"
   ],
   "ZTF21aahbrjs": [
@@ -1492,8 +1314,8 @@
    "fainter_than_max_mag"
   ],
   "ZTF21aasubrq": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
@@ -1510,21 +1332,21 @@
    "fainter_than_max_mag"
   ],
   "ZTF21aatznbo": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
   ],
   "ZTF21aavfmja": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
   "ZTF21aavfoiw": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF21aavfprb": [
@@ -1536,11 +1358,11 @@
    "too_few_detections"
   ],
   "ZTF21aavgbxa": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart"
   ],
   "ZTF21aaxixai": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart"
   ],
   "ZTF21aaxywmu": [
@@ -1557,10 +1379,10 @@
    "near_bright_star"
   ],
   "ZTF21abcodbl": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
+  ],
+  "ZTF21abgvfmz": [
+   "first_detection_before_window"
   ],
   "ZTF21abgvugs": [
    "no_real_alert_le_t",
@@ -1568,13 +1390,10 @@
    "fainter_than_max_mag"
   ],
   "ZTF21abhswjr": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF21abjbhfw": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart"
   ],
   "ZTF21abknhgb": [
@@ -1600,9 +1419,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF21achyoou": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF21acnxfgw": [
    "no_real_alert_le_t",
@@ -1646,9 +1463,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF22aabgomb": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF22aagqnnv": [
    "no_real_alert_le_t",
@@ -1657,15 +1472,10 @@
    "star_like_counterpart"
   ],
   "ZTF22aagqqmv": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF22aagyqjo": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF22aaiwqlt": [
    "no_real_alert_le_t",
@@ -1673,9 +1483,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF22aajnabl": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF22aallmzc": [
    "no_real_alert_le_t",
@@ -1683,9 +1491,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF22aamdwed": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF22aamqtwo": [
    "no_real_alert_le_t",
@@ -1693,8 +1499,8 @@
    "fainter_than_max_mag"
   ],
   "ZTF22aamqybv": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
@@ -1751,17 +1557,17 @@
    "near_bright_star"
   ],
   "ZTF22aaxcwab": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart"
   ],
   "ZTF22aazxaag": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "galactic_plane"
   ],
   "ZTF22abfgcvd": [
-   "too_few_detections"
+   "first_detection_before_window"
   ],
   "ZTF22abfwcif": [
    "no_real_alert_le_t",
@@ -1771,9 +1577,7 @@
    "near_bright_star"
   ],
   "ZTF22abjjwub": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF22abktere": [
    "no_real_alert_le_t",
@@ -1783,11 +1587,11 @@
    "near_bright_star"
   ],
   "ZTF22abmtobu": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart"
   ],
   "ZTF22abmtobv": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart"
   ],
   "ZTF22abnflxv": [
@@ -1797,10 +1601,7 @@
    "near_bright_star"
   ],
   "ZTF22abocivw": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF22abpmsfk": [
    "no_real_alert_le_t",
@@ -1809,31 +1610,23 @@
    "star_like_counterpart"
   ],
   "ZTF22abpyqna": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF22abqjwfi": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart"
   ],
   "ZTF22abrrpur": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF22absnjgu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF22abtliky": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF22abuawje": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart",
    "near_bright_star"
   ],
@@ -1848,17 +1641,13 @@
    "fainter_than_max_mag"
   ],
   "ZTF22abxbyka": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF22abzmgyc": [
-   "too_few_detections"
+   "first_detection_before_window"
   ],
   "ZTF23aaaseyo": [
-   "no_real_alert_le_t",
-   "detections_too_close_in_time",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF23aabaqxc": [
    "no_real_alert_le_t",
@@ -1866,7 +1655,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF23aabhxkc": [
-   "too_few_detections"
+   "first_detection_before_window"
   ],
   "ZTF23aaeywxd": [
    "no_real_alert_le_t",
@@ -1875,13 +1664,10 @@
    "near_bright_star"
   ],
   "ZTF23aafizvg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF23aafpknh": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart"
   ],
   "ZTF23aaihzco": [
@@ -1896,9 +1682,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF23aaliplu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF23aalzvut": [
    "first_detection_before_window",
@@ -1907,9 +1691,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF23aaoimqh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF23aaoowpr": [
    "no_real_alert_le_t",
@@ -1919,11 +1701,7 @@
    "near_bright_star"
   ],
   "ZTF23aapbiio": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "star_like_counterpart",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF23aapupwf": [
    "no_real_alert_le_t",
@@ -1937,46 +1715,30 @@
    "near_bright_star"
   ],
   "ZTF23aattkyz": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF23aattutb": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF23aavtwqd": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF23abgxfcm": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star",
    "galactic_plane"
   ],
   "ZTF23abhnxyg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF23abhztyg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF23aboajcv": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF23abpuday": [
    "no_real_alert_le_t",
@@ -1985,11 +1747,7 @@
    "near_bright_star"
   ],
   "ZTF23absecee": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star",
-   "galactic_plane"
+   "no_detection_le_t"
   ],
   "ZTF23abskwra": [
    "no_real_alert_le_t",
@@ -2002,8 +1760,8 @@
    "fainter_than_max_mag"
   ],
   "ZTF23abvmpek": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF24aaabwcn": [
@@ -2011,9 +1769,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF24aaadgic": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF24aaahrqa": [
    "no_real_alert_le_t",
@@ -2027,26 +1783,22 @@
    "near_bright_star"
   ],
   "ZTF24aabfoya": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF24aaddapt": [
    "too_few_detections"
   ],
   "ZTF24aadzzxj": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
   "ZTF24aaeizfm": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF24aafigkd": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF24aaframp": [
    "no_real_alert_le_t",
@@ -2055,9 +1807,7 @@
    "near_bright_star"
   ],
   "ZTF24aagcrps": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF24aaglnkz": [
    "no_real_alert_le_t",
@@ -2072,9 +1822,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF24aagmbnx": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF24aagycpz": [
    "no_real_alert_le_t",
@@ -2082,15 +1830,13 @@
    "fainter_than_max_mag"
   ],
   "ZTF24aahpxwh": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
   "ZTF24aaihice": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF24aajqkzk": [
    "no_real_alert_le_t",
@@ -2099,8 +1845,8 @@
    "near_bright_star"
   ],
   "ZTF24aajwanc": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "near_bright_star"
   ],
@@ -2117,15 +1863,10 @@
    "near_bright_star"
   ],
   "ZTF24aakefyl": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF24aakhuxa": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF24aakjpde": [
    "no_real_alert_le_t",
@@ -2134,9 +1875,7 @@
    "near_bright_star"
   ],
   "ZTF24aaknqgf": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF24aalgvwv": [
    "no_real_alert_le_t",
@@ -2145,9 +1884,7 @@
    "near_bright_star"
   ],
   "ZTF24aalofry": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF24aamuvvt": [
    "no_real_alert_le_t",
@@ -2167,10 +1904,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF24aaobxoo": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF24aaoimly": [
    "no_real_alert_le_t",
@@ -2184,38 +1918,30 @@
    "near_bright_star"
   ],
   "ZTF24aaoqnru": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF24aapcujk": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF24aaponrw": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF24aaqfouq": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
   "ZTF24aaqfpaf": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
   ],
   "ZTF24aaqfqur": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
@@ -2225,9 +1951,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF24aarjkhc": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF24aarkcei": [
    "no_real_alert_le_t",
@@ -2264,16 +1988,10 @@
    "near_bright_star"
   ],
   "ZTF24aavppqy": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag",
-   "star_like_counterpart",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF24aavykkb": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF24aawojih": [
    "no_real_alert_le_t",
@@ -2286,8 +2004,8 @@
    "fainter_than_max_mag"
   ],
   "ZTF24aaxfupl": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
@@ -2308,14 +2026,10 @@
    "fainter_than_max_mag"
   ],
   "ZTF24abhetld": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF24abidwhw": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF24ablrysv": [
    "no_real_alert_le_t",
@@ -2324,10 +2038,7 @@
    "near_bright_star"
   ],
   "ZTF24abnxbdh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF24abpjzjx": [
    "no_real_alert_le_t",
@@ -2335,9 +2046,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF24abpqewg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF24abqzsac": [
    "no_real_alert_le_t",
@@ -2351,9 +2060,7 @@
    "galactic_plane"
   ],
   "ZTF24abrrzja": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF24abtdojm": [
    "no_real_alert_le_t",
@@ -2367,10 +2074,7 @@
    "star_like_counterpart"
   ],
   "ZTF24abwzgfo": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "star_like_counterpart"
+   "no_detection_le_t"
   ],
   "ZTF24abxmuyv": [
    "no_real_alert_le_t",
@@ -2385,27 +2089,20 @@
    "fainter_than_max_mag"
   ],
   "ZTF25aabfzkt": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aabylyc": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aacaunf": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aacdoac": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aacudtb": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
@@ -2422,27 +2119,22 @@
    "near_bright_star"
   ],
   "ZTF25aadmirt": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
+  ],
+  "ZTF25aadupwg": [
+   "first_detection_before_window"
   ],
   "ZTF25aadurdg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaetrqx": [
    "too_few_detections"
   ],
   "ZTF25aaffxry": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaffymp": [
-   "no_real_alert_le_t",
-   "detections_too_close_in_time",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aafnnnb": [
    "no_real_alert_le_t",
@@ -2450,14 +2142,10 @@
    "fainter_than_max_mag"
   ],
   "ZTF25aaftowo": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaftppi": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aafzcaz": [
    "no_real_alert_le_t",
@@ -2470,13 +2158,10 @@
    "fainter_than_max_mag"
   ],
   "ZTF25aaheqvs": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aahojim": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaifjtm": [
    "no_real_alert_le_t",
@@ -2484,14 +2169,10 @@
    "fainter_than_max_mag"
   ],
   "ZTF25aailmwq": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aairlju": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaiszkw": [
    "no_real_alert_le_t",
@@ -2517,15 +2198,12 @@
    "fainter_than_max_mag"
   ],
   "ZTF25aajxvbl": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF25aajzana": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aalldzz": [
    "first_detection_before_window"
@@ -2618,8 +2296,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aalthgl": [
-   "first_detection_before_window",
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aalthik": [
    "first_detection_before_window",
@@ -2752,8 +2429,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aaltwmn": [
-   "first_detection_before_window",
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aaltwon": [
    "first_detection_before_window",
@@ -2910,9 +2586,11 @@
   "ZTF25aaluuld": [
    "first_detection_before_window"
   ],
+  "ZTF25aaluvkb": [
+   "first_detection_before_window"
+  ],
   "ZTF25aaluvlw": [
-   "first_detection_before_window",
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aaluvxl": [
    "first_detection_before_window",
@@ -2943,8 +2621,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aaluxat": [
-   "first_detection_before_window",
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aaluxbc": [
    "first_detection_before_window",
@@ -2971,8 +2648,10 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aaluxmh": [
-   "first_detection_before_window",
-   "detections_too_close_in_time"
+   "first_detection_before_window"
+  ],
+  "ZTF25aaluyhj": [
+   "first_detection_before_window"
   ],
   "ZTF25aalvawr": [
    "first_detection_before_window",
@@ -3008,8 +2687,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aalvbbv": [
-   "first_detection_before_window",
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aalvbby": [
    "first_detection_before_window",
@@ -3040,8 +2718,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aalvbhd": [
-   "first_detection_before_window",
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aalvbhh": [
    "first_detection_before_window",
@@ -3089,8 +2766,7 @@
    "first_detection_before_window"
   ],
   "ZTF25aalvnut": [
-   "first_detection_before_window",
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aalvnyi": [
    "first_detection_before_window"
@@ -3411,8 +3087,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aalvzce": [
-   "first_detection_before_window",
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aalvzdb": [
    "first_detection_before_window",
@@ -3509,7 +3184,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aalygwl": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aalyhci": [
    "detections_too_close_in_time"
@@ -3540,7 +3215,7 @@
    "galactic_plane"
   ],
   "ZTF25aalyjqf": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aalyjui": [
    "detections_too_close_in_time"
@@ -3575,7 +3250,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aalymzf": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aalyneq": [
    "detections_too_close_in_time"
@@ -3693,11 +3368,11 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aalzias": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aalzicc": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
@@ -3740,7 +3415,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aalzlke": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart"
   ],
   "ZTF25aalzllk": [
@@ -3831,7 +3506,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF25aalzose": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aalzovk": [
    "detections_too_close_in_time"
@@ -3869,7 +3544,7 @@
    "near_bright_star"
   ],
   "ZTF25aalzpxz": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aalzpyb": [
    "detections_too_close_in_time"
@@ -3972,8 +3647,8 @@
    "too_few_detections"
   ],
   "ZTF25aalztkt": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
@@ -4010,7 +3685,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF25aalzvex": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart"
   ],
   "ZTF25aalzvfj": [
@@ -4128,7 +3803,7 @@
    "near_bright_star"
   ],
   "ZTF25aamadqi": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamadue": [
    "no_real_alert_le_t",
@@ -4246,7 +3921,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamercf": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamercz": [
    "detections_too_close_in_time"
@@ -4475,7 +4150,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamewjd": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamewrc": [
    "detections_too_close_in_time"
@@ -4514,7 +4189,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamexeg": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart"
   ],
   "ZTF25aamexfe": [
@@ -4527,7 +4202,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamexgu": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamexgv": [
    "detections_too_close_in_time"
@@ -4615,10 +4290,10 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamfmit": [
-   "too_few_detections"
+   "first_detection_before_window"
   ],
   "ZTF25aamfqcv": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamfqcw": [
    "detections_too_close_in_time"
@@ -4630,7 +4305,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamfqfg": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamfqfk": [
    "detections_too_close_in_time"
@@ -4741,8 +4416,8 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamfuhr": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
@@ -4791,7 +4466,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF25aamgjhb": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamgjhe": [
    "detections_too_close_in_time"
@@ -4920,7 +4595,6 @@
   "ZTF25aamheat": [
    "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
@@ -4971,8 +4645,8 @@
    "fainter_than_max_mag"
   ],
   "ZTF25aamhfbn": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
@@ -5082,7 +4756,6 @@
   "ZTF25aamhhgb": [
    "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star",
@@ -5167,8 +4840,8 @@
    "galactic_plane"
   ],
   "ZTF25aamhmtg": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
@@ -5191,7 +4864,7 @@
    "galactic_plane"
   ],
   "ZTF25aamhovp": [
-   "too_few_detections",
+   "first_detection_before_window",
    "fainter_than_max_mag",
    "star_like_counterpart"
   ],
@@ -5504,7 +5177,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aaminkj": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aaminph": [
    "too_few_detections"
@@ -5633,7 +5306,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamixip": [
-   "too_few_detections",
+   "first_detection_before_window",
    "star_like_counterpart",
    "near_bright_star"
   ],
@@ -5701,7 +5374,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamjaqv": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamjart": [
    "detections_too_close_in_time"
@@ -5727,13 +5400,16 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamjiqk": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamjiqn": [
    "detections_too_close_in_time"
   ],
   "ZTF25aamjivu": [
    "detections_too_close_in_time"
+  ],
+  "ZTF25aamjiyk": [
+   "first_detection_before_window"
   ],
   "ZTF25aamjjnd": [
    "no_real_alert_le_t",
@@ -5765,8 +5441,8 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamjncw": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "star_like_counterpart",
    "near_bright_star"
@@ -5791,7 +5467,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamjpfg": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamjqix": [
    "detections_too_close_in_time"
@@ -5840,7 +5516,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamjtrg": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamjtrj": [
    "detections_too_close_in_time"
@@ -5861,7 +5537,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamjugr": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamjugs": [
    "detections_too_close_in_time"
@@ -5928,8 +5604,8 @@
    "near_bright_star"
   ],
   "ZTF25aamjvow": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF25aamjvps": [
@@ -5978,10 +5654,10 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamjwfm": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamjwfo": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamjwgh": [
    "detections_too_close_in_time"
@@ -6017,7 +5693,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamjwvr": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamjxak": [
    "detections_too_close_in_time"
@@ -6041,7 +5717,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamjyvq": [
-   "detections_too_close_in_time",
+   "first_detection_before_window",
    "near_bright_star"
   ],
   "ZTF25aamjyvr": [
@@ -6325,7 +6001,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aampdfg": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aampdoo": [
    "too_few_detections"
@@ -6375,7 +6051,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aampgxh": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamphcj": [
    "detections_too_close_in_time"
@@ -6442,7 +6118,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamphvo": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamphwy": [
    "detections_too_close_in_time"
@@ -6454,7 +6130,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aampiab": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aampiad": [
    "detections_too_close_in_time"
@@ -6478,7 +6154,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aampicv": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aampief": [
    "detections_too_close_in_time"
@@ -6536,7 +6212,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aampisv": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aampitq": [
    "detections_too_close_in_time",
@@ -6546,9 +6222,6 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aampiup": [
-   "detections_too_close_in_time"
-  ],
-  "ZTF25aampiuq": [
    "detections_too_close_in_time"
   ],
   "ZTF25aampivr": [
@@ -6616,7 +6289,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aampjgi": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aampjhd": [
    "detections_too_close_in_time"
@@ -6717,7 +6390,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aampkqn": [
-   "detections_too_close_in_time",
+   "first_detection_before_window",
    "near_bright_star"
   ],
   "ZTF25aampkqo": [
@@ -6733,7 +6406,6 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamplge": [
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF25aamplnn": [
@@ -6873,6 +6545,9 @@
   ],
   "ZTF25aampxbu": [
    "detections_too_close_in_time"
+  ],
+  "ZTF25aamqasc": [
+   "first_detection_before_window"
   ],
   "ZTF25aamqbsx": [
    "too_few_detections"
@@ -7219,7 +6894,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aamqvma": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aamqvoh": [
    "detections_too_close_in_time"
@@ -7397,7 +7072,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanbdhe": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanbdin": [
    "no_real_alert_le_t",
@@ -7433,7 +7108,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanbeyp": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanbfbf": [
    "detections_too_close_in_time"
@@ -7488,7 +7163,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanbgbi": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanbgbj": [
    "detections_too_close_in_time"
@@ -7561,7 +7236,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanbitf": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanbiwa": [
    "detections_too_close_in_time"
@@ -7594,7 +7269,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanbjrp": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanbjrq": [
    "detections_too_close_in_time"
@@ -7624,7 +7299,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanbjxh": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanbjye": [
    "detections_too_close_in_time"
@@ -7678,7 +7353,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanblaw": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanblba": [
    "detections_too_close_in_time"
@@ -7722,6 +7397,9 @@
   "ZTF25aanbmyj": [
    "detections_too_close_in_time"
   ],
+  "ZTF25aanbnfj": [
+   "first_detection_before_window"
+  ],
   "ZTF25aanbnhm": [
    "detections_too_close_in_time"
   ],
@@ -7763,7 +7441,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanboyz": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanbozb": [
    "detections_too_close_in_time"
@@ -7860,6 +7538,9 @@
    "too_few_detections",
    "fainter_than_max_mag"
   ],
+  "ZTF25aanbqrx": [
+   "first_detection_before_window"
+  ],
   "ZTF25aanbqti": [
    "detections_too_close_in_time"
   ],
@@ -7870,7 +7551,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanbrdo": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanbrfj": [
    "detections_too_close_in_time"
@@ -7979,10 +7660,10 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanbthk": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanbthl": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanbtii": [
    "detections_too_close_in_time"
@@ -8006,13 +7687,13 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanbtoy": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanbtoz": [
    "detections_too_close_in_time"
   ],
   "ZTF25aanbtpb": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanbtqh": [
    "detections_too_close_in_time"
@@ -8039,7 +7720,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanbuaw": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanbudp": [
    "detections_too_close_in_time"
@@ -8124,7 +7805,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanbxhh": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanbxjd": [
    "detections_too_close_in_time"
@@ -8151,7 +7832,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanbypm": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanbypr": [
    "detections_too_close_in_time"
@@ -8184,7 +7865,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aancups": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aancvnh": [
    "too_few_detections"
@@ -8294,7 +7975,6 @@
    "near_bright_star"
   ],
   "ZTF25aanfaxg": [
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF25aanfeip": [
@@ -8304,8 +7984,8 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanffzc": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "near_bright_star"
   ],
@@ -8436,7 +8116,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanfxbz": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanfxea": [
    "detections_too_close_in_time"
@@ -8457,7 +8137,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanfxtu": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanfxtx": [
    "detections_too_close_in_time"
@@ -8496,7 +8176,7 @@
    "too_few_detections"
   ],
   "ZTF25aangeai": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aangeaj": [
    "detections_too_close_in_time"
@@ -8527,8 +8207,8 @@
    "fainter_than_max_mag"
   ],
   "ZTF25aangloy": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF25aanglsg": [
@@ -8573,6 +8253,9 @@
   "ZTF25aanhfuz": [
    "detections_too_close_in_time"
   ],
+  "ZTF25aanhfwo": [
+   "first_detection_before_window"
+  ],
   "ZTF25aanhhbq": [
    "no_real_alert_le_t",
    "too_few_detections",
@@ -8597,7 +8280,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanhikh": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanhimb": [
    "detections_too_close_in_time"
@@ -8662,7 +8345,7 @@
    "near_bright_star"
   ],
   "ZTF25aanhspj": [
-   "detections_too_close_in_time",
+   "first_detection_before_window",
    "fainter_than_max_mag"
   ],
   "ZTF25aanhtcz": [
@@ -8765,7 +8448,6 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanikpq": [
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF25aaniktz": [
@@ -8784,15 +8466,12 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanilxe": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aanimml": [
    "near_bright_star"
   ],
   "ZTF25aanimzh": [
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF25aaninod": [
@@ -8820,7 +8499,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aaniqqx": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aaniqtj": [
    "detections_too_close_in_time"
@@ -8868,8 +8547,8 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanivrj": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "near_bright_star"
   ],
@@ -8883,7 +8562,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF25aanixml": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanixtm": [
    "detections_too_close_in_time"
@@ -8900,7 +8579,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aaniylc": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aaniynm": [
    "no_real_alert_le_t",
@@ -8929,7 +8608,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanjaaz": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanjafq": [
    "too_few_detections"
@@ -9017,7 +8696,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanjezl": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanjfbi": [
    "detections_too_close_in_time"
@@ -9026,7 +8705,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanjffg": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanjfif": [
    "detections_too_close_in_time"
@@ -9195,8 +8874,8 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanjqqo": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF25aanjrbv": [
@@ -9312,7 +8991,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanjylv": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanjysu": [
    "detections_too_close_in_time"
@@ -9346,7 +9025,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aankaqm": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aankbeo": [
    "detections_too_close_in_time"
@@ -9385,7 +9064,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF25aankptu": [
-   "too_few_detections",
+   "first_detection_before_window",
    "fainter_than_max_mag"
   ],
   "ZTF25aankpyy": [
@@ -9498,10 +9177,10 @@
    "near_bright_star"
   ],
   "ZTF25aanlifj": [
-   "too_few_detections"
+   "detections_too_close_in_time"
   ],
   "ZTF25aanljaw": [
-   "too_few_detections"
+   "detections_too_close_in_time"
   ],
   "ZTF25aanljne": [
    "no_real_alert_le_t",
@@ -9700,7 +9379,7 @@
    "star_like_counterpart"
   ],
   "ZTF25aanmfwt": [
-   "too_few_detections",
+   "first_detection_before_window",
    "fainter_than_max_mag"
   ],
   "ZTF25aanmgbt": [
@@ -9757,9 +9436,7 @@
    "near_bright_star"
   ],
   "ZTF25aanmkhm": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aanmkib": [
    "no_real_alert_le_t",
@@ -9808,7 +9485,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanmsrb": [
-   "detections_too_close_in_time"
+   "too_few_detections"
   ],
   "ZTF25aanmszq": [
    "detections_too_close_in_time"
@@ -9875,7 +9552,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanojnq": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanojns": [
    "detections_too_close_in_time"
@@ -9907,7 +9584,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanopan": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanoqbg": [
    "detections_too_close_in_time"
@@ -9953,8 +9630,8 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanotfk": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF25aanotgy": [
@@ -10071,11 +9748,11 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanpjuv": [
-   "detections_too_close_in_time"
+   "first_detection_before_window"
   ],
   "ZTF25aanpkas": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag",
    "near_bright_star"
   ],
@@ -10144,7 +9821,7 @@
    "fainter_than_max_mag"
   ],
   "ZTF25aanqfsi": [
-   "too_few_detections",
+   "detections_too_close_in_time",
    "fainter_than_max_mag"
   ],
   "ZTF25aanqigg": [
@@ -10172,8 +9849,8 @@
    "too_few_detections"
   ],
   "ZTF25aanqufn": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF25aanqvvo": [
@@ -10192,7 +9869,7 @@
    "detections_too_close_in_time"
   ],
   "ZTF25aanratw": [
-   "too_few_detections"
+   "detections_too_close_in_time"
   ],
   "ZTF25aanrawq": [
    "no_real_alert_le_t",
@@ -10243,9 +9920,7 @@
    "too_few_detections"
   ],
   "ZTF25aanrkut": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aanrnpe": [
    "no_real_alert_le_t",
@@ -10285,7 +9960,7 @@
   ],
   "ZTF25aanrylr": [
    "no_real_alert_le_t",
-   "too_few_detections",
+   "detections_too_close_in_time",
    "fainter_than_max_mag"
   ],
   "ZTF25aansahg": [
@@ -10304,1681 +9979,948 @@
    "fainter_than_max_mag"
   ],
   "ZTF25aanstsa": [
-   "too_few_detections"
+   "first_detection_before_window"
   ],
   "ZTF25aansvsb": [
+   "first_detection_before_window",
    "no_real_alert_le_t",
-   "too_few_detections",
    "fainter_than_max_mag"
   ],
   "ZTF25aantcrh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aantdli": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aantepy": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aantixo": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aantkgq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aantkpx": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aantljg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aantmka": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "star_like_counterpart",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aanurrh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aanvbxs": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aanvhrh": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aanvpit": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aanxcij": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aanxxby": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aanxxen": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aanykbc": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aanzpxu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aanzrtc": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aanzuun": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aanzvwr": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aanzygz": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aanzyju": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaoaada": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star",
-   "galactic_plane"
+   "no_detection_le_t"
   ],
   "ZTF25aaoaama": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoaaxd": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaoadah": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "galactic_plane"
+   "no_detection_le_t"
   ],
   "ZTF25aaoadjq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoaduv": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoadyf": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaoaegw": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoaemx": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoaemz": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaoaena": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoaend": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoaeqa": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoaeqz": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoaesm": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoaetl": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoaewq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoaezd": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoafdy": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoafjq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaoagmm": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaobujx": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoburp": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaobvih": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaobzud": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaocbfv": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaocduk": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaodqew": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaodsjf": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoeimv": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoelaf": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaoepnd": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaofpnf": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaogmlg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaogwfe": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaogwrc": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaogxpo": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaogzwi": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaohhmg": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaohjyi": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "galactic_plane"
+   "no_detection_le_t"
   ],
   "ZTF25aaohldr": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaohlwu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaohouw": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaohtvk": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaohvfe": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "galactic_plane"
+   "no_detection_le_t"
   ],
   "ZTF25aaoiaew": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoiaok": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoiapk": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoiapr": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoiaqc": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoibjb": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoibqg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoibsi": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoinxb": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoiqef": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoirrb": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoiteh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoiwop": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaojbvn": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaokatk": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaokbex": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaokdhs": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaokegz": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaokehg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaokehj": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaokjuf": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaokkyk": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoklga": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaokupy": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaokuqr": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaokuqx": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaokxhr": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaomiob": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaosoeb": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaotvuu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoubsl": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaoufvp": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaouief": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaousad": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaovgkp": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaovgyt": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoxcgn": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaoxiem": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaoxygt": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoxzzz": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaoyede": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaoyejs": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaoyfil": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaozbsn": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaozcwc": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaozeyt": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaozgbc": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaozihq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaozmlb": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaoznqh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "star_like_counterpart",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaozqmh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaozrfo": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapagpl": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapbbhv": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapcrth": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapdlzx": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapdxnh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapeils": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapfcuu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapgbpy": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapgssh": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaphluw": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapipgs": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapjhvl": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapjkba": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapjnhz": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapjqcu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapjxzu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapjzgq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapkccu": [
-   "no_real_alert_le_t",
-   "detections_too_close_in_time",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapkcfw": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapkcgu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapkchu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapkcst": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapkcuk": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapkhqt": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapkhsn": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapkxga": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaplpik": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapmabl": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapmdhy": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapmqow": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "star_like_counterpart",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapnvgc": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapodof": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapodom": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapoqxq": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapouxg": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapoxfd": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aappawv": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aappfev": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aappnea": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapppam": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapqbkn": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "star_like_counterpart"
+   "no_detection_le_t"
   ],
   "ZTF25aapqbsq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "star_like_counterpart",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapqcbo": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapqcti": [
-   "first_detection_before_window",
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapqdng": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapqdpz": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "star_like_counterpart",
-   "near_bright_star",
-   "galactic_plane"
+   "no_detection_le_t"
   ],
   "ZTF25aapqjwt": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapqkjg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapqlkr": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapqmvb": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapqnzk": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapqqpt": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaprdqj": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaprgky": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaprnbe": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapsmas": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapsvkd": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapsyas": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaptaaq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaptbdh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaptday": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaptgrw": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaptvnx": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapudtx": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapuhbd": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapukyf": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapulax": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapulcl": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapulkr": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapulsz": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapulyg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapulzo": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapumaf": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapumqn": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapumuw": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapumwp": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapunas": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapunmc": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapunmr": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapunwl": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapuosq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapuoyh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "galactic_plane"
+   "no_detection_le_t"
   ],
   "ZTF25aapupjl": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapuqdd": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapuwdi": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapuxbh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapuyag": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapuznl": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag",
-   "star_like_counterpart"
+   "no_detection_le_t"
   ],
   "ZTF25aapvbkr": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapvhah": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapvirp": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "star_like_counterpart"
+   "no_detection_le_t"
   ],
   "ZTF25aapvkps": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapvswg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapvwku": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapvxch": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapwgcq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapwhfw": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapwiux": [
-   "no_real_alert_le_t",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapwurq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapwvdh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapwwdg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapwxhq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapwzyi": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapwzyj": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapxdce": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapxdvy": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapxlrl": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapxmfi": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapxnci": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapxnjq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapxrpm": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapxsfm": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapybmm": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapyjmm": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapyjxu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "galactic_plane"
+   "no_detection_le_t"
   ],
   "ZTF25aapzevl": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapzeyy": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapzgyd": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapzhyn": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapzirl": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapziso": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapzjff": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapzjpg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapzjsz": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapzkjh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapzklo": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapzkoq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapzkpa": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapzkyj": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapzrmh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapztqf": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aapzubs": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapzyug": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aapzzbm": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqafoa": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaqamts": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqanbc": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "galactic_plane"
+   "no_detection_le_t"
   ],
   "ZTF25aaqaoof": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaqbfoh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaqbjbc": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqbjjq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaqbjvr": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaqbmsz": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqbvle": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaqbwlc": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqbxge": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqbxkw": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqbzpa": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaqbzwi": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqcaby": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqcarb": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqccch": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqcdwu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqchnn": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqclyk": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqcnff": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqcpko": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqcppl": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqcqkb": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqcqvf": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqcqwo": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqcrgq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqcrsz": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqcrxs": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaqcsbc": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqcshq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqctui": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqfcfg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqgcxo": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqgjtn": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqgnyd": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqgphm": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqgpnm": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqgpuh": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqgpze": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqgsjw": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqhius": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqhrdd": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqkksr": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "galactic_plane"
+   "no_detection_le_t"
   ],
   "ZTF25aaqokuf": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaqolhf": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqonhm": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqosqb": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqosqc": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqoupu": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqouwm": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaqoxmb": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqpftn": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag",
-   "near_bright_star"
+   "no_detection_le_t"
   ],
   "ZTF25aaqpmkq": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqppbx": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqqayn": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqrhhg": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ],
   "ZTF25aaqzkua": [
-   "no_real_alert_le_t",
-   "too_few_detections",
-   "fainter_than_max_mag"
+   "no_detection_le_t"
   ]
  }
 }

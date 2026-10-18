@@ -18,6 +18,8 @@
      "ra": 185.0,
      "dec": 30.0,
      "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null,
      "class": "SNIa",
      "probability": 0.871,
      "classifier": "lc_classifier"
@@ -34,6 +36,8 @@
      "ra": 185.0,
      "dec": 30.0,
      "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null,
      "class": "SNIa",
      "probability": 0.871,
      "classifier": "lc_classifier"
@@ -50,6 +54,8 @@
      "ra": 185.0,
      "dec": 30.0,
      "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null,
      "class": "SNIa",
      "probability": 0.871,
      "classifier": "lc_classifier"

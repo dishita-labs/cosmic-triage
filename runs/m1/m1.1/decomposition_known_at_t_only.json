@@ -1,0 +1,159 @@
+{
+ "2025-04-19": {
+  "pool": 104,
+  "contaminant": 37,
+  "left": {
+   "ZTF25aambyih": [
+    "too_few_detections"
+   ],
+   "ZTF25aamrath": [
+    "too_few_detections"
+   ],
+   "ZTF25aanbqrx": [
+    "too_few_detections"
+   ]
+  },
+  "joined": [
+   "ZTF25aalqnbr",
+   "ZTF25aalqrrk",
+   "ZTF25aalqsel",
+   "ZTF25aalqwnx",
+   "ZTF25aalrrdz",
+   "ZTF25aalrvjj",
+   "ZTF25aaluwyd",
+   "ZTF25aaluxnm",
+   "ZTF25aalvoiq",
+   "ZTF25aalvrqu",
+   "ZTF25aalvyig",
+   "ZTF25aalyjbo"
+  ],
+  "labels": {
+   "class": 30,
+   "unknown": 21,
+   "contaminant": 37,
+   "null": 16
+  }
+ },
+ "2025-04-20": {
+  "pool": 112,
+  "contaminant": 40,
+  "left": {
+   "ZTF25aamrath": [
+    "too_few_detections"
+   ],
+   "ZTF25aanitpo": [
+    "detections_too_close_in_time"
+   ],
+   "ZTF25aankqhe": [
+    "too_few_detections"
+   ]
+  },
+  "joined": [
+   "ZTF25aalqpuk",
+   "ZTF25aaluemf",
+   "ZTF25aaluens",
+   "ZTF25aaluerd",
+   "ZTF25aalvyrp",
+   "ZTF25aalvyyu",
+   "ZTF25aalyfoi",
+   "ZTF25aalzibz",
+   "ZTF25aalzmga",
+   "ZTF25aamaffc",
+   "ZTF25aambyih"
+  ],
+  "labels": {
+   "class": 28,
+   "unknown": 25,
+   "contaminant": 40,
+   "null": 19
+  }
+ },
+ "2025-04-21": {
+  "pool": 98,
+  "contaminant": 37,
+  "left": {
+   "ZTF19aahfevh": [
+    "too_few_detections"
+   ],
+   "ZTF19adggilm": [
+    "too_few_detections"
+   ],
+   "ZTF25aanbvqv": [
+    "too_few_detections"
+   ],
+   "ZTF25aanitpo": [
+    "detections_too_close_in_time"
+   ],
+   "ZTF25aankqhe": [
+    "too_few_detections"
+   ],
+   "ZTF25aanpulo": [
+    "too_few_detections"
+   ]
+  },
+  "joined": [
+   "ZTF25aamhqoo"
+  ],
+  "labels": {
+   "class": 22,
+   "unknown": 17,
+   "contaminant": 37,
+   "null": 22
+  }
+ },
+ "2025-04-22": {
+  "pool": 100,
+  "contaminant": 38,
+  "left": {
+   "ZTF19aahfevh": [
+    "too_few_detections"
+   ],
+   "ZTF19adggilm": [
+    "too_few_detections"
+   ],
+   "ZTF25aanbvqv": [
+    "too_few_detections"
+   ],
+   "ZTF25aanpulo": [
+    "too_few_detections"
+   ]
+  },
+  "joined": [
+   "ZTF25aanbqrx",
+   "ZTF25aancbod"
+  ],
+  "labels": {
+   "class": 22,
+   "unknown": 17,
+   "contaminant": 38,
+   "null": 23
+  }
+ },
+ "2025-04-23": {
+  "pool": 101,
+  "contaminant": 36,
+  "left": {
+   "ZTF19adggilm": [
+    "too_few_detections"
+   ],
+   "ZTF25aaoburp": [
+    "too_few_detections"
+   ]
+  },
+  "joined": [
+   "ZTF25aamkqzo"
+  ],
+  "labels": {
+   "class": 21,
+   "unknown": 17,
+   "contaminant": 36,
+   "null": 27
+  }
+ },
+ "photometry": {
+  "dets_mjd_le_t_without_stamp": 272,
+  "dets_mjd_le_t_not_known": 197,
+  "nondets_le_t": 8004,
+  "nondets_le_t_not_known": 53
+ }
+}

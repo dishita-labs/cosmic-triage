@@ -1,0 +1,186 @@
+{
+ "already_classified_sn": {
+  "chosen": {
+   "oid": "ZTF25aalzmga",
+   "night": "2025-04-19",
+   "t_mjd": 60784.833333333336,
+   "bts_type": "SN II",
+   "bts_peakmag": 15.5651,
+   "fink_tns_label": "SN II",
+   "evidence_by_mjd": 60773.35072920006,
+   "days_classified_before_t": 11.482604133278073,
+   "label_matches_bts": true
+  },
+  "n_candidates": 16,
+  "candidates": [
+   {
+    "oid": "ZTF25aalzmga",
+    "night": "2025-04-19",
+    "t_mjd": 60784.833333333336,
+    "bts_type": "SN II",
+    "bts_peakmag": 15.5651,
+    "fink_tns_label": "SN II",
+    "evidence_by_mjd": 60773.35072920006,
+    "days_classified_before_t": 11.482604133278073,
+    "label_matches_bts": true
+   },
+   {
+    "oid": "ZTF25aalrrwj",
+    "night": "2025-04-19",
+    "t_mjd": 60784.833333333336,
+    "bts_type": "SN Ia",
+    "bts_peakmag": 17.4747,
+    "fink_tns_label": "SN Ia",
+    "evidence_by_mjd": 60774.36479170015,
+    "days_classified_before_t": 10.468541633184941,
+    "label_matches_bts": true
+   },
+   {
+    "oid": "ZTF25aalthwc",
+    "night": "2025-04-20",
+    "t_mjd": 60785.833333333336,
+    "bts_type": "SN Ia",
+    "bts_peakmag": 16.4703,
+    "fink_tns_label": "SN Ia",
+    "evidence_by_mjd": 60776.23524310021,
+    "days_classified_before_t": 9.59809023312846,
+    "label_matches_bts": true
+   },
+   {
+    "oid": "ZTF25aalsxks",
+    "night": "2025-04-20",
+    "t_mjd": 60785.833333333336,
+    "bts_type": "SN Ia",
+    "bts_peakmag": 17.3335,
+    "fink_tns_label": "SN Ia",
+    "evidence_by_mjd": 60776.23666669987,
+    "days_classified_before_t": 9.596666633464338,
+    "label_matches_bts": true
+   },
+   {
+    "oid": "ZTF25aalthwc",
+    "night": "2025-04-19",
+    "t_mjd": 60784.833333333336,
+    "bts_type": "SN Ia",
+    "bts_peakmag": 16.4703,
+    "fink_tns_label": "SN Ia",
+    "evidence_by_mjd": 60776.23524310021,
+    "days_classified_before_t": 8.59809023312846,
+    "label_matches_bts": true
+   },
+   {
+    "oid": "ZTF25aalsxks",
+    "night": "2025-04-19",
+    "t_mjd": 60784.833333333336,
+    "bts_type": "SN Ia",
+    "bts_peakmag": 17.3335,
+    "fink_tns_label": "SN Ia",
+    "evidence_by_mjd": 60776.23666669987,
+    "days_classified_before_t": 8.596666633464338,
+    "label_matches_bts": true
+   },
+   {
+    "oid": "ZTF25aaluvkb",
+    "night": "2025-04-20",
+    "t_mjd": 60785.833333333336,
+    "bts_type": "SN Ia",
+    "bts_peakmag": 17.7499,
+    "fink_tns_label": "SN Ia",
+    "evidence_by_mjd": 60780.362141199876,
+    "days_classified_before_t": 5.471192133460136,
+    "label_matches_bts": true
+   },
+   {
+    "oid": "ZTF25aaluyhj",
+    "night": "2025-04-20",
+    "t_mjd": 60785.833333333336,
+    "bts_type": "SN Ia",
+    "bts_peakmag": 18.2064,
+    "fink_tns_label": "SN Ia",
+    "evidence_by_mjd": 60781.31714119995,
+    "days_classified_before_t": 4.51619213338563,
+    "label_matches_bts": true
+   },
+   {
+    "oid": "ZTF25aaluvkb",
+    "night": "2025-04-19",
+    "t_mjd": 60784.833333333336,
+    "bts_type": "SN Ia",
+    "bts_peakmag": 17.7499,
+    "fink_tns_label": "SN Ia",
+    "evidence_by_mjd": 60780.362141199876,
+    "days_classified_before_t": 4.471192133460136,
+    "label_matches_bts": true
+   },
+   {
+    "oid": "ZTF25aaluyhj",
+    "night": "2025-04-19",
+    "t_mjd": 60784.833333333336,
+    "bts_type": "SN Ia",
+    "bts_peakmag": 18.2064,
+    "fink_tns_label": "SN Ia",
+    "evidence_by_mjd": 60781.31714119995,
+    "days_classified_before_t": 3.51619213338563,
+    "label_matches_bts": true
+   }
+  ],
+  "criteria": "BTS-classified SN (Ia/II/Ibc) in a pool at t; Fink d:tns = SN* at an alert <= t",
+  "caveat": "date_kind = evidence_by (tool evidence, never Tier-A truth); TNS report date BLOCKED: CREDENTIAL REQUIRED (TNS bot registration pending)"
+ },
+ "agn_contaminant": {
+  "chosen": {
+   "oid": "ZTF25aankqtm",
+   "night": "2025-04-22",
+   "t_mjd": 60787.833333333336,
+   "label": "unknown",
+   "fink_cdsxmatch_at_t": "",
+   "qualifying_peak": 18.4255,
+   "sherlock_class": "AGN",
+   "sherlock_sep_arcsec": 1.679,
+   "sherlock_catalogue": "SDSS/MILLIQUAS/2MASS/PS1/GAIA/VERON",
+   "tier": "fallback: non-classified + AGN/NT context"
+  },
+  "n_candidates": 3,
+  "candidates": [
+   {
+    "oid": "ZTF25aankqtm",
+    "night": "2025-04-22",
+    "t_mjd": 60787.833333333336,
+    "label": "unknown",
+    "fink_cdsxmatch_at_t": "",
+    "qualifying_peak": 18.4255,
+    "sherlock_class": "AGN",
+    "sherlock_sep_arcsec": 1.679,
+    "sherlock_catalogue": "SDSS/MILLIQUAS/2MASS/PS1/GAIA/VERON",
+    "tier": "fallback: non-classified + AGN/NT context"
+   },
+   {
+    "oid": "ZTF25aanfnya",
+    "night": "2025-04-23",
+    "t_mjd": 60788.833333333336,
+    "label": "unknown",
+    "fink_cdsxmatch_at_t": "Galaxy",
+    "qualifying_peak": 18.6435,
+    "sherlock_class": "NT",
+    "sherlock_sep_arcsec": 0.021,
+    "sherlock_catalogue": "NED/SDSS",
+    "tier": "fallback: non-classified + AGN/NT context"
+   },
+   {
+    "oid": "ZTF25aanevul",
+    "night": "2025-04-21",
+    "t_mjd": 60786.833333333336,
+    "label": "unknown",
+    "fink_cdsxmatch_at_t": "Galaxy",
+    "qualifying_peak": 18.9632,
+    "sherlock_class": "NT",
+    "sherlock_sep_arcsec": 0.926,
+    "sherlock_catalogue": "NED/SDSS/GAIA",
+    "tier": "fallback: non-classified + AGN/NT context"
+   }
+  ],
+  "criteria": "tier 1: contaminant label (provisional) + AGN context (Fink alert-time cdsxmatch AGN-type or Sherlock AGN); tier 2 fallback: unknown/unscored member with Sherlock AGN/NT",
+  "n_tier1": 0,
+  "sherlock_status": "ok"
+ }
+}

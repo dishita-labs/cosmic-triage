@@ -17,7 +17,9 @@
      "candid": 6076383333,
      "ra": 185.0,
      "dec": 30.0,
-     "diffmaglim": 20.5
+     "diffmaglim": 20.5,
+     "has_stamp": false,
+     "parent_candid": 6076733333
     },
     {
      "mjd": 60764.8333333,
@@ -30,7 +32,9 @@
      "candid": 6076483333,
      "ra": 185.0,
      "dec": 30.0,
-     "diffmaglim": 20.5
+     "diffmaglim": 20.5,
+     "has_stamp": false,
+     "parent_candid": 6076733333
     },
     {
      "mjd": 60767.3333333,
@@ -43,7 +47,9 @@
      "candid": 6076733333,
      "ra": 185.0,
      "dec": 30.0,
-     "diffmaglim": 20.5
+     "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null
     }
    ],
    "non_detections": [
@@ -115,6 +121,7 @@
   }
  },
  "expect": {
-  "member": false
+  "member": false,
+  "no_snapshot": true
  }
 }

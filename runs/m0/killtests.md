@@ -1,6 +1,6 @@
 # M0 kill-tests (ARCHITECTURE §11)
 
-Generated 2026-10-17T21:25:24+00:00 by `scripts/m0_killtests.py` (code 19f5378-dirty). No paid model calls were made.
+Generated 2026-10-18T10:36:33+00:00 by `scripts/m0_killtests.py` (code ebf9062-dirty). No paid model calls were made.
 
 | # | Assumption | Verdict | Fallback / note |
 |---|---|---|---|
@@ -10,7 +10,7 @@ Generated 2026-10-17T21:25:24+00:00 by `scripts/m0_killtests.py` (code 19f5378-d
 | 4 | Budget binds: median(bright SN-like candidates)/slots >= 2 | **PASS** |  |
 | 5 | BTS CSV without filters includes unclassified saved candidates | **PASS** |  |
 | 6 | Lasair token + Sherlock available; SIMBAD/NED rate limits tolerable with caching | **PASS** |  |
-| 7 | Jev and Claude keys; Jev call ~200 ms with ~500-token state | **BLOCKED: CREDENTIAL REQUIRED** | M4 slips; architecture unaffected (§11) |
+| 7 | Jev and Claude keys; Jev call ~200 ms with ~500-token state | **BLOCKED: SPEND APPROVAL REQUIRED** | M4 slips; architecture unaffected (§11) |
 | 8 | btsbot installs and runs on ALeRCE stamps | **PASS** |  |
 | 9 | CP-SAT solves 60 targets x 12 h in < 5 s | **PASS** |  |
 | 10 | Corpus ingestion (AstroNotes/ATels/GCN) feasible with dates | **PASS** |  |
@@ -62,10 +62,8 @@ Generated 2026-10-17T21:25:24+00:00 by `scripts/m0_killtests.py` (code 19f5378-d
 - NED: 10 cone searches (30"), errors=0, rows=66, median latency 0.00s (paced; cached thereafter)
 
 ### 7. Jev and Claude keys; Jev call ~200 ms with ~500-token state
-*Test:* one call each · *Verdict:* **BLOCKED: CREDENTIAL REQUIRED** · 0.0s
-- **Credential:** `ANTHROPIC_API_KEY, TYPESAFE_API_KEY (or OPENROUTER_API_KEY)`
-- **Setup:** ANTHROPIC_API_KEY: create at https://console.anthropic.com -> API keys. TYPESAFE_API_KEY: create at https://docs.typesafe.ai (quickstart) or use OPENROUTER_API_KEY (https://openrouter.ai/keys). Add to .env. Live calls are paid: the owner must also approve a spend budget.
-- No model call attempted (keys absent; and no spend budget approved by the owner).
+*Test:* one call each · *Verdict:* **BLOCKED: SPEND APPROVAL REQUIRED** · 0.0s
+- Keys present, but the owner has not approved a model spend budget; no paid call made.
 - *Fallback:* M4 slips; architecture unaffected (§11)
 
 ### 8. btsbot installs and runs on ALeRCE stamps

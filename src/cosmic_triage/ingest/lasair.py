@@ -66,6 +66,42 @@ class LasairClient:
             "sherlock_classifications.*", "objects,sherlock_classifications", f"objects.objectId='{_safe_oid(oid)}'", 5
         )
 
+    def sherlock_objects(self, oids: list[str], chunk: int = 100) -> dict[str, dict[str, Any]]:
+        """Sherlock classifications for many objects in ceil(n / chunk) calls (100 calls/h tier). Static context."""
+        ids = sorted({_safe_oid(o) for o in oids})
+        out: dict[str, dict[str, Any]] = {}
+        for i in range(0, len(ids), chunk):
+            part = ids[i:i + chunk]
+            cond = "objects.objectId IN (" + ",".join(f"'{o}'" for o in part) + ")"
+            for r in self.query("sherlock_classifications.*", "objects,sherlock_classifications", cond, len(part) + 5):
+                out.setdefault(str(r["objectId"]), r)
+        return out
+
+    def prefetch(self, oids: list[str], table: str, chunk: int = 100) -> int:
+        """Warm the per-object cache entries of ``sherlock_object`` / ``tns_crossmatch`` with batched queries.
+
+        One IN-query per ``chunk`` objects; each object's rows are stored under exactly the key its single-object call
+        would use (the same rows, filtered by objectId), so tools then run from cache. Returns the number of entries written."""
+        if table not in ("sherlock_classifications", "crossmatch_tns"):
+            raise ValueError(table)
+        todo = [o for o in sorted({_safe_oid(x) for x in oids})
+                if not self.cache.has(self.name, "query", self._single_params(o, table))]
+        written = 0
+        for i in range(0, len(todo), chunk):
+            part = todo[i:i + chunk]
+            cond = "objects.objectId IN (" + ",".join(f"'{o}'" for o in part) + ")"
+            rows = self.query(f"objects.objectId AS _oid, {table}.*", f"objects,{table}", cond, 5 * len(part) + 5)
+            for o in part:
+                mine = [{k: v for k, v in r.items() if k != "_oid"} for r in rows if r.get("_oid") == o][:5]
+                self.cache.put(self.name, "query", self._single_params(o, table), mine)
+                written += 1
+        return written
+
+    @staticmethod
+    def _single_params(oid: str, table: str) -> dict[str, Any]:
+        return {"selected": f"{table}.*", "tables": f"objects,{table}", "conditions": f"objects.objectId='{oid}'", "limit": 5,
+                "offset": 0}
+
     def tns_crossmatch(self, oid: str) -> list[dict[str, Any]]:
         """Lasair's TNS crossmatch rows. NOTE: ``type``/``z`` are *current* TNS values (no classification date)."""
         return self.query("crossmatch_tns.*", "objects,crossmatch_tns", f"objects.objectId='{_safe_oid(oid)}'", 5)

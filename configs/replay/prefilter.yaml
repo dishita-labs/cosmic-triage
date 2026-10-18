@@ -1,9 +1,13 @@
 # Time-honest forward-pool pre-filter mirroring the BTS alert filter (ARCHITECTURE §6.4).
 # Changing any value here is a §14.3 trigger (pre-filter change) once comparisons begin.
-version: "1.0"
-window_days: 14            # first detection in [t - 14 d, t]
-min_detections: 2          # qualifying detections at <= t
-min_separation_min: 30     # ... at least 30 minutes apart
+version: "1.1"
+window_days: 14            # first detection in [t - 14 d, t]; v1.1: first = min(known detections, alert-time i:jdstarthist)
+# v1.1 (Review-03): known-at-t rule. A detection is known at t iff delivered by an alert with jd <= t (its own stamped
+# alert, or prv_candidates of the alert named by parent_candid). A non-detection is known iff a stamped alert of the
+# object has mjd in [nd.mjd, min(t, nd.mjd + packet_history_days)] (packets carry 30 days of history).
+packet_history_days: 30
+min_detections: 2          # history detections at <= t: max(known positive detections, alert-time i:ndethist)
+min_separation_min: 30     # ... at least 30 min apart: max(span of known detections, alert jd - i:jdstarthist)
 min_drb: 0.5               # deep real/bogus score of the alert detection
 require_positive_subtraction: true
 max_mag: 19.0              # brightest qualifying detection at <= t

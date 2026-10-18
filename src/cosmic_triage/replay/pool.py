@@ -9,12 +9,17 @@ Retrieval is two-stage:
    pool member. Final aggregates are used only to *exclude* objects that can never qualify; they never enter a
    Snapshot. (Lasair's object aggregates were rejected for this: they cover a rolling recent window, not the full
    history, so they are not monotone — see runs/reports/M1.md.)
-2. **Time-honest filter at t** (`evaluate`), computed solely from detections, non-detections and alert rows
-   with ``mjd <= t`` after the denylist has stripped final-history fields.
+2. **Time-honest filter at t** (`evaluate`), computed solely from what was *known* at t after the denylist has
+   stripped final-history fields (Review-03, §6.4):
+   - a detection is known iff it was delivered by an alert with jd <= t — its own stamped alert, or the
+     ``prv_candidates`` of the alert named by ``parent_candid``;
+   - a non-detection is known iff a stamped alert of the object has mjd in [nd.mjd, min(t, nd.mjd + 30 d)];
+   - per-alert ``i:jdstarthist`` / ``i:ndethist`` from Fink rows with jd <= t are values the packet carried then.
 """
 
 from __future__ import annotations
 
+import bisect
 import math
 from collections.abc import Iterable
 from concurrent.futures import ThreadPoolExecutor
@@ -50,6 +55,7 @@ class PrefilterConfig:
     min_abs_gal_b: float
     scored_peak_mag: float
     config_hash: str
+    packet_history_days: float = 30.0
 
     @classmethod
     def load(cls, path: str = "configs/replay/prefilter.yaml") -> PrefilterConfig:
@@ -63,6 +69,7 @@ class PrefilterConfig:
             bright_star_max_dist=float(c["bright_star"]["max_dist_arcsec"]),
             bright_star_max_mag=float(c["bright_star"]["max_mag"]),
             min_abs_gal_b=float(c["min_abs_gal_b"]), scored_peak_mag=float(c["scored_peak_mag"]), config_hash=h,
+            packet_history_days=float(c["packet_history_days"]),
         )
 
 
@@ -94,22 +101,69 @@ def _positive(x: Any) -> bool | None:
     return str(x).lower() in ("t", "1", "true")
 
 
+def _candid(x: Any) -> str | None:
+    if x is None or (isinstance(x, float) and math.isnan(x)):
+        return None
+    return str(int(x)) if isinstance(x, int | float) else str(x)
+
+
 @dataclass
 class RawCandidate:
-    """Raw, denylist-scrubbed broker records for one object (all epochs; filter by t before use)."""
+    """Raw, denylist-scrubbed broker records for one object (all epochs). Never read these directly for a decision
+    at t: use the ``known_*`` / ``*_le`` accessors, which apply the known-at-t rule."""
 
     oid: str
     detections: list[dict[str, Any]]
     non_detections: list[dict[str, Any]]
     fink_rows: list[dict[str, Any]]
     static: dict[str, Any] = field(default_factory=dict)
+    _alerts: tuple[dict[str, float], list[float]] | None = field(default=None, init=False, repr=False, compare=False)
 
-    def dets_le(self, t: float) -> list[dict[str, Any]]:
-        return [d for d in self.detections if d["mjd"] <= t]
+    def _alert_index(self) -> tuple[dict[str, float], list[float]]:
+        """candid -> mjd for every stamped alert of the object (ALeRCE has_stamp detections and Fink alert rows),
+        plus the sorted alert mjds. Built over all epochs; callers compare against t."""
+        if self._alerts is None:
+            by_candid: dict[str, float] = {}
+            for d in self.detections:
+                if d.get("has_stamp") and (c := _candid(d.get("candid"))) is not None:
+                    by_candid[c] = float(d["mjd"])
+            for r in self.fink_rows:
+                if (c := _candid(r.get("i:candid"))) is not None:
+                    by_candid.setdefault(c, float(r["mjd"]))
+            self._alerts = (by_candid, sorted(set(by_candid.values())))
+        return self._alerts
+
+    def delivered_by(self, d: dict[str, Any]) -> float | None:
+        """MJD of the alert that delivered detection ``d``: its own (stamped) alert, else its prv_candidates parent."""
+        if d.get("has_stamp"):
+            return float(d["mjd"])
+        return self._alert_index()[0].get(_candid(d.get("parent_candid")) or "")
+
+    def known_dets(self, t: float) -> list[dict[str, Any]]:
+        """Detections known at t: mjd <= t and delivered by an alert with jd <= t (Review-03 known-at-t rule)."""
+        out = []
+        for d in self.detections:
+            if d["mjd"] > t:
+                continue
+            by = self.delivered_by(d)
+            if by is not None and by <= t:
+                out.append(d)
+        return out
+
+    def nondet_delivered_by(self, n: dict[str, Any], t: float, history_days: float) -> float | None:
+        """Earliest stamped alert with mjd in [nd.mjd, min(t, nd.mjd + history_days)], i.e. a packet that carried it."""
+        mjds = self._alert_index()[1]
+        i = bisect.bisect_left(mjds, float(n["mjd"]))
+        if i < len(mjds) and mjds[i] <= min(t, float(n["mjd"]) + history_days):
+            return mjds[i]
+        return None
+
+    def known_nondets(self, t: float, history_days: float) -> list[dict[str, Any]]:
+        return [n for n in self.non_detections if n["mjd"] <= t and self.nondet_delivered_by(n, t, history_days) is not None]
 
     def qualifying(self, t: float, cfg: PrefilterConfig) -> list[dict[str, Any]]:
         out = []
-        for d in self.dets_le(t):
+        for d in self.known_dets(t):
             drb = _f(d.get("drb"))
             if drb is None or drb < cfg.min_drb:
                 continue
@@ -120,12 +174,31 @@ class RawCandidate:
             out.append(d)
         return out
 
+    def fink_le(self, t: float) -> list[dict[str, Any]]:
+        return sorted((r for r in self.fink_rows if r["mjd"] <= t), key=lambda r: r["mjd"])
+
     def first_fink_le(self, t: float) -> dict[str, Any] | None:
-        rows = sorted((r for r in self.fink_rows if r["mjd"] <= t), key=lambda r: r["mjd"])
+        rows = self.fink_le(t)
         return rows[0] if rows else None
 
+    def alert_hist_start(self, t: float) -> float | None:
+        """Earliest per-alert ``i:jdstarthist`` (as MJD) over Fink rows with jd <= t; values > the row's jd are ignored."""
+        vals = [jd_to_mjd(v) for r in self.fink_le(t) if (v := _f(r.get("i:jdstarthist"))) is not None
+                and jd_to_mjd(v) <= r["mjd"]]
+        return min(vals) if vals else None
+
+    def alert_ndethist(self, t: float) -> int | None:
+        vals = [int(v) for r in self.fink_le(t) if (v := _f(r.get("i:ndethist"))) is not None]
+        return max(vals) if vals else None
+
+    def alert_span_min(self, t: float) -> float | None:
+        """Largest (alert jd - i:jdstarthist) over Fink rows <= t, in minutes (the BTS filter's history span)."""
+        vals = [(r["mjd"] - jd_to_mjd(v)) * 1440.0 for r in self.fink_le(t) if (v := _f(r.get("i:jdstarthist"))) is not None
+                and jd_to_mjd(v) <= r["mjd"]]
+        return max(vals) if vals else None
+
     def position_le(self, t: float) -> tuple[float, float] | None:
-        ds = [d for d in self.dets_le(t) if _f(d.get("ra")) is not None and _f(d.get("dec")) is not None]
+        ds = [d for d in self.known_dets(t) if _f(d.get("ra")) is not None and _f(d.get("dec")) is not None]
         if not ds:
             return None
         ra = [float(d["ra"]) for d in ds]
@@ -170,27 +243,34 @@ class FilterResult:
     first_detection_mjd: float | None = None
     brightest_mag: float | None = None
     gal_b: float | None = None
+    n_hist: int | None = None
+    first_from_alert_history: bool = False
 
 
 def evaluate(raw: RawCandidate, t: float, cfg: PrefilterConfig) -> FilterResult:
-    """The time-honest pre-filter at t. Reads only records with mjd <= t."""
+    """The time-honest pre-filter at t. Reads only what was known at t (see module docstring)."""
     reasons: list[str] = []
-    dets = raw.dets_le(t)
+    dets = raw.known_dets(t)
     if not dets:
         return FilterResult(False, ("no_detection_le_t",))
-    first = min(d["mjd"] for d in dets)
+    first_det = min(d["mjd"] for d in dets)
+    hist_start = raw.alert_hist_start(t)
+    first = min(first_det, hist_start) if hist_start is not None else first_det
     if first < t - cfg.window_days:
         reasons.append("first_detection_before_window")
     # Mirrors the BTS alert filter: the *alert* must pass drb (and the magnitude cut), while the detection count
-    # and time span come from the position's detection history (like ndethist / jd - jdstarthist), recomputed from
-    # positive detections <= t. History detections from prv_candidates carry no drb in the broker record.
+    # and time span come from the position's history: known positive detections <= t, or the alert packet's own
+    # i:ndethist / (jd - i:jdstarthist) from rows <= t, whichever is larger.
     q = raw.qualifying(t, cfg)
     hist = [d for d in dets if _positive(d.get("isdiffpos")) is not False and _f(d.get("magpsf")) is not None]
+    n_hist = max(len(hist), raw.alert_ndethist(t) or 0)
+    span = (max(d["mjd"] for d in hist) - min(d["mjd"] for d in hist)) * 1440.0 if hist else 0.0
+    span = max(span, raw.alert_span_min(t) or 0.0)
     if not q:
         reasons.append("no_real_alert_le_t")
-    if len(hist) < cfg.min_detections:
+    if n_hist < cfg.min_detections:
         reasons.append("too_few_detections")
-    elif (max(d["mjd"] for d in hist) - min(d["mjd"] for d in hist)) * 1440.0 < cfg.min_separation_min:
+    elif span < cfg.min_separation_min:
         reasons.append("detections_too_close_in_time")
     brightest = min((float(d["magpsf"]) for d in q), default=None)
     if brightest is None or brightest > cfg.max_mag:
@@ -208,13 +288,16 @@ def evaluate(raw: RawCandidate, t: float, cfg: PrefilterConfig) -> FilterResult:
     b = galactic_b(*pos) if pos else None
     if b is None or abs(b) < cfg.min_abs_gal_b:
         reasons.append("galactic_plane")
-    return FilterResult(not reasons, tuple(reasons), first, brightest, b)
+    return FilterResult(not reasons, tuple(reasons), first, brightest, b, n_hist,
+                        hist_start is not None and hist_start < first_det)
 
 
 def normalise_alerce_lightcurve(lc: dict[str, Any], deny: Denylist) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     dets = []
     seen: set[str] = set()
     for d in lc.get("detections", []):
+        if "has_stamp" not in d:
+            raise ValueError("ALeRCE detection without has_stamp: the known-at-t delivery rule cannot be applied")
         d = deny.scrub(d)
         key = f"{d.get('candid')}:{d.get('mjd')}"
         if key in seen:
@@ -233,7 +316,7 @@ def normalise_fink_rows(rows: Iterable[dict[str, Any]], deny: Denylist) -> list[
             continue
         if r.get("d:tag") == "upperlim":
             continue
-        s = deny.scrub(r)
+        s = deny.scrub(r, source="fink")  # per-alert i:jdstarthist / i:ndethist are allowed in alert rows
         s["mjd"] = jd_to_mjd(jd)
         out.append(s)
     return sorted(out, key=lambda r: r["mjd"])

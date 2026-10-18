@@ -66,3 +66,51 @@ class AlerceDBClient:
 
         result: list[dict[str, Any]] = self.cache.get_or_fetch(self.name, "superset_day_v1", params, fetch)
         return result
+
+
+OBJECTS_SQL = """
+select o.oid, o.firstmjd, o.lastmjd, o.ndet, o.meanra, o.meandec,
+       (select min(m.magmin) from magstat m where m.oid = o.oid) as magmin,
+       bool_or(ps.sgscore1 is null or ps.distpsnr1 is null
+               or not (ps.sgscore1 >= %(star_sg)s and ps.distpsnr1 < %(star_dist)s)) as any_nonstellar_ps1
+from object o
+left join ps1_ztf ps on ps.oid = o.oid
+where o.oid = any(%(oids)s)
+group by o.oid, o.firstmjd, o.lastmjd, o.ndet, o.meanra, o.meandec
+"""
+
+
+def _objects_sql_params(oids: list[str], star_sg: float, star_dist: float) -> dict[str, Any]:
+    return {"oids": sorted(set(oids)), "star_sg": star_sg, "star_dist": star_dist}
+
+
+def objects_by_oid(client: AlerceDBClient, oids: list[str], star_sg: float, star_dist: float) -> list[dict[str, Any]]:
+    """Object-level (final) facts for given oids — replay-side diagnostics only (e.g. why a BTS object is not in the
+    superset). Never feeds a Snapshot."""
+    params = _objects_sql_params(oids, star_sg, star_dist)
+
+    def fetch() -> list[dict[str, Any]]:
+        cur = client._connect().execute(OBJECTS_SQL, params)
+        cols = [d.name for d in cur.description]
+        return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+
+    result: list[dict[str, Any]] = client.cache.get_or_fetch(client.name, "objects_by_oid_v1", params, fetch)
+    return result
+
+
+def known_sso_by_oid(client: AlerceDBClient, oids: list[str]) -> dict[str, list[dict[str, Any]]]:
+    """Alert-packet known-solar-system-object match (``ssdistnr``/``ssmagnr``/``ssnamenr``) per object from ALeRCE's
+    ``ss_ztf`` table. Per-alert fields (time-honest for alerts <= t); used for diagnostics/stratification only."""
+    params = {"oids": sorted(set(oids))}
+
+    def fetch() -> list[dict[str, Any]]:
+        cur = client._connect().execute(
+            "select oid, candid::text as candid, ssdistnr, ssmagnr, ssnamenr from ss_ztf where oid = any(%(oids)s)", params)
+        cols = [d.name for d in cur.description]
+        return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+
+    rows: list[dict[str, Any]] = client.cache.get_or_fetch(client.name, "ss_ztf_by_oid_v1", params, fetch)
+    out: dict[str, list[dict[str, Any]]] = {}
+    for r in rows:
+        out.setdefault(str(r["oid"]), []).append(r)
+    return out

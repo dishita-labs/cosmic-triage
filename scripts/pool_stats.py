@@ -1,4 +1,8 @@
-"""M1 pool statistics + budget-binding check (ARCHITECTURE §6.3, §10.3 M1). Writes runs/m1/pool_stats.{md,json}.
+"""M1/M1.1 pool statistics + budget-binding check (ARCHITECTURE §6.3, §10.3 M1/M1.1). Writes runs/m1/pool_stats.{md,json}.
+
+M1.1: pool membership uses the known-at-t rule and per-alert history fields (pre-filter v1.1); never-saved brightness
+uses qualifying detections only. If runs/m1/m1.1/before_labels.json exists (the pre-M1.1 snapshot), the before/after
+pool and contaminant counts are reported.
 
 Replay-side script: it may read BTS truth (labels are reported as pool composition, never fed back).
 Bright SN-like (time-honest, at t): pool member, brightest qualifying magnitude <= 18.5 at t, and latest alert-time
@@ -40,6 +44,8 @@ def main() -> int:
     bts.load(str(rcfg["bts_snapshot_date"]))
     cmap = ClassMap()
     scored = pool.cfg.scored_peak_mag
+    bpath = PROJECT_ROOT / "runs" / "m1" / "m1.1" / "before_labels.json"
+    before: dict[str, dict[str, dict[str, object]]] = json.loads(bpath.read_text())["nights"] if bpath.exists() else {}
     rows = []
     for night in rcfg["m1_nights"]:
         t = night_t(night, float(rcfg["decision_time_utc_hour"]))
@@ -47,7 +53,7 @@ def main() -> int:
         members = sorted(o for o, r in res.items() if r.passed)
         bright = [o for o in members if (res[o].brightest_mag or 99) <= scored]
         bright_sn = [o for o in bright if sn_like(pool.raw(o), t)]
-        labels = {o: label_candidate(o, pool.raw(o), bts, cmap, scored) for o in members}
+        labels = {o: label_candidate(o, pool.raw(o), bts, cmap, scored, pool.cfg.min_drb) for o in members}
         lab = Counter(lb.label or "unscored" for lb in labels.values())
         cls = Counter(lb.coarse_class for lb in labels.values() if lb.label == "class")
         # Recall vs BTS: objects BTS saved by t whose first detection (<= t) is inside the window.
@@ -56,12 +62,18 @@ def main() -> int:
             r = bts.row(oid)
             if r is None or r.get("savedate_mjd") is None or r["savedate_mjd"] > t:
                 continue
-            dets = raw.dets_le(t)
+            dets = raw.known_dets(t)
             if not dets or min(d["mjd"] for d in dets) < t - pool.cfg.window_days:
                 continue  # outside the forward window by definition
             saved_by_t.append(oid)
         missed = [o for o in saved_by_t if not res[o].passed]
+        prev = before.get(night, {})
         rows.append({
+            "before_pool": len(prev) if prev else None,
+            "before_contaminant": sum(1 for v in prev.values() if v["label"] == "contaminant") if prev else None,
+            "before_labels": dict(Counter(v["label"] or "unscored" for v in prev.values())) if prev else None,
+            "left_pool": sorted(set(prev) - set(members)) if prev else None,
+            "joined_pool": sorted(set(members) - set(prev)) if prev else None,
             "night": night, "t_mjd": t, "superset": len(res), "pool": len(members), "bright_le_18p5_at_t": len(bright),
             "bright_sn_like": len(bright_sn), "labels": dict(lab), "classes": dict(cls),
             "bts_saved_by_t_in_superset": len(saved_by_t), "bts_saved_by_t_in_pool": len(saved_by_t) - len(missed),
@@ -77,7 +89,7 @@ def main() -> int:
     (PROJECT_ROOT / "runs" / "m1").mkdir(parents=True, exist_ok=True)
     (PROJECT_ROOT / "runs" / "m1" / "pool_stats.json").write_text(json.dumps(out, indent=1))
     L = [
-        "# M1 forward-pool statistics and budget-binding check",
+        "# Forward-pool statistics and budget-binding check (regenerated in M1.1)",
         "",
         f"Nights: {', '.join(rcfg['m1_nights'])} (decision time t = local date 20:00 UTC). Pre-filter `{pool.cfg.config_hash}` "
         f"(configs/replay/prefilter.yaml v{pool.cfg.version}); BTS snapshot {rcfg['bts_snapshot_date']}. All pool counts use data <= t only. "
@@ -92,6 +104,17 @@ def main() -> int:
         L.append(f"| {r['night']} | {r['superset']} | {r['pool']} | {r['bright_le_18p5_at_t']} | {r['bright_sn_like']} | "
                  f"{lb.get('class', 0)} | {lb.get('unknown', 0)} | {lb.get('contaminant', 0)} | {lb.get('unscored', 0)} | "
                  f"{r['bts_saved_by_t_in_pool']} / {r['bts_saved_by_t_in_superset']} |")
+    if before:
+        L += [
+            "",
+            "## Before / after M1.1 (pre-filter v1.0 → v1.1, never-saved brightness from qualifying detections)",
+            "",
+            "| Night | Pool before → after | Contaminant before → after | Left pool | Joined pool | Labels before | Labels after |",
+            "|---|---|---|---|---|---|---|",
+        ]
+        for r in rows:
+            L.append(f"| {r['night']} | {r['before_pool']} → {r['pool']} | {r['before_contaminant']} → {r['labels'].get('contaminant', 0)} | "
+                     f"{len(r['left_pool'])} | {len(r['joined_pool'])} | {r['before_labels']} | {r['labels']} |")
     L += [
         "",
         "## Budget-binding check (§6.3)",
@@ -119,7 +142,10 @@ def main() -> int:
                  f"rejection reasons in superset: {r['rejection_reasons']}; BTS-saved-by-t objects rejected at t: {r['bts_missed_reasons'] or 'none'}")
     L += ["", "Definitions: *bright SN-like* = pool member whose brightest qualifying detection at t is ≤ 18.5 mag and whose latest "
           "alert-time Fink SIMBAD crossmatch is not a stellar/AGN type (`scripts/m0_killtests.py:SN_LIKE_CDS_EXCLUDE`). "
-          "*BTS saved by t* = in BTS with savedate ≤ t and first detection (≤ t) inside the 14-day window (recall diagnostic for the time-honest filter)."]
+          "*BTS saved by t* = in BTS with savedate ≤ t and first known detection (≤ t) inside the 14-day window, among superset objects. "
+          "The full bright-regime recall diagnostic (denominator from BTS, not the superset) is `runs/m1/m1.1/recall_bright.md`. "
+          "*Review-03:* this count-binding check includes contaminants and ignores feasibility; M3 re-verifies binding in "
+          "spectrograph-hours (§6.3)."]
     (PROJECT_ROOT / "runs" / "m1" / "pool_stats.md").write_text("\n".join(L) + "\n")
     print(f"median bright SN-like {med}; largest binding budget {bmax}")
     return 0

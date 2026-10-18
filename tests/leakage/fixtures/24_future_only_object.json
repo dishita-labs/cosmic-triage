@@ -17,7 +17,9 @@
      "candid": 6076693333,
      "ra": 185.0,
      "dec": 30.0,
-     "diffmaglim": 20.5
+     "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null
     },
     {
      "mjd": 60767.033333299994,
@@ -30,7 +32,9 @@
      "candid": 6076703333,
      "ra": 185.0,
      "dec": 30.0,
-     "diffmaglim": 20.5
+     "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null
     }
    ],
    "non_detections": [

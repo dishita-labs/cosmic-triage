@@ -393,6 +393,32 @@
       "default": null,
       "title": "Cdsxmatch"
      },
+     "hist_ndet": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Per-alert i:ndethist carried by this packet",
+      "title": "Hist Ndet"
+     },
+     "hist_start_mjd": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Per-alert i:jdstarthist carried by this packet, as MJD (time-honest, \u00a76.4 Review-03)",
+      "title": "Hist Start Mjd"
+     },
      "mjd": {
       "title": "Mjd",
       "type": "number"
@@ -477,6 +503,19 @@
       ],
       "default": null,
       "title": "Candid"
+     },
+     "delivered_by_mjd": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "MJD of the alert whose packet delivered this point (its own alert, or the prv_candidates parent / covering alert); known-at-t rule, \u00a76.4 Review-03",
+      "title": "Delivered By Mjd"
      },
      "drb": {
       "anyOf": [
@@ -633,6 +672,7 @@
     "type": "array"
    },
    "first_detection_mjd": {
+    "description": "min(known detections <= t, alert-time hist_start_mjd over Fink rows <= t) (\u00a76.4 Review-03)",
     "title": "First Detection Mjd",
     "type": "number"
    },
@@ -1416,6 +1456,32 @@
     "default": null,
     "title": "Cdsxmatch"
    },
+   "hist_ndet": {
+    "anyOf": [
+     {
+      "type": "integer"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "description": "Per-alert i:ndethist carried by this packet",
+    "title": "Hist Ndet"
+   },
+   "hist_start_mjd": {
+    "anyOf": [
+     {
+      "type": "number"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "description": "Per-alert i:jdstarthist carried by this packet, as MJD (time-honest, \u00a76.4 Review-03)",
+    "title": "Hist Start Mjd"
+   },
    "mjd": {
     "title": "Mjd",
     "type": "number"
@@ -1925,6 +1991,19 @@
     ],
     "default": null,
     "title": "Candid"
+   },
+   "delivered_by_mjd": {
+    "anyOf": [
+     {
+      "type": "number"
+     },
+     {
+      "type": "null"
+     }
+    ],
+    "default": null,
+    "description": "MJD of the alert whose packet delivered this point (its own alert, or the prv_candidates parent / covering alert); known-at-t rule, \u00a76.4 Review-03",
+    "title": "Delivered By Mjd"
    },
    "drb": {
     "anyOf": [
@@ -2528,6 +2607,7 @@
       "type": "array"
      },
      "first_detection_mjd": {
+      "description": "min(known detections <= t, alert-time hist_start_mjd over Fink rows <= t) (\u00a76.4 Review-03)",
       "title": "First Detection Mjd",
       "type": "number"
      },
@@ -2623,6 +2703,32 @@
       "default": null,
       "title": "Cdsxmatch"
      },
+     "hist_ndet": {
+      "anyOf": [
+       {
+        "type": "integer"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Per-alert i:ndethist carried by this packet",
+      "title": "Hist Ndet"
+     },
+     "hist_start_mjd": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "Per-alert i:jdstarthist carried by this packet, as MJD (time-honest, \u00a76.4 Review-03)",
+      "title": "Hist Start Mjd"
+     },
      "mjd": {
       "title": "Mjd",
       "type": "number"
@@ -2707,6 +2813,19 @@
       ],
       "default": null,
       "title": "Candid"
+     },
+     "delivered_by_mjd": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "default": null,
+      "description": "MJD of the alert whose packet delivered this point (its own alert, or the prv_candidates parent / covering alert); known-at-t rule, \u00a76.4 Review-03",
+      "title": "Delivered By Mjd"
      },
      "drb": {
       "anyOf": [

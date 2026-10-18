@@ -22,9 +22,13 @@ class Snapshot(Contract):
             for p in c.photometry:
                 if p.mjd > self.t_mjd:
                     raise ValueError(f"photometry at {p.mjd} > t={self.t_mjd} for {c.oid}")
+                if p.delivered_by_mjd is not None and p.delivered_by_mjd > self.t_mjd:
+                    raise ValueError(f"photometry delivered by an alert at {p.delivered_by_mjd} > t for {c.oid}")
             for r in c.fink_rows:
                 if r.mjd > self.t_mjd:
                     raise ValueError(f"Fink row at {r.mjd} > t={self.t_mjd} for {c.oid}")
+                if r.hist_start_mjd is not None and r.hist_start_mjd > r.mjd:
+                    raise ValueError(f"Fink row at {r.mjd} carries a history start after its own jd for {c.oid}")
             if c.stamp_prior is not None and c.stamp_prior.first_alert_mjd > self.t_mjd:
                 raise ValueError(f"stamp prior from the future for {c.oid}")
         return self

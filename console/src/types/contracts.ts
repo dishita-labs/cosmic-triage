@@ -50,6 +50,14 @@ export type Srmag1 = number | null;
 export type BrightestMag = number;
 export type Candid = string | null;
 export type Cdsxmatch = string | null;
+/**
+ * Per-alert i:ndethist carried by this packet
+ */
+export type HistNdet = number | null;
+/**
+ * Per-alert i:jdstarthist carried by this packet, as MJD (time-honest, §6.4 Review-03)
+ */
+export type HistStartMjd = number | null;
 export type Mjd = number;
 export type RfSniaVsNonia = number | null;
 export type SnnSnVsAll = number | null;
@@ -59,6 +67,9 @@ export type SnnSniaVsNonia = number | null;
  */
 export type TnsAlertTime = string | null;
 export type FinkRows = FinkAlertRow[];
+/**
+ * min(known detections <= t, alert-time hist_start_mjd over Fink rows <= t) (§6.4 Review-03)
+ */
 export type FirstDetectionMjd = number;
 export type LastDetectionMjd = number;
 export type LatestBand = string;
@@ -71,6 +82,10 @@ export type NNondetections = number;
 export type Oid2 = string;
 export type Band = "g" | "r" | "i";
 export type Candid1 = string | null;
+/**
+ * MJD of the alert whose packet delivered this point (its own alert, or the prv_candidates parent / covering alert); known-at-t rule, §6.4 Review-03
+ */
+export type DeliveredByMjd = number | null;
 /**
  * Deep real/bogus score of the alert, if any
  */
@@ -382,6 +397,8 @@ export interface CandidateState {
 export interface FinkAlertRow {
   candid?: Candid;
   cdsxmatch?: Cdsxmatch;
+  hist_ndet?: HistNdet;
+  hist_start_mjd?: HistStartMjd;
   mjd: Mjd;
   rf_snia_vs_nonia?: RfSniaVsNonia;
   snn_sn_vs_all?: SnnSnVsAll;
@@ -397,6 +414,7 @@ export interface FinkAlertRow {
 export interface PhotometryPoint {
   band: Band;
   candid?: Candid1;
+  delivered_by_mjd?: DeliveredByMjd;
   drb?: Drb;
   is_detection: IsDetection;
   isdiffpos?: Isdiffpos;

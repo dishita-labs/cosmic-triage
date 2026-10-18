@@ -18,8 +18,9 @@ def bts(fixture_cache):  # type: ignore[no-untyped-def]
     return b
 
 
-def raw(oid: str, mags: list[float]) -> RawCandidate:
-    return RawCandidate(oid, [{"mjd": 60000.0 + i, "magpsf": m, "isdiffpos": "t"} for i, m in enumerate(mags)], [], [])
+def raw(oid: str, mags: list[float], drb: float | None = 0.99) -> RawCandidate:
+    return RawCandidate(oid, [{"mjd": 60000.0 + i, "magpsf": m, "isdiffpos": "t", "drb": drb, "has_stamp": drb is not None}
+                              for i, m in enumerate(mags)], [], [])
 
 
 def test_saved_classified_is_class_with_coarse_mapping(bts) -> None:  # type: ignore[no-untyped-def]
@@ -45,8 +46,22 @@ def test_never_saved_faint_is_unscored(bts) -> None:  # type: ignore[no-untyped-
 
 
 def test_negative_subtractions_do_not_make_an_object_bright(bts) -> None:  # type: ignore[no-untyped-def]
-    r = RawCandidate("ZTF25neg", [{"mjd": 1.0, "magpsf": 17.0, "isdiffpos": "f"}, {"mjd": 2.0, "magpsf": 19.0, "isdiffpos": "t"}], [], [])
+    r = RawCandidate("ZTF25neg", [{"mjd": 1.0, "magpsf": 17.0, "isdiffpos": "f", "drb": 0.99},
+                                  {"mjd": 2.0, "magpsf": 19.0, "isdiffpos": "t", "drb": 0.99}], [], [])
     assert label_candidate("ZTF25neg", r, bts, ClassMap(), 18.5).label is None
+
+
+def test_history_only_bright_detection_does_not_make_a_contaminant(bts) -> None:  # type: ignore[no-untyped-def]
+    """Review-03 §6.4 (a): brightness for never-saved objects uses qualifying detections (drb >= 0.5, positive) only."""
+    lab = label_candidate("ZTF25notinbts", raw("ZTF25notinbts", [17.5, 18.0], drb=None), bts, ClassMap(), 18.5)
+    assert lab.label is None and not lab.bright
+
+
+def test_low_drb_bright_detection_does_not_make_a_contaminant(bts) -> None:  # type: ignore[no-untyped-def]
+    r = RawCandidate("ZTF25lowdrb", [{"mjd": 1.0, "magpsf": 17.0, "isdiffpos": "t", "drb": 0.2},
+                                     {"mjd": 2.0, "magpsf": 18.9, "isdiffpos": "t", "drb": 0.99}], [], [])
+    lab = label_candidate("ZTF25lowdrb", r, bts, ClassMap(), 18.5)
+    assert lab.label is None and lab.peak_mag == 18.9
 
 
 def test_class_map_covers_common_types() -> None:

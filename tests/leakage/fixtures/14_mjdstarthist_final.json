@@ -18,6 +18,8 @@
      "ra": 185.0,
      "dec": 30.0,
      "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null,
      "mjdstarthist": 60366.8333333,
      "jdstarthist": 2460367.3333333
     },
@@ -33,6 +35,8 @@
      "ra": 185.0,
      "dec": 30.0,
      "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null,
      "mjdstarthist": 60366.8333333,
      "jdstarthist": 2460367.3333333
     },
@@ -48,6 +52,8 @@
      "ra": 185.0,
      "dec": 30.0,
      "diffmaglim": 20.5,
+     "has_stamp": true,
+     "parent_candid": null,
      "mjdstarthist": 60366.8333333,
      "jdstarthist": 2460367.3333333
     }
