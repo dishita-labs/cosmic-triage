@@ -1,16 +1,16 @@
 # Cosmic Triage
 
-**Cosmic Triage investigates astronomical transients with grounded AI agents to decide which objects deserve limited telescope follow-up time, using only the evidence that existed at the moment of decision.**
+**Cosmic Triage is an AI-powered astronomical investigation and decision-support system that combines real telescope-survey data, tool-using agents, evidence verification, and historical replay to determine which objects deserve scarce follow-up observations.**
 
 **The problem.** Sky surveys such as the Zwicky Transient Facility (ZTF) report far more new transient candidates every night than follow-up telescopes can observe. Some are exploding stars worth a spectrum. Others are variable stars, active galaxies, asteroids, or artifacts, and some were already classified by another team hours earlier. Every night, someone has to decide which few candidates get the telescope.
 
 **The system.** Cosmic Triage replays real ZTF nights and sends candidates to an **Investigator**. This is a code-owned agent loop with six scientific tools. Every claim it makes must cite dated evidence in an EvidenceLedger and pass a deterministic validator chain before it can influence a decision. An interactive **Observatory Console** replays the night at Palomar and shows each investigation step by step.
 
-**The question.** Where do specialized decision models such as TypeSafe's **Jev** outperform larger LLMs or deterministic code on decision quality, latency, and cost, and where don't they? Each model sits in a swappable slot (gate, extractor, verifier) alongside a deterministic baseline, so its contribution can be measured rather than assumed.
+**The question.** For each decision in the loop, which approach gives the best quality for its latency and cost: a large general-purpose LLM, a specialized decision model, or plain deterministic code? Each model (Claude for structured extraction, TypeSafe's Jev for bounded judgments such as gating and claim-support checks) sits in a swappable slot alongside a deterministic baseline, so its contribution can be measured rather than assumed.
 
 **The engineering challenge.** Decisions must be historically honest. Each candidate is judged at a past decision time *t*, using only what was known then. A detection is excluded if it was delivered in a later alert, and catalog entries or reports dated after *t* are filtered out at the tool layer. Adversarial leakage fixtures enforce this on every test run.
 
-**Built so far:** a six-tool Investigator with evidence provenance and deterministic validation, time-bounded replay of real ZTF observations, and an interactive Observatory Console. Claude and Jev decision components are integrated for controlled evaluation. Live model evaluation, the telescope scheduler, and comparative benchmarks are the next milestones ([status](#project-status)).
+**Implemented system:** A six-tool AI Investigator with an evidence ledger, deterministic claim validation, and bounded execution; historical replay of real ZTF observations with safeguards against future-data leakage; and an interactive Observatory Console for inspecting candidates, investigations, and their decision effects. Claude and Jev integrations are in place for controlled evaluation, with live model comparisons and telescope scheduling planned next ([status](#project-status)).
 
 ## See it in action
 
@@ -68,7 +68,7 @@ A key design constraint is **historical information availability**. An observati
 
 ## The Investigator
 
-Investigator v1 includes:
+The Investigator is a bounded, tool-using system designed to turn heterogeneous astronomical data into traceable, validated claims. It separates model judgments from scientific evidence and code-owned decision logic, allowing different decision models to be evaluated without changing the surrounding architecture.
 
 - **Six typed scientific tools.** Each filters its output to what was known at the replay time t:
   - alert history
@@ -97,11 +97,11 @@ One example of the intended behavior: if a candidate was **already classified be
 | Direct TNS report-date lookup | **Implemented but unverified; blocked** on TNS bot credentials. A Lasair-TNS discovery-report fallback is used meanwhile |
 | 20-candidate exploratory Investigator batch | **Experimental** (deterministic slots only; not a benchmark) |
 | Calibrated beliefs, objective-specific rewards, constraint-based nightly scheduler, telescope playback | **Planned (M3)** |
-| Agent-versus-baseline benchmarks, Jev cost/quality comparisons | **Planned (M4+)** |
+| Agent-versus-baseline benchmarks; model cost/quality comparisons | **Planned (M4+)** |
 
 The offline test suite has 239 tests and makes no network calls.
 
-## Current limitations and ongoing validation
+## Evaluation status and scientific considerations
 
 - **The Investigator has so far run in deterministic mode only.** In a 20-candidate exploratory batch it:
   - stayed within budget on every run
