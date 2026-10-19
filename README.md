@@ -1,51 +1,59 @@
 # Cosmic Triage
 
-**Cosmic Triage investigates astronomical transients using grounded AI agents to determine which objects deserve limited telescope follow-up time.**
+**Cosmic Triage investigates astronomical transients with grounded AI agents to decide which objects deserve limited telescope follow-up time, using only the evidence that existed at the moment of decision.**
 
-### Can a grounded AI investigator make better decisions about where to point a telescope?
+**The problem.** Sky surveys such as the Zwicky Transient Facility (ZTF) report far more new transient candidates every night than follow-up telescopes can observe. Some are exploding stars worth a spectrum. Others are variable stars, active galaxies, asteroids, or artifacts, and some were already classified by another team hours earlier. Every night, someone has to decide which few candidates get the telescope.
 
-Astronomical surveys surface more transient candidates than a follow-up telescope can observe. Some are newly exploding stars. Others are variable galaxies, stars, asteroids, or artifacts. A promising target might already have been classified by another team. The difficult question is not just **what is this object?** It is **which observation is worth spending limited telescope time on, given what was known at that moment?**
+**The system.** Cosmic Triage replays real ZTF nights and sends candidates to an **Investigator**. This is a code-owned agent loop with six scientific tools. Every claim it makes must cite dated evidence in an EvidenceLedger and pass a deterministic validator chain before it can influence a decision. An interactive **Observatory Console** replays the night at Palomar and shows each investigation step by step.
 
-Cosmic Triage is a learning-driven engineering project exploring that question with historical observations from the Zwicky Transient Facility (ZTF). It is being built to combine a tool-using AI Investigator, evidence validation, probabilistic decision-making, observation scheduling, and an interactive replay of a night at Palomar Observatory.
+**The question.** Where do specialized decision models such as TypeSafe's **Jev** outperform larger LLMs or deterministic code on decision quality, latency, and cost, and where don't they? Each model sits in a swappable slot (gate, extractor, verifier) alongside a deterministic baseline, so its contribution can be measured rather than assumed.
 
-The broader engineering objective is to measure whether **typed, tool-using agents improve decisions over simpler approaches**, such as rules, broker scores, and non-agent baselines, once evidence quality, reliability, and inference cost are accounted for. The system is a research prototype. It does **not** control a physical telescope and makes no claim of new astronomical discovery.
+**The engineering challenge.** Decisions must be historically honest. Each candidate is judged at a past decision time *t*, using only what was known then. A detection is excluded if it was delivered in a later alert, and catalog entries or reports dated after *t* are filtered out at the tool layer. Adversarial leakage fixtures enforce this on every test run.
 
-> **Current stage: Investigator v1 implemented and running in deterministic, exploratory mode.** Historical replay and the Observatory Console run on real ZTF data. The Claude and Jev integrations are implemented behind feature flags but have **not yet been exercised with live paid model calls**. The scheduler and the comparative benchmark are next, so there are **no benchmark results yet**. See [Project status](#project-status).
+**Built so far:** a six-tool Investigator with evidence provenance and deterministic validation, time-bounded replay of real ZTF observations, and an interactive Observatory Console. Claude and Jev decision components are integrated for controlled evaluation. Live model evaluation, the telescope scheduler, and comparative benchmarks are the next milestones ([status](#project-status)).
 
 ## See it in action
 
-![Night Theater: a replayed night at Palomar with candidates on the sky, Sun and Moon, the 30° altitude limit, and a selected candidate's light curve](docs/assets/night-theater.png)
+![Night Theater: a replayed night at Palomar with candidates on the sky dome, the 30° altitude limit, and the selected candidate ZTF25aalzmga with its light curve](docs/assets/night-theater.png)
 
-*Night Theater: scrub through a historical night at Palomar to see candidates move across the sky, twilight and Moon, and which targets clear the 30° altitude limit.*
+*Night Theater: a replay of the night of 2025-04-19 at Palomar, with candidates moving across the sky. The selected supernova candidate shows its track, its altitude, and what was known at decision time.*
 
-![Candidate Explorer: a table of pool candidates at the decision time and one candidate's light curve with detections and upper limits](docs/assets/candidate-explorer.png)
+![Candidate Explorer: the candidate pool at decision time t and the light curve of ZTF25aalzmga with detections and upper limits](docs/assets/candidate-explorer.png)
 
-*Candidate Explorer: each candidate's light curve and the information available at the historical decision time t. Circles are detections; triangles are non-detection limits (lower magnitude = brighter).*
+*Candidate Explorer: the candidate pool at decision time t. Every value shown was known at or before t; circles are detections and triangles are non-detection limits.*
 
-These screenshots come from the early S0 console, captured before the M1.1 replay-integrity fixes. Candidate counts have since changed: the 2025-04-19 pool shown here had 95 candidates and now has 79. The current console also has an **Investigations** tab. The telescope is simulated; the ZTF observations are historical.
+![Investigations view: the trace for ZTF25aalzmga, showing tool calls, a validated prior-classification claim with its checks, the code-owned effect on spectrum reward, and the evidence ledger dated relative to t](docs/assets/investigations.png)
+
+*Investigation trace for the same object: Fink's alert-time record shows it was already classified as SN II 11.5 days before t. The claim passes all six validation checks, and code sets that candidate's spectrum reward factor to 0. This is an exploratory run, not a benchmark.*
+
+The telescope is simulated; the ZTF observations are real and historical.
 
 ## How it works
 
 ```mermaid
 flowchart TD
     A[Historical ZTF alerts and catalog data] --> B[Time-bounded candidate snapshots]
-    B --> C[Candidate beliefs]
+    B --> C["Calibrated candidate beliefs (planned)"]
     B --> D[AI Investigator]
     D --> E[Scientific tools and dated sources]
     E --> F[Typed evidence and claims]
     F --> G[Deterministic validation and evidence ledger]
     G --> H[Code-owned effects on decisions]
-    C --> I[Expected observation value]
+    C --> I["Expected observation value (planned)"]
     H --> I
-    I --> J[Visibility and telescope-time scheduler]
-    J --> K[Historical replay and policy comparison]
+    I --> J["Visibility and telescope-time scheduler (planned)"]
+    J --> K["Policy comparison on replayed nights (planned)"]
     K --> L[Observatory Console and Night Theater]
+    B --> L
+    G --> L
 
-    classDef planned stroke-dasharray: 5 5
+    classDef planned stroke-dasharray: 6 4,stroke-width:1px
+    classDef built stroke-width:2px
+    class A,B,D,E,F,G,H,L built
     class C,I,J,K planned
 ```
 
-*Dashed boxes are planned for M3–M4. Beliefs are currently an uncalibrated stub; the only implemented decision effect is the spectrum-reward adjustment for objects already classified at t.*
+*Solid boxes are implemented; dashed boxes are planned for M3–M4. Beliefs are currently an uncalibrated stub. The only decision effect implemented so far is the spectrum-reward adjustment for objects already classified at t.*
 
 **The AI does not get to invent a probability or directly command a telescope.** Models can decide *what to investigate*, call tools, and propose evidence-backed claims. Before an accepted claim can influence a decision, deterministic code checks:
 
@@ -93,29 +101,23 @@ One example of the intended behavior: if a candidate was **already classified be
 
 The offline test suite has 239 tests and makes no network calls.
 
-### What the exploratory runs show, and what they don't
+## Current limitations and ongoing validation
 
-In an initial **20-candidate exploratory batch**, the deterministic Investigator:
+- **The Investigator has so far run in deterministic mode only.** In a 20-candidate exploratory batch it:
+  - stayed within budget on every run
+  - accepted 19 claims, none citing evidence dated after t
+  - ended each run with validated claims or an explicit `no_context_found`
+  - flagged 2 candidates as already classified at t
 
-- terminated within its budgets on all 20 cases
-- recorded **19 accepted claims** and **0 accepted claims citing evidence dated after t**
-- ended every run with either validated claims or an explicit `no_context_found` outcome
-- identified 2 candidates as already classified at t
+  This is a smoke test, not a benchmark. Claude and Jev have not yet been called live, and comparative model benchmarks have not been run.
+- **Upstream candidate recall is 59.4% (85 of 143 object-nights).** This measures the replay's bright-transient candidate filter: which real, bright BTS transients reach the Investigator at all. It is *not* a measure of Jev accuracy, agent reasoning quality, or claim verification. Part of the shortfall comes from deliberately conservative historical-detection rules. For example, older unrelated activity at a supernova's position can make it look too old for the 14-day window.
+- **Open scientific issues:**
+  - filtering known asteroids, which make up 28 of 50 provisional contaminants
+  - historical availability of host-galaxy associations, which are currently treated as static
+  - contaminant labels that are provisional until a 30-object human audit
+  - TNS classification report dates, which await TNS bot access. Fink's alert-time labels are used only as tool evidence, never as ground truth.
 
-A hand review of all 20 dossiers found and fixed one bug: a catalogue placeholder redshift of 0.0 had been accepted as data. It also recorded the remaining error categories in [`runs/reports/M2.md`](runs/reports/M2.md).
-
-These are engineering smoke tests, **not evidence that an AI agent improves telescope decisions**. No paid model calls were made, and no benchmark comparison has been run yet.
-
-### Known limitations
-
-These limitations are documented in [`runs/reports/M1.1.md`](runs/reports/M1.1.md) and [`runs/reports/M2.md`](runs/reports/M2.md):
-
-- **Candidate recall.** Of bright (≤ 18.5 mag) BTS transients first detected within the 14-day window, the replay's candidate selection currently admits 59.4% (85 of 143 object-nights). Every miss is attributed to a specific rule. The most common reason (24 misses) is an alert-reported history start that places the first detection before the window. This also rejects some real supernovae that had unrelated, years-older activity at the same position. Whether to keep that rule is an open architecture decision.
-- **Known asteroids** pass the pre-filter. They account for 28 of 50 provisional contaminants (56%), and no Investigator tool can identify them yet.
-- **Contaminant labels are provisional** pending a 30-object human audit (`runs/reports/labels_audit.md`).
-- **Some context is not time-versioned.** Lasair/Sherlock host associations are treated as static, so they need stronger historical-availability checks before benchmark evaluation.
-- **Classification report dates are unavailable** until TNS bot access is approved. Fink's alert-time TNS labels are used only as "known by this alert" tool evidence, never as ground truth.
-- **Validation radii and redshift-quality handling are conservative first choices.** For example, one AGN association at about 2″ was missed, and one poor photometric redshift produced an implausible absolute magnitude.
+Detailed failure analyses, per-miss attributions, error categories (including one bug found and fixed in hand review), and the unresolved scientific decisions are in [`runs/reports/M1.1.md`](runs/reports/M1.1.md) and [`runs/reports/M2.md`](runs/reports/M2.md).
 
 ## What we're testing next
 
@@ -197,6 +199,7 @@ Paid model calls stay disabled even when keys are present. Enabling them require
 - Import-linter contracts in `pyproject.toml` enforce the data boundaries. For example, only `replay` may read truth labels, and the Investigator never reads the raw cache.
 - Every run records its seed, config hash, and output hash. Identical inputs reproduce identical output hashes.
 - [`runs/reports/`](runs/reports/) records milestone outcomes ([M0](runs/reports/M0.md), [M1](runs/reports/M1.md), [M1.1](runs/reports/M1.1.md), [M2](runs/reports/M2.md)), open scientific questions, and known limitations.
+- **Engineering process.** The design evolved through written reviews (`docs/REVIEW-*.md`) and was implemented milestone by milestone with Claude Code, following `CLAUDE.md`. "Fable" and "Opus" in those documents are the Claude models used as design reviewer and implementer. Each milestone report lists the decisions made and the questions escalated for review.
 
 ## Data sources and acknowledgments
 
@@ -207,6 +210,6 @@ This project relies on public astronomy data and services:
 - [SIMBAD](https://simbad.cds.unistra.fr/) (CDS, Strasbourg) and the [NASA/IPAC Extragalactic Database](https://ned.ipac.caltech.edu/)
 - the [Transient Name Server](https://www.wis-tns.org/)
 
-`tests/fixtures/` holds a small number of recorded public responses used as offline test fixtures. `runs/` holds derived replay artifacts. Please follow each provider's acknowledgment and usage policies if you reuse the data.
+`tests/fixtures/` holds a small number of recorded broker and catalog query responses used as offline test fixtures. The text-corpus fixtures (GCN, ATel, and AstroNotes) are synthetic and generated by `scripts/make_corpus_fixtures.py`, so no published third-party text is redistributed. `runs/` holds derived replay artifacts. Please follow each provider's acknowledgment and usage policies if you reuse the data.
 
 The project's goal is an **auditable answer** to a practical AI-systems question: *when does a grounded, budgeted, tool-using agent actually make a better decision than simpler software?*

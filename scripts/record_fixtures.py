@@ -54,12 +54,11 @@ def main() -> int:
     copy("simbad", "cone", {"ra": 186.27, "dec": 12.887, "r": 60, "top": 25})
     NedClient(live).cone(186.27, 12.887, 60)
     copy("ned", "cone", {"ra": 186.27, "dec": 12.887, "r": 60, "top": 25})
+    # GCN / ATel / AstroNote fixtures are synthetic (third-party publications are not redistributed):
+    # see scripts/make_corpus_fixtures.py. The live fetches below only warm the local cache.
     GcnClient(live).circular(39000)
-    copy("gcn", "circular", {"id": 39000})
     AtelClient(live).raw(17100)
-    copy("atel", "telegram", {"read": 17100})
     AstroNoteClient(live).listing_raw(0)
-    copy("astronote", "listing", {"page": 0})
     # BTS: trimmed copy of the snapshot (header + probe rows + a deterministic sample incl. unclassified rows).
     rcfg, _ = load_config("configs/replay/replay.yaml")
     params = {"snapshot_date": str(rcfg["bts_snapshot_date"]), **UNFILTERED_PARAMS}
